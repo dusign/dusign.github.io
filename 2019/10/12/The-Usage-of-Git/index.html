@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="It&#39;s an IT blog">
+    <meta name="keyword"  content="dusign, super snail, dugang, IT blog, snail">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          The Usage of Git - Super Snail | An IT blog
+        
+    </title>
+
+    <link rel="canonical" href="https://dusign.net/2019/10/12/The-Usage-of-Git/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('git-bg.jpg')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/Just-do-it-white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#github" title="github">github</a>
+                            
+                              <a class="tag" href="/tags/#git" title="git">git</a>
+                            
+                        </div>
+                        <h1>The Usage of Git</h1>
+                        <h2 class="subheading">Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</h2>
+                        <span class="meta">
+                            Posted by Dusign on
+                            2019-10-12
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Super Snail</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                    <li>
+                        <a href="https://blog.csdn.net/d_Nail" target="_blank">Chinese Blog</a>
+                    </li>
+                    <li>
+                        <a href="http://www.shmyjd.net" target="_blank">Store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>直接进入 <a href="https://git-scm.com" target="_blank" rel="noopener">git官网</a> 下载相应的版本进行安装，安装比较简单，这里就不详述了</p>
+<p>macos 也可以使用 <code>brew</code> 安装：<code>brew install git</code>，<code>brew</code> 的安装使用方法见 <a href="http://www.dusign.net/2019/10/02/MySQL-Tutorial/" target="_blank" rel="noopener">MySQL Tutorial</a></p>
+<p>linux 安装命令 <code>yum</code>/<code>dnf</code>(redhat/centos)、<code>apt-get</code>(ubuntu)、<code>pacman</code>(arch/manjaro)等</p>
+<h2 id="configure"><a href="#configure" class="headerlink" title="configure"></a>configure</h2><p>git 安装完成之后还要进行配置之后才能使用，我们需要设置自己的名称以及邮箱，这是我们仓库的唯一表示，使用如下</p>
+<ul>
+<li>配置名称<br><code>git config --global user.name &quot;NAME&quot;</code></li>
+<li>配置邮箱<br><code>git config --global user.email &quot;EMAIL&quot;</code></li>
+<li>查看配置信息<br><code>git config --list</code></li>
+</ul>
+<h2 id="git原理"><a href="#git原理" class="headerlink" title="git原理"></a>git原理</h2><p>下面介绍一下 git 的工作原理</p>
+<p><img src="git.png" alt="git"></p>
+<h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p>git 使用非常方便，平时工作中使用 git 管理自己的项目可以节省自己大量的时间，同时也可以通过 git 团队协作</p>
+<ul>
+<li><p>创建 Repository<br>在仓库目录下执行命令 <code>git init</code> / <code>git init DIR</code></p>
+</li>
+<li><p>添加内容到 Stage<br>执行命令 <code>git  add FILE</code> / <code>git add DIR</code>(目录) / <code>git add .</code>(当前目录下所有文件) / <code>git add -p</code>(所有变化确认）</p>
+</li>
+<li><p>从 Stage 删除内容<br><code>git rm FILE</code>（删除工作区以及暂存区） / <code>git rm --cached FILE</code>(停止追踪，但文件会保留在工作区)</p>
+</li>
+<li><p>文件改名<br><code>git mv FILE_OLD_NAME FILE_NEW_NAME</code> 文件改名并放入暂存区</p>
+</li>
+<li><p>提交文件到 Repository<br>执行命令 <code>git commit</code> / <code>git commit FILE -m MESSAGE</code></p>
+</li>
+<li><p>使用下面命令查看状态<br><code>git status</code></p>
+</li>
+<li><p>查看文件变动(Stage &lt;-&gt; Repository)<br><code>git diff FILE</code></p>
+</li>
+<li><p>查看修改日志(提交日志)<br><code>git log</code> / <code>git log -pretty=oneline</code></p>
+</li>
+<li><p>回退到上一个版本<br><code>git reset --hard HEAD^</code></p>
+</li>
+<li><p>回退到上上一个版本<br><code>git reset --hard HEAD^^</code></p>
+</li>
+<li><p>回退到前 N 个版本<br><code>git reset --hard HEAD~N</code></p>
+</li>
+<li><p>回退到某一个版本，版本号为 NUM<br><code>git reset --hard NUM</code></p>
+</li>
+<li><p>查看版本号对应的操作<br><code>git reflog</code></p>
+</li>
+<li><p>撤销修改（丢弃工作区的修改）<br><code>git checkout --FILE</code></p>
+</li>
+<li><p>创建分支<br><code>git checkout FILE</code></p>
+</li>
+</ul>
+<blockquote>
+<p>工作区：就是你执行 <code>git init</code> 的目录，<code>.git</code> 隐藏目录版本库除外，或者以后需要再新建的目录文件等等都属于工作区范畴<br>&nbsp;<br>版本库(Repository)：工作区有一个隐藏目录 <code>.git</code>, 这个不属于工作区，这是版本库。其中版本库里面存了很多东西，其中最重要的就是 stage(暂存区)，还有 git 为我们自动创建了第一个分支 master,以及指向 master 的一个指针 <code>HEAD</code><br>&nbsp;<br>我们前面说过使用 git 提交文件到版本库有两步：<br>&nbsp;<br>第一步：是使用 <code>git add</code> 把文件添加进去，实际上就是把文件添加到暂存区<br>&nbsp;<br>第二步：使用 <code>git commit</code> 提交更改，实际上就是把暂存区的所有内容提交到当前分支上</p>
+</blockquote>
+<h2 id="远程-Repository"><a href="#远程-Repository" class="headerlink" title="远程 Repository"></a>远程 Repository</h2><p>使用 git 远程团队协作非常方便，github 是目前最大的远程 git 仓库，同时也是最大的开源社区，每天都有许多开发者在 github 上进行团队开发</p>
+<ul>
+<li><p>创建 SSH Key<br>本地 git 仓库和 github 仓库之间是通过 ssh 加密的，所需需要设置 ssh<br><code>ssh-keygen -t rsa -C &quot;EMAIL&quot;</code> 其中 <code>EMAIL</code> 是 github 账号，最后在用户主目录下 <code>.ssh</code> 文件夹中有 <code>id_rsa</code>、 <code>id_rsa.pub</code> 说明创建成功，其中 <code>id_rsa</code> 是私钥， <code>id_rsa.pub</code> 公钥</p>
+</li>
+<li><p>添加 SSH Keys 到 GitHub<br>登录 gitHub，打开 <code>settings</code> 中的 <code>SSH Keys</code>，然后点击 <code>Add SSH Key</code>，将 <code>id_rsa.pub</code> 中的内容复制进去之后点击 <code>Add Key</code></p>
+</li>
+<li><p>关联本地仓库<br>按照 github 仓库提示，在本地克隆仓库或者把本地仓库推送到 github</p>
+</li>
+<li><p>推送到远程<br><code>git push</code> / <code>git push -u</code> 推送本地 master 分支到远程仓库<br><code>git push origin master</code> 把本地 master 分支的最新修改推送到 github 上</p>
+</li>
+<li><p>克隆远程仓库到本地<br><code>git clone GITHUB_ADDRESS</code></p>
+</li>
+<li><p>创建分支<br><code>git branch BRANCH_NAME</code> 创建分支<br><code>git checkout BRANCH_NAME</code> 切换到分支<br><code>git checkout -b BRANCH_NAME</code> 创建并切换到分支<br>master 是主分支，HEAD 指向当前分支</p>
+</li>
+<li><p>查看分支<br><code>git branch</code> 列出所有分支，当前分支前面会添加一个星号</p>
+</li>
+<li><p>合并分支<br><code>git merge BRANCH_NAME</code> 把分支合并到主分支 master</p>
+</li>
+<li><p>删除分支<br><code>git branch -d BRANCH_NAME</code></p>
+</li>
+<li><p>非 Fast forward 模式合并<br><code>git merge --no-ff -m “” BRANCH_NAME</code></p>
+</li>
+</ul>
+<blockquote>
+<p>通常合并分支时，git 一般使用 ”Fast forward” 模式，在这种模式下，删除分支后，会丢掉分支信息，现在我们来使用带参数 <code>–no-ff</code> 来禁用 ”Fast forward” 模式</p>
+</blockquote>
+<h2 id="BUG-分支"><a href="#BUG-分支" class="headerlink" title="BUG 分支"></a>BUG 分支</h2><p>在开发项目的过程中，有时候需要临时修复 bug，为此 git 提供了非常方便的 bug 分支功能，具体使用方法如下</p>
+<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>从远程克隆仓库时，git 自动把本地的 master 分支和远程的 master 分支对应起来，并且远程仓库名称是 origin</p>
+<ul>
+<li><p>查看远程仓库信息<br><code>git remote</code></p>
+</li>
+<li><p>查看远程仓库详细信息<br><code>git remote -v</code></p>
+</li>
+<li><p>推送本地仓库到远程<br><code>git push LOCAL_REPOSITORY REMOTE_REPOSITORY</code></p>
+</li>
+<li><p>把远程仓库分支克隆到本地<br><code>git checkout -b LOCALBRAND_NAME REPOSITORY/BRAND_NAME</code></p>
+</li>
+<li><p>推送自己的修改到远程仓库<br><code>git push origin BRANCH_NAME</code><br>如果推送失败，则因为远程分支比你的本地更新早，需要先用 <code>git pull</code> 试图合并</p>
+</li>
+</ul>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/10/14/Hexo-Configuration/" data-toggle="tooltip" data-placement="top" title="Hexo Configuration">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/10/09/Vim-Commands-and-Shortcuts/" data-toggle="tooltip" data-placement="top" title="Usage of Vim">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <div class="comment_notes_blank"></div>
+
+                <!-- tip start -->
+                
+                <div class="visitor_notice">
+                    <img 
+                        src="/img/notice.png" 
+                        alt="notice"
+                        title="notice"/>
+                    <p class="notice">
+                        欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客，博客系统一键分享的功能还在完善中，请大家耐心等待。 若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。 评论点赞需要github账号登录，如果没有账号的话请点击 <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
+                    </p>
+                </div>
+                <div class="comment_notes">
+                    <p>
+                        If you like this blog or find it useful for you, you are welcome to comment on it. 
+                        You are also welcome to share this blog, so that more people can participate in it.
+                        If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- gitment start -->
+                
+                <hr>
+                <div id="blog_comments"></div>
+
+<!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+<!--
+<link rel="stylesheet" href="/css/gitment.css">
+<script type="text/javascript" src="/js/gitment.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<!--
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+-->
+
+<script>
+const gitment = new Gitment({
+    id: 'Sat Oct 12 2019 01:07:11 GMT+0800', // optional
+    owner: "dusign",
+    repo: "comments",
+    oauth: {
+      client_id: "14d5194dbf45604a7488",
+      client_secret: "b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc",
+    },
+    // ...
+    // For more available options, check out the documentation below
+  })
+  
+  gitment.render('blog_comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
+                
+                <!-- gitment end -->
+
+                <!-- disqus comment start -->
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Install"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Install</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#configure"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">configure</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#git原理"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">git原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#usage"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">usage</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#远程-Repository"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">远程 Repository</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#BUG-分支"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">BUG 分支</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#多人协作"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">多人协作</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#github" title="github">github</a>
+                        
+                          <a class="tag" href="/tags/#git" title="git">git</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Dusign&#39;s Web</a></li>
+                    
+                        <li><a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a></li>
+                    
+                        <li><a href="#" target="_blank">Other</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "your-disqus-ID";
+    var disqus_identifier = "https://dusign.net/2019/10/12/The-Usage-of-Git/";
+    var disqus_url = "https://dusign.net/2019/10/12/The-Usage-of-Git/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+
+        .comment_notes_blank {
+            height:100px;
+        }
+        
+        .comment_notes {
+            color:rgba(51,51,51,0.9);
+            text-align:left;
+            font-style:italic;
+        }
+
+        .notice {
+            color:rgba(51,51,51,0.9);
+            margin:0px;
+            padding:0px;
+        }
+
+        .visitor_notice {
+            border:1px solid rgba(209,216,220,0.9);
+            padding:20px 20px 20px 20px;
+            border-radius:10px;
+        }
+
+        .visitor_notice img{
+            height:40px;
+            width:40px;
+            float:left;
+            position:relative;
+            margin:0px 10px 0px 0px;
+            padding:0px;
+            top:0px;
+            left:0px;
+        }
+
+        .visitor_notice a {
+            text-decoration:none;
+            color:rgba(51,51,51,0.9);
+            font-weight:normal;
+            font-style:italic;
+        }
+
+        .visitor_notice a:hover {
+            text-decoration:none;
+            color:rgba(51,51,51,0.9);
+            font-weight:bolder;
+            font-style:italic;
+        }
+    }
+
+    .comment_notes_blank {
+        height:100px;
+    }
+    
+    .comment_notes {
+        color:rgba(51,51,51,0.9);
+        text-align:left;
+        font-style:italic;
+    }
+
+    .notice {
+        color:rgba(51,51,51,0.9);
+        margin:0px;
+        padding:0px;
+    }
+
+    .visitor_notice {
+        border:1px solid rgba(209,216,220,0.9);
+        padding:20px 20px 20px 20px;
+        border-radius:10px;
+    }
+
+    .visitor_notice img{
+        height:40px;
+        width:40px;
+        float:left;
+        position:relative;
+        margin:0px 10px 0px 0px;
+        padding:0px;
+        top:0px;
+        left:0px;
+    }
+
+    .visitor_notice a {
+        text-decoration:none;
+        color:rgba(51,51,51,0.9);
+        font-weight:normal;
+        font-style:italic;
+    }
+
+    .visitor_notice a:hover {
+        text-decoration:none;
+        color:rgba(51,51,51,0.9);
+        font-weight:bolder;
+        font-style:italic;
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/dusign">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Dusign 2019 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign" target="_blank" rel="noopener">
+                        <i>dusign</i>
+                    </a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=dusign.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://dusign.net/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="It&#39;s an IT blog">
+    <meta name="keyword"  content="dusign, super snail, dugang, IT blog, snail">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Django Project Development - Super Snail | An IT blog
+        
+    </title>
+
+    <link rel="canonical" href="https://dusign.net/2019/09/30/Django-Project-Development/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('django-bg.jpg')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/Just-do-it-white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#python" title="python">python</a>
+                            
+                              <a class="tag" href="/tags/#web" title="web">web</a>
+                            
+                              <a class="tag" href="/tags/#django" title="django">django</a>
+                            
+                              <a class="tag" href="/tags/#framework" title="framework">framework</a>
+                            
+                        </div>
+                        <h1>Django Project Development</h1>
+                        <h2 class="subheading">Django is a web framework developed with python. It is one of the most representative Python frameworks. Many successful websites and APPs are based on Django.</h2>
+                        <span class="meta">
+                            Posted by Dusign on
+                            2019-09-30
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Super Snail</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                    <li>
+                        <a href="https://blog.csdn.net/d_Nail" target="_blank">Chinese Blog</a>
+                    </li>
+                    <li>
+                        <a href="http://www.shmyjd.net" target="_blank">Store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>Django is an open source Web application framework written by Python. The framework model of MTV, namely model M, view V and template T, is adopted. It was originally developed to manage some news content oriented websites of the publishing group, that is, CMS (content management system) software. It was issued under BSD license in July 2005.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><ol>
+<li>Install python<br>截止目前 <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python</a> 的最新版本为 <code>python3.7.4</code> ，django 需要的 python 版本如下</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">Django版本</th>
+<th align="center">Python版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><font color=#868686 size=2>1.11</font></td>
+<td align="center"><font color=#868686 size=2>2.7,3.4,3.5,3.6,3.7</font></td>
+</tr>
+<tr>
+<td align="center"><font color=#868686 size=2>2.0</font></td>
+<td align="center"><font color=#868686 size=2>3.4,3.5,3.6,3.7</font></td>
+</tr>
+<tr>
+<td align="center"><font color=#868686 size=2>2.1, 2.2</font></td>
+<td align="center"><font color=#868686 size=2>3.5,3.6,3.7</font></td>
+</tr>
+<tr>
+<td align="center">python 安装方法比较简单，安装之后记得配置环境变量，这里就不做介绍了。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2. 安装 <code>virtualenv</code></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>Install django<br>创建并激活一个虚拟环境然后执行下面的命令或直接在系统中执行下面的命令<br><code>pip3 install Django</code><br>然后在 python3 环境中执行下面代码，如果输出 django 版本，说明 django 安装成功<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> django</span><br><span class="line">print(django.get_version())</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="Create-Project"><a href="#Create-Project" class="headerlink" title="Create Project"></a>Create Project</h2><p>运行下面命令创建项目<br><code>django-admin startproject PROJECT_NAME</code><br>创建之后的目录与作用如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PROJECT_NAME/        <span class="comment"># 根目录，项目的容器</span></span><br><span class="line">    manage.py        <span class="comment"># 管理 django 项目的命令行工具</span></span><br><span class="line">    PROJECT_NAME/    <span class="comment"># 项目目录。它是一个纯 python 包，名字是引用内部东西时需要用的 python 包名，如（PROJECT_NAME.urls）</span></span><br><span class="line">        __init__.py  <span class="comment"># 空文件。告诉 python 这个目录是一个 python 包</span></span><br><span class="line">        settings.py  <span class="comment"># django 项目的配置文件</span></span><br><span class="line">        urls.py      <span class="comment"># django 项目的 URL 声明，像网站的“目录”</span></span><br><span class="line">        wsgi.py      <span class="comment"># 作为项目运行在 wsgi 兼容的 web 服务器的入口</span></span><br></pre></td></tr></table></figure>
+<p>用于开发的简易服务器使用以下命令开启<br><code>python3 manage.py runserver</code><br><code>runserver</code> 命令会将服务器设置为监听本机内部 ip 的 8000 端口，想更换端口的话使用下面的命令<br><code>python3 manage.py runserver PORT</code></p>
+<h2 id="Create-APP"><a href="#Create-APP" class="headerlink" title="Create APP"></a>Create APP</h2><ol>
+<li>运行以下命令创建应用<br><code>python3 manage.py startapp APP_NAME</code><br>创建之后的目录如下<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">APP_NAME/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    apps.py</span><br><span class="line">    migrations/</span><br><span class="line">        __init__.py</span><br><span class="line">    models.py</span><br><span class="line">    tests.py</span><br><span class="line">    <span class="comment"># 这个文件是后期创建的，这个是 URL 映射的文件，创建完之后需要在 PROJECT_NAME/urls.py 中加入 include()</span></span><br><span class="line">    urls.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure></li>
+<li>将应用安装到项目里<br>在 <code>PROJECT_NAME/settings.py</code> 中的 <code>INSTALLED_APPS</code> 中添加 <code>APP_NAME.apps.APP_NAMEConfig</code>—<code>APP_NAMEConfig</code> 的 <code>APP_NAME</code> 首字母大写。因为 <code>APP_NAMEConfig</code> 类写在文件 <code>APP_NAME/apps.py</code> 中，所以它的点式路径是 <code>APP_NAME.apps.APP_NAMEConfig</code></li>
+</ol>
+<h2 id="View"><a href="#View" class="headerlink" title="View"></a>View</h2><p>添加视图，修改文件 <code>PROJECT_NAME/APP_NAME/views.py</code> 如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"Hello, world. This is an APP."</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">VIEW_NAME</span><span class="params">(request,PARAMETER)</span>:</span></span><br><span class="line">    response = <span class="string">"This is a simple view"</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(response % PARAMETER)</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>设置路由，修改文件 <code>APP_NAME/urls.py</code> 如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">''</span>, views.index, name=<span class="string">'index'</span>),</span><br><span class="line">    path(<span class="string">'ROUTER_NAME'</span>, views.VIEW_NAME, name=<span class="string">'VIEW_NAME'</span>)</span><br><span class="line">    <span class="comment"># 使用尖括号捕获URL 并且以参数的形式发送给视图函数</span></span><br><span class="line">    path(<span class="string">'&lt;ROUTER_NAME:PARAMETER&gt;'</span>, views.VIEW_NAME, name=<span class="string">'VIEW_NAME'</span>) </span><br><span class="line">    ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>修改 <code>PROJECT_NAME/urls.py</code> 的内容如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> include, path</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'admin/'</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">'APP_NAME/'</span>, include(<span class="string">'APP_NAME.urls'</span>)),</span><br><span class="line">    ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p><code>path()</code> 函数总共有四个参数，分别是<code>route</code>、<code>view</code>、<code>kwargs</code>、<code>name</code>，前两个是必须参数，后两个是可选参数，参数意义如下</p>
+<ul>
+<li><code>route</code> 这是一个匹配 URL 的准则，当 django 响应一个请求时，会从 urlpatterns 的第一项开始，按顺序依次匹配列表中的项，直到找到匹配的项</li>
+<li><code>view</code> 当 django 找到一个匹配的准则，会调用这个特定的视图函数，并传入一个 HttpRequest 对象作为第一个参数，被“捕获”的参数以关键字参数的形式传入</li>
+<li><code>kwargs</code> 任意个关键字参数可以作为一个字典传递给目标视图函数</li>
+<li><code>name</code> 为你的 URL 取名能使你在 django 的任意地方唯一地引用它，尤其是在模板中。这个有用的特性允许你只改一个文件就能全局地修改某个 URL 模式</li>
+</ul>
+<h3 id="Django模版系统"><a href="#Django模版系统" class="headerlink" title="Django模版系统"></a>Django模版系统</h3><p>如果页面的设计写死在视图函数的代码里的，则修改页面的样子需要编辑 Python 代码，如果使用 Django 的模板系统，只要创建一个视图，就可以将页面的设计从代码中分离出来。具体使用方法如下</p>
+<ol>
+<li>在 PROJECT_NAME 目录里创建一个 <code>templates</code> 目录，django 将会在这个目录里查找模版文件</li>
+</ol>
+<blockquote>
+<p>项目的 <code>TEMPLATES</code> 配置项描述了 Django 如何载入和渲染模板。默认的设置文件设置了 <code>DjangoTemplates</code> 后端，并将 <code>APP_DIRS</code> 设置成了 <code>True</code>。这一选项将会让 <code>DjangoTemplates</code> 在每个 <code>INSTALLED_APPS</code> 文件夹中寻找 “templates” 子目录。所以如果 <code>templates</code> 文件夹在 <code>APP_NAME</code> 目录中，就算没有修改 <code>DIRS</code> 设置，Django 也能正确找到 APP_NAME 的模板位置，但是如果目录在其它地方，就必须设置 <code>DIRS</code><br><code>TEMPLATES</code> 配置如下</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">'BACKEND'</span>: <span class="string">'django.template.backends.django.DjangoTemplates'</span>,</span><br><span class="line">        <span class="string">'DIRS'</span>: [os.path.join(BASE_DIR, <span class="string">'templates'</span>)],</span><br><span class="line">        <span class="string">'APP_DIRS'</span>: <span class="literal">True</span>,</span><br><span class="line">        <span class="string">'OPTIONS'</span>: &#123;</span><br><span class="line">            <span class="string">'context_processors'</span>: [</span><br><span class="line">                <span class="string">'django.template.context_processors.debug'</span>,</span><br><span class="line">                <span class="string">'django.template.context_processors.request'</span>,</span><br><span class="line">                <span class="string">'django.contrib.auth.context_processors.auth'</span>,</span><br><span class="line">                <span class="string">'django.contrib.messages.context_processors.messages'</span>,</span><br><span class="line">            ],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>在 <code>templates</code> 目录里创建一个 <code>APP_NAME</code> 目录，此时模版文件的路径就是 <code>APP_NAME/templates/APP_NAME/VIEW_NAME.html</code>，使用 <code>APP_NAME/VIEW_NAME.html</code> 就可以引用相应的模版了</p>
+</li>
+<li><p><code>APP_NAME/views.py</code> 文件的设置如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your views here.</span></span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"><span class="keyword">from</span> django.template <span class="keyword">import</span> loader</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> app1.models <span class="keyword">import</span> User</span><br><span class="line"><span class="keyword">from</span> app1.models <span class="keyword">import</span> Job</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    latest_user_list = User.objects.order_by(<span class="string">'name'</span>)[:<span class="number">3</span>]</span><br><span class="line">    template = loader.get_template(<span class="string">'app1/index.html'</span>)</span><br><span class="line">    context = &#123;</span><br><span class="line">        <span class="string">'latest_user_list'</span> : latest_user_list,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(template.render(context,request))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>render()</code>函数<br><code>render()</code> 作用是载入模版，填充上下文，再返回由它生成的 <code>HttpResponse</code> 对象，使用此函数重写 <code>index()</code> 视图如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"><span class="keyword">from</span> app1.models <span class="keyword">import</span> User</span><br><span class="line"><span class="keyword">from</span> app1.models <span class="keyword">import</span> Job</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    latest_user_list = User.objects.order_by(<span class="string">'name'</span>)[:<span class="number">3</span>]</span><br><span class="line">    context = &#123;</span><br><span class="line">        <span class="string">'latest_user_list'</span> : latest_user_list,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'app1/index.html'</span>, context)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>抛出404<br>如果查询指定的内容不存在，则抛出一个 <code>Http404</code> 异常</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse, Http404</span><br><span class="line"><span class="keyword">from</span> app1.models <span class="keyword">import</span> User</span><br><span class="line"><span class="keyword">from</span> app1.models <span class="keyword">import</span> Job</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request, user_name)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        user_detail = User.objects.get(name=user_name)</span><br><span class="line">    <span class="keyword">except</span> User.DoesNotExist:</span><br><span class="line">        <span class="keyword">raise</span> Http404(<span class="string">"User does not exist !"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'app1/index.html'</span>, &#123;<span class="string">'user'</span>: user_detail&#125;)</span><br></pre></td></tr></table></figure>
+<p><code>get_object_or_404()</code>实现方法如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render, get_object_or_404</span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse, Http404</span><br><span class="line"><span class="keyword">from</span> app1.models <span class="keyword">import</span> User</span><br><span class="line"><span class="keyword">from</span> app1.models <span class="keyword">import</span> Job</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request, user_name)</span>:</span></span><br><span class="line">    user_detail = get_object_or_404(User, name=user_name)</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'app1/index.html'</span>, &#123;<span class="string">'user'</span>: user_detail&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h3 id="第三方模版系统"><a href="#第三方模版系统" class="headerlink" title="第三方模版系统"></a>第三方模版系统</h3><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><ol>
+<li><p>设置时区 <code>TIME_ZONE</code><br>默认为 <code>UTC</code> 是国际标准时间“格林尼治时间”，中国的时间有 <code>Asia/Shanghai</code>、<code>Asia/Chongqing</code><br><code>USE_TZ</code> 用于控制是否使用 UTC 时间（true and false），如果设置为 false，则使用本地时间<br><code>LANGUAGE_CODE</code> 默认为 <code>en-us</code> ，设置中文为 <code>zh-Hans</code></p>
+</li>
+<li><p>编辑 <code>PROJECT_NAME/settings.py</code><br><code>PROJECT_NAME/settings.py</code> 包含了 django 项目设置的 python 模块，配置文件使用 SQLite 作为默认数据库，使用其他数据库则需要安装相应的 python 数据库绑定，具体如下</p>
+<ul>
+<li><p><code>PostgreSQL</code> 需要安装 <code>psycopg2</code> 包</p>
+</li>
+<li><p><code>MySQL</code> 需要安装 <code>DB API driver</code>,如 <code>mysqlclient</code><br><code>mysqlclient</code> 安装方法如下<br><code>pip3 install mysqlclient</code></p>
+</li>
+<li><p><code>Oracle</code> 需要 <code>cx_Oracle</code> 的副本</p>
+<p>安装完之后需要改变设置中 <code>DATABASES &#39;default&#39;</code> 项目中的一些键值</p>
+</li>
+<li><p><code>ENGINE</code> 可选值有 <code>django.db.backends.sqlites</code>，<code>django.db.backends.postgresql</code>，<code>django.db.backends.mysql</code> 或 <code>django.db.backends.oracle</code></p>
+</li>
+<li><p><code>NAME</code> 数据库的名称。如果使用 SQLite，数据库将是电脑上的一个文件，此时 <code>NAME</code> 是此文件的绝对路径，包括文件名</p>
+</li>
+<li><p>如果使用的不是 SQLite ，则必须添加一些额外设置，比如 <code>USER</code>、<code>PASSWORD</code>、<code>HOST</code>，设置如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysql'</span>,</span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'mydatabase'</span>,</span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'mydatabaseuser'</span>,</span><br><span class="line">        <span class="string">'PASSWORD'</span>: <span class="string">'mypassword'</span>,</span><br><span class="line">        <span class="string">'HOST'</span>: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">        <span class="string">'PORT'</span>: <span class="string">'5432'</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>若要使用 django 的 <code>manage.py</code> <code>migrate</code> 命令为您的模型自动创建数据库表，则需要确保 django 有权在您正在使用的数据库中创建和更改表<br>如果你打算手动创建这些表，你可以只需授予 Django <code>select</code>、<code>insert</code>、<code>update</code> 和 <code>delete</code> 权限</p>
+</blockquote>
+<ol start="3">
+<li><p><code>INSTALLED_APPS</code> 设置包括了项目中启用的所有 django 应用，默认为</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">django.contrib.admin         <span class="comment"># 管理员站点</span></span><br><span class="line">django.contrib.auth          <span class="comment"># 认证授权系统</span></span><br><span class="line">django.contrib.contenttypes  <span class="comment"># 内容类型框架</span></span><br><span class="line">django.contrib.sessions      <span class="comment"># 会话框架</span></span><br><span class="line">django.contrib.messages      <span class="comment"># 消息框架</span></span><br><span class="line">django.contrib.staticfiles   <span class="comment"># 管理静态文件的框架</span></span><br></pre></td></tr></table></figure>
+<p>这些应用被默认启用是为了给常规项目提供方便,默认开启的某些应用需要至少一个数据表，故在使用他们之前需要在数据库中创建一些表，命令如下<br><code>python3 manage.py migrate</code><br><code>migrate</code> 命令检查 <code>INSTALLED_APPS</code> 设置，为其中的每个应用创建需要的数据表</p>
+</li>
+<li><p>创建模型<br>编辑 <code>APP_NAME/models.py</code> ，如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MODEL_NAME</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    FIELD_NAME = models.TYPE(max_length=MAX_LENGTH | default = DEFAULT_VALUE)</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<p><code>TYPE</code> 中字符字段被表示为 <code>CharField</code>，日期时间字段被表示为 <code>DateTimeField</code>，<code>ForeignKey</code> 定义一个关系，将相应的对象关联到另一个对象，详细的字段类型见下表</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">类型</th>
+<th align="center">大小</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>AutoField</code></td>
+<td align="center"><font color=#868686 size=2><code>int</code> auto increment</font></td>
+<td align="center"><font color=#868686 size=2><code>int</code></font></td>
+<td align="center"><font color=#868686 size=2>一般不用，主键一般会自动创建</font></td>
+</tr>
+<tr>
+<td align="center"><code>IntegerField</code></td>
+<td align="center"><font color=#868686 size=2><code>int</code> auto increment</font></td>
+<td align="center"><font color=#868686 size=2><code>64-bit</code></font></td>
+<td align="center"><font color=#868686 size=2>一般不用，主键一般会自动创建</font></td>
+</tr>
+<tr>
+<td align="center"><code>BigIntegerField</code></td>
+<td align="center"><font color=#868686 size=2><code>long int</code></font></td>
+<td align="center"><font color=#868686 size=2><code>64-bit</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>BinaryField</code></td>
+<td align="center"><font color=#868686 size=2><code>binary</code></font></td>
+<td align="center"><font color=#868686 size=2><code>max_length</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>BooleanField</code></td>
+<td align="center"><font color=#868686 size=2><code>bool</code></font></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>CharField</code></td>
+<td align="center"><font color=#868686 size=2><code>char</code></font></td>
+<td align="center"><font color=#868686 size=2><code>max_length</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>DateField</code></td>
+<td align="center"><font color=#868686 size=2><code>date</code></font></td>
+<td align="center"><font color=#868686 size=2><code>auto_now</code> | <code>auto_now_add</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>DateTimeField</code></td>
+<td align="center"><font color=#868686 size=2>date&amp;time</font></td>
+<td align="center"><font color=#868686 size=2><code>auto_now</code> | <code>auto_now_add</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>DecimalField</code></td>
+<td align="center"><font color=#868686 size=2>固定精度的十进制</font></td>
+<td align="center"><font color=#868686 size=2><code>max_digits</code> | <code>decimal_places</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>DurationField</code></td>
+<td align="center"><font color=#868686 size=2>一段时间的字段类型</font></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>EmailField</code></td>
+<td align="center"><font color=#868686 size=2><code>email</code></font></td>
+<td align="center"><font color=#868686 size=2><code>max_length</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>FileField</code></td>
+<td align="center"><font color=#868686 size=2>文件上传类型</font></td>
+<td align="center"><font color=#868686 size=2><code>upload_to</code> | <code>max_length</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>FilePathField</code></td>
+<td align="center"><font color=#868686 size=2>文件目录类型</font></td>
+<td align="center"><font color=#868686 size=2><code>path</code> | <code>match</code> | <code>recursive</code> | <code>max_length</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>ImageField</code></td>
+<td align="center"><font color=#868686 size=2>图片类型</font></td>
+<td align="center"><font color=#868686 size=2><code>upload_to</code> | <code>height_field</code> | <code>width_field</code> | <code>max_length</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>IntegerField</code></td>
+<td align="center"><font color=#868686 size=2><code>int</code></font></td>
+<td align="center"><font color=#868686 size=2><code>-2147483648</code> - <code>2147483647</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>PositiveIntegerField</code></td>
+<td align="center"><font color=#868686 size=2><code>int</code></font></td>
+<td align="center"><font color=#868686 size=2><code>0</code> - <code>2147483647</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>PositiveSmallIntegerField</code></td>
+<td align="center"><font color=#868686 size=2><code>int</code></font></td>
+<td align="center"><font color=#868686 size=2><code>0</code> - <code>32767</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>SmallIntegerField</code></td>
+<td align="center"><font color=#868686 size=2><code>int</code></font></td>
+<td align="center"><font color=#868686 size=2><code>-32768</code> - <code>32767</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>TextField</code></td>
+<td align="center"><font color=#868686 size=2><code>char</code></font></td>
+<td align="center"><font color=#868686 size=2><code>max_length</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>TimeField</code></td>
+<td align="center"><font color=#868686 size=2><code>time</code></font></td>
+<td align="center"><font color=#868686 size=2><code>auto_now</code> | <code>auto_now_add</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>URLField</code></td>
+<td align="center"><font color=#868686 size=2><code>URL</code></font></td>
+<td align="center"><font color=#868686 size=2><code>max_length</code></font></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>ForeignKey</code></td>
+<td align="center"><font color=#868686 size=2>关联关系字段</font></td>
+<td align="center"><font color=#868686 size=2><code>to</code> | <code>on_delete</code></font></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li><p>激活模型<br><code>python3 manage.py makemigrations APP_NAME</code><br>运行 <code>makemigrations</code> 命令，django 会检测你对模型文件的修改，并且把修改的部分存储为一次迁移，迁移是 django 对于模型定义（也就是你的数据库结构）的变化的储存形式，其实也只是一些你磁盘上的文件，它被储存在 <code>APP_NAME/migrations/0001_initial.py</code> 里。<br>使用 <code>sqlmigrate</code> 可以查看模型的迁移信息，它可以接收一个迁移的名称，用法如下<br><code>python3 manage.py sqlmigrate APP_NAME 0001</code> 其中 <code>0001</code> 是一个迁移的名称<br>之后如果定义了新模型的话，可以直接运行下面的命令创建<br><code>python3 manage.py migrate</code><br><code>migrate</code> 命令选中所有还没有执行过的迁移（django 通过在数据库中创建一个特殊的表 django_migrations 来跟踪执行过哪些迁移）并应用在数据库上(也就是将你对模型的更改同步到数据库结构上)。</p>
+</li>
+<li><p>改变模型</p>
+<ol>
+<li>编辑 <code>models.py</code> 文件，改变模型</li>
+<li>运行 <code>python3 manage.py makemigrations</code> 为模型的改变生成迁移文件</li>
+<li>运行 <code>python3 manage.py migrate</code> 来应用数据库迁移</li>
+</ol>
+</li>
+</ol>
+<h2 id="Django-API"><a href="#Django-API" class="headerlink" title="Django API"></a>Django API</h2><p>使用下面命令进入交互式 Python 命令行<br><code>python3 manage.py shell</code> 这个命令中 <code>manage.py</code> 会设置 <code>DJANGO_SETTINGS_MODULE</code> 环境变量，这个变量会让 django 根据 <code>PROJECT_NAME/settings.py</code> 文件来设置 python 包的导入路径</p>
+<h3 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h3><p>数据库操作是项目必不可少的，以下介绍 django 的数据库操作的 API</p>
+<ol>
+<li>Insert <code>save()</code>、<code>create()</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 插入</span></span><br><span class="line">tmp = MODEL_NAME(FIELD_NAME=‘FIELD_VALUE’,...)</span><br><span class="line">tmp.save()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改</span></span><br><span class="line">MODEL_NAME.FIELD_NAME = <span class="string">'FIELD_VALUE'</span></span><br><span class="line">MODEL_NAME.save()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MODEL_NAME.objects.create(FIELD_NAME=<span class="string">"FIELD_VALUE"</span>,...)</span><br></pre></td></tr></table></figure></li>
+<li>Select <code>objects</code><br>从数据库检索对象要通过模型类的 <code>manager</code> 构建一个 <code>querySet</code>。<br><code>querySet</code> 代表来自数据库中对象的一个集合。它可以有 0 个，1 个或者多个 <code>filters</code>. <code>filters</code>可以根据给定参数缩小查询结果量。在 SQL 的层面上， <code>queryset</code> 对应 <code>select</code> 语句，而过滤器对应类似 <code>where</code> 或 <code>limit</code> 的限制子句。可以通过模型的 <code>manager</code> 获取 <code>querySet</code>。每个模型至少有一个 <code>manager</code>，默认名称是 <code>objects</code>。用法如下<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检索全部对象，返回值是一个 queryset，包含所有的 MODEL_NAME 对象</span></span><br><span class="line">ALL_MODEL = MODEL_NAME.objects.all()</span><br></pre></td></tr></table></figure>
+过滤器</li>
+</ol>
+<ul>
+<li>all() –&gt; 查询所有</li>
+<li>filter( **kwargs ) –&gt; 使用过滤器查询</li>
+<li>exclude( **kwargs ) –&gt; 条件查询</li>
+<li>get( **kwargs ) –&gt; 查询<blockquote>
+<p><code>**kwargs</code> 为参数，参数的形式为 <code>FIELD_NAME__LOOKUPTYPE=VALUE</code> （有个双下划线）<br>其中 <code>__LOOKUPTYPE</code> 具体有</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>__exact</code></td>
+<td align="center"><font color=#868686 size=2>精确等于</font></td>
+</tr>
+<tr>
+<td align="center"><code>__iexact</code></td>
+<td align="center"><font color=#868686 size=2>精确等于，忽略大小写</font></td>
+</tr>
+<tr>
+<td align="center"><code>__contains</code></td>
+<td align="center"><font color=#868686 size=2>包含</font></td>
+</tr>
+<tr>
+<td align="center"><code>__icontains</code></td>
+<td align="center"><font color=#868686 size=2>包含，忽略大小写</font></td>
+</tr>
+<tr>
+<td align="center"><code>__gt</code></td>
+<td align="center"><font color=#868686 size=2>大于</font></td>
+</tr>
+<tr>
+<td align="center"><code>__gte</code></td>
+<td align="center"><font color=#868686 size=2>大于等于</font></td>
+</tr>
+<tr>
+<td align="center"><code>__lt</code></td>
+<td align="center"><font color=#868686 size=2>小于</font></td>
+</tr>
+<tr>
+<td align="center"><code>__lte</code></td>
+<td align="center"><font color=#868686 size=2>小于等于</font></td>
+</tr>
+<tr>
+<td align="center"><code>__in</code></td>
+<td align="center"><font color=#868686 size=2>存在于一个list范围内</font></td>
+</tr>
+<tr>
+<td align="center"><code>__startswith</code></td>
+<td align="center"><font color=#868686 size=2>以…开头</font></td>
+</tr>
+<tr>
+<td align="center"><code>__istartswith</code></td>
+<td align="center"><font color=#868686 size=2>以…开头，忽略大小写</font></td>
+</tr>
+<tr>
+<td align="center"><code>__endswith</code></td>
+<td align="center"><font color=#868686 size=2>以…结尾</font></td>
+</tr>
+<tr>
+<td align="center"><code>__iendswith</code></td>
+<td align="center"><font color=#868686 size=2>以…结尾，忽略大小写</font></td>
+</tr>
+<tr>
+<td align="center"><code>__range</code></td>
+<td align="center"><font color=#868686 size=2>在…范围内</font></td>
+</tr>
+<tr>
+<td align="center"><code>__year</code></td>
+<td align="center"><font color=#868686 size=2>日期字段的年份</font></td>
+</tr>
+<tr>
+<td align="center"><code>__month</code></td>
+<td align="center"><font color=#868686 size=2>日期字段的月份</font></td>
+</tr>
+<tr>
+<td align="center"><code>__day</code></td>
+<td align="center"><font color=#868686 size=2>日期字段的日</font></td>
+</tr>
+<tr>
+<td align="center"><code>__isnull</code></td>
+<td align="center"><font color=#868686 size=2>True/False</font></td>
+</tr>
+</tbody></table>
+<p>在查询的过程中 <code>pk</code> 表示主键，如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询主键为 1 的数据</span></span><br><span class="line">MODEL_NAME.objects.get(pk=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>跨关系查询</p>
+</li>
+<li><p>Delete <code>delete()</code><br>删除方法被命名为 delete()。该方法立刻删除对象，并返回被删除的对象数量和一个包含了每个被删除对象类型的数量的字典,也能批量删除对象。所有 QuerySet 都有个 delete() 方法，它会删除 QuerySet 中的所有成员</p>
+</li>
+<li><p><code>update()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MODEL_NAME.objects.filter().update(FIELD_NAME=<span class="string">'NEW_FIELD_VALUE'</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="原生SQL查询"><a href="#原生SQL查询" class="headerlink" title="原生SQL查询"></a>原生SQL查询</h3><p>Django 允许你用两种方式执行原生 SQL 查询：你可以使用 <code>manager.raw()</code> 来执行原生查询并返回模型实例，或者完全不用模型层 直接执行自定义 SQL<br><code>manager.raw(raw_query,params=none,translations=none)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MODEL_NAME.objects.raw(<span class="string">'SQL statement'</span>)</span><br></pre></td></tr></table></figure>
+<p>除了上面的 <code>manager.raw()</code> 之外，如果想要功能更强大的查询，可以使用下面的方法绕过模型层，直接访问数据库<br>对象 <code>django.db.connection</code> 代表默认数据库连接。要使用这个数据库连接，调用 <code>connection.cursor()</code> 来获取一个指针对象。然后，调用 <code>cursor.execute(sql,[params])</code> 来执行该 SQL 和 <code>cursor.fetchone()</code> 或 <code>cursor.fetchaall()</code> 获取结果数据，使用方法如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> connection</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">custom_sql</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">with</span> connection.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">        cursor.execute(<span class="string">"SQL insert statement"</span>, [self.baz])</span><br><span class="line">        cursor.execute(<span class="string">"SQL select statement"</span>, [self.baz])</span><br><span class="line">        row = cursor.fetchone()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> row</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>要避免 SQL 注入，你绝对不能在 SQL 字符串中用引号包裹 <code>%s</code> 占位符，若要在查询中包含文本的百分号，你需要在传入参数使用两个百分号</p>
+</blockquote>
+<h2 id="Django-管理页面"><a href="#Django-管理页面" class="headerlink" title="Django 管理页面"></a>Django 管理页面</h2><ol>
+<li>创建管理账号<br><code>python3 manage.py createsuperuser</code><br>启动开发服务器之后通过 <code>http://127.0.0.1:8000/admin/</code> 就可以看到管理员登录界面</li>
+<li>添加被管理的应用<br>如果想要一个应用被管理，只需要将应用加入 <code>APP_NAME/admin.py</code> 文件即可，具体如下<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> MODEL_NAME</span><br><span class="line"></span><br><span class="line">admin.site.register(MODEL_NAME)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ol>
+<h2 id="配置Django运行环境"><a href="#配置Django运行环境" class="headerlink" title="配置Django运行环境"></a>配置Django运行环境</h2><p>如果要在生产站点上使用 django ，则需要搭建 Apache 或者 Nginx 服务器，具体搭建方法如下</p>
+<h3 id="Apache-amp-mod-wsgi"><a href="#Apache-amp-mod-wsgi" class="headerlink" title="Apache&amp;mod_wsgi"></a>Apache&amp;mod_wsgi</h3><ol>
+<li>Install Apache</li>
+</ol>
+<h3 id="Nginx-amp-uWSGI"><a href="#Nginx-amp-uWSGI" class="headerlink" title="Nginx&amp;uWSGI"></a>Nginx&amp;uWSGI</h3><ol>
+<li>Install Nginx</li>
+</ol>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/10/02/MySQL-Tutorial/" data-toggle="tooltip" data-placement="top" title="MySQL Tutorial">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/09/30/Vue-Project-Development/" data-toggle="tooltip" data-placement="top" title="Vue Project Development">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <div class="comment_notes_blank"></div>
+
+                <!-- tip start -->
+                
+                <div class="visitor_notice">
+                    <img 
+                        src="/img/notice.png" 
+                        alt="notice"
+                        title="notice"/>
+                    <p class="notice">
+                        欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客，博客系统一键分享的功能还在完善中，请大家耐心等待。 若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。 评论点赞需要github账号登录，如果没有账号的话请点击 <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
+                    </p>
+                </div>
+                <div class="comment_notes">
+                    <p>
+                        If you like this blog or find it useful for you, you are welcome to comment on it. 
+                        You are also welcome to share this blog, so that more people can participate in it.
+                        If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- gitment start -->
+                
+                <hr>
+                <div id="blog_comments"></div>
+
+<!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+<!--
+<link rel="stylesheet" href="/css/gitment.css">
+<script type="text/javascript" src="/js/gitment.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<!--
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+-->
+
+<script>
+const gitment = new Gitment({
+    id: 'Mon Sep 30 2019 23:28:14 GMT+0800', // optional
+    owner: "dusign",
+    repo: "comments",
+    oauth: {
+      client_id: "14d5194dbf45604a7488",
+      client_secret: "b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc",
+    },
+    // ...
+    // For more available options, check out the documentation below
+  })
+  
+  gitment.render('blog_comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
+                
+                <!-- gitment end -->
+
+                <!-- disqus comment start -->
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Install"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Install</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Create-Project"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Create Project</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Create-APP"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Create APP</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#View"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">View</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Django模版系统"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Django模版系统</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#第三方模版系统"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">第三方模版系统</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Model"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Model</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Django-API"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Django API</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Database"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">Database</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#原生SQL查询"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">原生SQL查询</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Django-管理页面"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Django 管理页面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置Django运行环境"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">配置Django运行环境</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Apache-amp-mod-wsgi"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">Apache&amp;mod_wsgi</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Nginx-amp-uWSGI"><span class="toc-nav-number">8.2.</span> <span class="toc-nav-text">Nginx&amp;uWSGI</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#python" title="python">python</a>
+                        
+                          <a class="tag" href="/tags/#web" title="web">web</a>
+                        
+                          <a class="tag" href="/tags/#django" title="django">django</a>
+                        
+                          <a class="tag" href="/tags/#framework" title="framework">framework</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Dusign&#39;s Web</a></li>
+                    
+                        <li><a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a></li>
+                    
+                        <li><a href="#" target="_blank">Other</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "your-disqus-ID";
+    var disqus_identifier = "https://dusign.net/2019/09/30/Django-Project-Development/";
+    var disqus_url = "https://dusign.net/2019/09/30/Django-Project-Development/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+
+        .comment_notes_blank {
+            height:100px;
+        }
+        
+        .comment_notes {
+            color:rgba(51,51,51,0.9);
+            text-align:left;
+            font-style:italic;
+        }
+
+        .notice {
+            color:rgba(51,51,51,0.9);
+            margin:0px;
+            padding:0px;
+        }
+
+        .visitor_notice {
+            border:1px solid rgba(209,216,220,0.9);
+            padding:20px 20px 20px 20px;
+            border-radius:10px;
+        }
+
+        .visitor_notice img{
+            height:40px;
+            width:40px;
+            float:left;
+            position:relative;
+            margin:0px 10px 0px 0px;
+            padding:0px;
+            top:0px;
+            left:0px;
+        }
+
+        .visitor_notice a {
+            text-decoration:none;
+            color:rgba(51,51,51,0.9);
+            font-weight:normal;
+            font-style:italic;
+        }
+
+        .visitor_notice a:hover {
+            text-decoration:none;
+            color:rgba(51,51,51,0.9);
+            font-weight:bolder;
+            font-style:italic;
+        }
+    }
+
+    .comment_notes_blank {
+        height:100px;
+    }
+    
+    .comment_notes {
+        color:rgba(51,51,51,0.9);
+        text-align:left;
+        font-style:italic;
+    }
+
+    .notice {
+        color:rgba(51,51,51,0.9);
+        margin:0px;
+        padding:0px;
+    }
+
+    .visitor_notice {
+        border:1px solid rgba(209,216,220,0.9);
+        padding:20px 20px 20px 20px;
+        border-radius:10px;
+    }
+
+    .visitor_notice img{
+        height:40px;
+        width:40px;
+        float:left;
+        position:relative;
+        margin:0px 10px 0px 0px;
+        padding:0px;
+        top:0px;
+        left:0px;
+    }
+
+    .visitor_notice a {
+        text-decoration:none;
+        color:rgba(51,51,51,0.9);
+        font-weight:normal;
+        font-style:italic;
+    }
+
+    .visitor_notice a:hover {
+        text-decoration:none;
+        color:rgba(51,51,51,0.9);
+        font-weight:bolder;
+        font-style:italic;
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/dusign">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Dusign 2019 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign" target="_blank" rel="noopener">
+                        <i>dusign</i>
+                    </a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=dusign.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://dusign.net/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+</body>
+
+</html>

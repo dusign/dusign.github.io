@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="It&#39;s an IT blog">
+    <meta name="keyword"  content="dusign, super snail, dugang, IT blog, snail">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Usage of Vim - Super Snail | An IT blog
+        
+    </title>
+
+    <link rel="canonical" href="https://dusign.net/2019/10/09/Vim-Commands-and-Shortcuts/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('vim-bg.jpg')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/Just-do-it-white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#editor" title="editor">editor</a>
+                            
+                              <a class="tag" href="/tags/#linux" title="linux">linux</a>
+                            
+                              <a class="tag" href="/tags/#vim" title="vim">vim</a>
+                            
+                        </div>
+                        <h1>Usage of Vim</h1>
+                        <h2 class="subheading">Vim is a well-known powerful, highly customizable text editor.</h2>
+                        <span class="meta">
+                            Posted by Dusign on
+                            2019-10-09
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Super Snail</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                    <li>
+                        <a href="https://blog.csdn.net/d_Nail" target="_blank">Chinese Blog</a>
+                    </li>
+                    <li>
+                        <a href="http://www.shmyjd.net" target="_blank">Store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>Vim is a well-known powerful and highly customizable text editor, which is loved by many developers. But the use of vim is still a bit difficult, there are many shortcuts and commands to remember. Next, I will introduce the use of vim.</p>
+<h2 id="Vim命令"><a href="#Vim命令" class="headerlink" title="Vim命令"></a>Vim命令</h2><p>Vim 有插入模式（insert）、正常模式（normal）、可视化模式（visual）以及命令行模式，四种模式之间的转换方法如下<br><img src="pattern.png" alt="pattern"></p>
+<h3 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h3><p>刚打开 vim 就是一般模式，左下角有 <code>NORMAL</code>,一般模式可以查看文件，修改文件，具体操作方法如下</p>
+<h4 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h4><p><code>h</code> 或 <code>←</code> –&gt; 光标左移一个字符<br><code>j</code> 或 <code>↓</code> –&gt; 光标下移一个字符<br><code>k</code> 或 <code>↑</code> –&gt; 光标上移一个字符<br><code>l</code> 或 <code>→</code> –&gt; 光标右移一个字符</p>
+<blockquote>
+<p>加上相应的数字之后可以移动多行，如 <code>30j</code> 是下移 30 行</p>
+</blockquote>
+<p><code>ctrl + f</code> –&gt; 屏幕下移一页<br><code>ctrl + b</code> –&gt; 屏幕上移一页<br><code>ctrl + d</code> –&gt; 屏幕下移半页<br><code>ctrl + u</code> –&gt; 屏幕上移半页</p>
+<p><code>+</code> –&gt; 光标移动到非空格符的下一行<br><code>-</code> –&gt; 光标移动到非空格符的上一行</p>
+<p><code>n + space</code> –&gt; 光标会向右移动这一行的 n 个字符</p>
+<p><code>0</code> 或 <code>home</code> –&gt; （数字 0）移动到这一行的最前面字符处<br><code>$</code> 或 <code>end</code> –&gt; 移动到这一行的最后面字符处 </p>
+<p><code>H</code> –&gt; 光标移动到这个屏幕的最上方那一行的第一个字符<br><code>M</code> –&gt; 光标移动到这个屏幕的中央那一行的第一个字符<br><code>L</code> –&gt; 光标移动到这个屏幕的最下方那一行的第一个字符<br><code>G</code> –&gt; 移动到这个档案的最后一行<br><code>nG</code> –&gt; n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)<br><code>gg</code> –&gt; 移动到这个档案的第一行<br><code>n + enter</code> –&gt; n 为数字。光标向下移动 n 行</p>
+<h4 id="搜索替换"><a href="#搜索替换" class="headerlink" title="搜索替换"></a>搜索替换</h4><p><code>/word</code> –&gt; 向下搜索字符串<br><code>?word</code> –&gt; 向上搜索字符串</p>
+<p><code>n</code> –&gt; 重复前一个动作，经常与搜索命令一起用，为重复搜索<br><code>N</code> –&gt; 反向进行前一个动作，经常与搜索命令一起用，为反向重复搜索</p>
+<p><code>:n1,n2s/word1/word2/g</code> –&gt; n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2<br><code>:1,$s/word1/word2/g</code> 或 <code>:%s/word1/word2/g</code> –&gt; 从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2<br><code>:1,$s/word1/word2/gc</code> 或 <code>:%s/word1/word2/gc</code> –&gt; 从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代</p>
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><p><code>x</code>,<code>X</code> –&gt; 在一行字当中，<code>x</code> 为向后删除一个字符 (相当于 <code>[del]</code>)， <code>X</code> 为向前删除一个字符(相当于 <code>[backspace]</code>)<br><code>nx</code> –&gt; n 为数字，连续向后删除 n 个字符<br><code>dd</code> –&gt; 删除游标所在的那一整行<br><code>ndd</code> –&gt; n 为数字。删除光标所在的向下 n 行<br><code>d1G</code> –&gt; 删除光标所在到第 1 行的所有数据<br><code>dG</code> –&gt; 删除光标所在到最后一行的所有数据<br><code>d$</code> –&gt; 删除游标所在处，到该行的最后一个字符<br><code>d0</code> –&gt; 那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符<br><code>y</code> –&gt; 复制<br><code>yy</code> –&gt; 复制游标所在的那一行<br><code>nyy</code> –&gt; n 为数字。复制光标所在的向下 n 行<br><code>y1G</code> –&gt; 复制游标所在行到第一行的所有数据<br><code>yG</code> –&gt; 复制游标所在行到最后一行的所有数据<br><code>y0</code> –&gt; 复制光标所在的那个字符到该行行首的所有数据<br><code>y$</code> –&gt; 复制光标所在的那个字符到该行行尾的所有数据<br><code>p</code>,<code>P</code> –&gt; <code>p</code> 为将已复制的数据在光标下一行贴上，<code>P</code> 则为贴在游标上一行<br><code>c</code> –&gt; 重复删除多个数据，例如向下删除 10 行为 <code>10cj</code><br><code>u</code> –&gt; 复原前一个动作，相当于word的 <code>undo</code><br><code>ctrl + r</code> –&gt; 重做上一个动作，相当于word的 <code>redo</code><br><code>.</code> –&gt; 重复前一个动作<br><code>:%d</code> –&gt; 清空文档（%表示所有行）</p>
+<h3 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h3><p><code>i</code>,<code>I</code> –&gt; 进入输入模式，<code>i</code> 从目前光标所在处输入， <code>I</code> 在目前所在行的第一个非空格符处开始输入<br><code>a</code>,<code>A</code> –&gt; 进入输入模式，<code>a</code> 从目前光标所在的下一个字符处开始输入， <code>A</code> 从光标所在行的最后一个字符处开始输入<br><code>o</code>,<code>O</code> –&gt; 进入输入模式，<code>o</code> 在目前光标所在的下一行处输入新的一行， <code>O</code> 在目前光标所在处的上一行输入新的一行<br><code>r</code>,<code>R</code> –&gt; 进入取代模式，<code>r</code> 只会取代光标所在的那一个字符一次，<code>R</code> 会一直取代光标所在的文字，直到按下 ESC 为止</p>
+<h3 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h3><p>在命令行模式中可以输入会被解释成并执行的文本</p>
+<h4 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h4><p><code>:w</code> –&gt; 保存文件<br><code>:q</code> –&gt; 退出vim<br><code>:wq</code> –&gt; 保存并退出vim<br><code>ZZ</code> –&gt; 保存后退出<br><code>ZQ</code> –&gt; 不保存退出，Q表示放弃<br><code>:w [filename]</code> –&gt; 将编辑的数据储存成另一个档案（相当于另存为）<br><code>:r [filename]</code> –&gt; 在编辑的数据中，读入另一个档案的数据。亦即将 <code>[filename]</code> 这个档案内容加到游标所在行后面<br><code>:! command</code> –&gt; 暂时离开 <code>vim</code> 到指令行模式下执行 <code>command</code> 的显示结果<br><code>:n</code> –&gt; n为数字，跳转到第 n 行<br><code>:n</code> –&gt; 打开新文件<br><code>:edit /path/to/file</code> –&gt; 在vim中打开文件<br><code>:saveas file</code> –&gt; 将文件另存为file，但不退出<br><code>:pwd</code> –&gt; 显示当前路径<br><code>:e.</code> –&gt; 打开当前目录</p>
+<blockquote>
+<p><code>!</code> 表示强制，可以和 <code>:w</code>、<code>:q</code> 等一起使用，为强制执行</p>
+</blockquote>
+<h4 id="窗口操作"><a href="#窗口操作" class="headerlink" title="窗口操作"></a>窗口操作</h4><p><code>:tabo</code> –&gt; 关闭所有窗口<br><code>:vsp</code>,<code>:sp</code> –&gt; 垂直/水平分割视窗<br><code>:diffs</code> –&gt; 分割视窗并比较档案<br><code>C-w p</code> –&gt; 跳转至前一个分割视窗<br><code>C-w w</code> –&gt; 在窗口间循环切换<br><code>C-w h</code> –&gt; 切换到左边的窗口<br><code>C-w j</code> –&gt; 切换到下边的窗口<br><code>C-w k</code> –&gt; 切换到上边的窗口<br><code>C-w l</code> –&gt; 切换到右边的窗口<br><code>C-w +</code> –&gt; 纵向扩大窗口<br><code>C-w -</code> –&gt; 纵向缩小窗口<br><code>:close</code> –&gt; 关闭当前窗口，但不能关闭最后一个</p>
+<h2 id="插件命令"><a href="#插件命令" class="headerlink" title="插件命令"></a>插件命令</h2><h3 id="NERDCommenter"><a href="#NERDCommenter" class="headerlink" title="NERDCommenter"></a>NERDCommenter</h3><p><code>&lt;leader&gt;cc</code> –&gt; 加注释<br><code>&lt;leader&gt;cu</code> –&gt; 解开注释<br><code>&lt;leader&gt;c&lt;space&gt;</code> –&gt; 加上解开注释智能判断<br><code>&lt;leader&gt;cs</code> –&gt; 以“性感”的方式注释<br><code>&lt;leader&gt;cA</code> –&gt; 行尾添加注释并进入Insert模式<br><code>n&lt;leader&gt;cc</code> –&gt; 以下n行添加注释<br><code>n&lt;leader&gt;cu</code> –&gt; 以下n行取消注释<br><code>n&lt;leader&gt;cm</code> –&gt; 为光标以下n行添加块注释</p>
+<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a>Doxygen</h3><p><code>:DoxLic</code> –&gt; 生成License<br><code>:DoxAuthor</code> –&gt; 插入文档注释，会提示输入版本号<br><code>:Dox</code> –&gt; // 插入注释<br><code>:DoxBlock</code> –&gt; // 插入一个注释块</p>
+<h3 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h3><p><code>:NERDTree</code> –&gt; 显示 NERDTree 即左边边目录栏</p>
+<h3 id="Tagbar"><a href="#Tagbar" class="headerlink" title="Tagbar"></a>Tagbar</h3><p><code>:TagBarToggle</code> –&gt; 显示 Tagbar 即右边函数栏</p>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/10/12/The-Usage-of-Git/" data-toggle="tooltip" data-placement="top" title="The Usage of Git">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/10/07/Picture-Processing-Class/" data-toggle="tooltip" data-placement="top" title="Picture Processing Class">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <div class="comment_notes_blank"></div>
+
+                <!-- tip start -->
+                
+                <div class="visitor_notice">
+                    <img 
+                        src="/img/notice.png" 
+                        alt="notice"
+                        title="notice"/>
+                    <p class="notice">
+                        欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客，博客系统一键分享的功能还在完善中，请大家耐心等待。 若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。 评论点赞需要github账号登录，如果没有账号的话请点击 <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
+                    </p>
+                </div>
+                <div class="comment_notes">
+                    <p>
+                        If you like this blog or find it useful for you, you are welcome to comment on it. 
+                        You are also welcome to share this blog, so that more people can participate in it.
+                        If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- gitment start -->
+                
+                <hr>
+                <div id="blog_comments"></div>
+
+<!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+<!--
+<link rel="stylesheet" href="/css/gitment.css">
+<script type="text/javascript" src="/js/gitment.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<!--
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+-->
+
+<script>
+const gitment = new Gitment({
+    id: 'Wed Oct 09 2019 23:08:52 GMT+0800', // optional
+    owner: "dusign",
+    repo: "comments",
+    oauth: {
+      client_id: "14d5194dbf45604a7488",
+      client_secret: "b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc",
+    },
+    // ...
+    // For more available options, check out the documentation below
+  })
+  
+  gitment.render('blog_comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
+                
+                <!-- gitment end -->
+
+                <!-- disqus comment start -->
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Vim命令"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Vim命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一般模式"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">一般模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#光标移动"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">光标移动</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#搜索替换"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">搜索替换</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#修改"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">修改</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#编辑模式"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">编辑模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#命令行模式"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">命令行模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#文件操作"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">文件操作</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#窗口操作"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">窗口操作</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插件命令"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">插件命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#NERDCommenter"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">NERDCommenter</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Doxygen"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Doxygen</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#NERDTree"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">NERDTree</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Tagbar"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Tagbar</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#editor" title="editor">editor</a>
+                        
+                          <a class="tag" href="/tags/#linux" title="linux">linux</a>
+                        
+                          <a class="tag" href="/tags/#vim" title="vim">vim</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Dusign&#39;s Web</a></li>
+                    
+                        <li><a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a></li>
+                    
+                        <li><a href="#" target="_blank">Other</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "your-disqus-ID";
+    var disqus_identifier = "https://dusign.net/2019/10/09/Vim-Commands-and-Shortcuts/";
+    var disqus_url = "https://dusign.net/2019/10/09/Vim-Commands-and-Shortcuts/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+
+        .comment_notes_blank {
+            height:100px;
+        }
+        
+        .comment_notes {
+            color:rgba(51,51,51,0.9);
+            text-align:left;
+            font-style:italic;
+        }
+
+        .notice {
+            color:rgba(51,51,51,0.9);
+            margin:0px;
+            padding:0px;
+        }
+
+        .visitor_notice {
+            border:1px solid rgba(209,216,220,0.9);
+            padding:20px 20px 20px 20px;
+            border-radius:10px;
+        }
+
+        .visitor_notice img{
+            height:40px;
+            width:40px;
+            float:left;
+            position:relative;
+            margin:0px 10px 0px 0px;
+            padding:0px;
+            top:0px;
+            left:0px;
+        }
+
+        .visitor_notice a {
+            text-decoration:none;
+            color:rgba(51,51,51,0.9);
+            font-weight:normal;
+            font-style:italic;
+        }
+
+        .visitor_notice a:hover {
+            text-decoration:none;
+            color:rgba(51,51,51,0.9);
+            font-weight:bolder;
+            font-style:italic;
+        }
+    }
+
+    .comment_notes_blank {
+        height:100px;
+    }
+    
+    .comment_notes {
+        color:rgba(51,51,51,0.9);
+        text-align:left;
+        font-style:italic;
+    }
+
+    .notice {
+        color:rgba(51,51,51,0.9);
+        margin:0px;
+        padding:0px;
+    }
+
+    .visitor_notice {
+        border:1px solid rgba(209,216,220,0.9);
+        padding:20px 20px 20px 20px;
+        border-radius:10px;
+    }
+
+    .visitor_notice img{
+        height:40px;
+        width:40px;
+        float:left;
+        position:relative;
+        margin:0px 10px 0px 0px;
+        padding:0px;
+        top:0px;
+        left:0px;
+    }
+
+    .visitor_notice a {
+        text-decoration:none;
+        color:rgba(51,51,51,0.9);
+        font-weight:normal;
+        font-style:italic;
+    }
+
+    .visitor_notice a:hover {
+        text-decoration:none;
+        color:rgba(51,51,51,0.9);
+        font-weight:bolder;
+        font-style:italic;
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/dusign">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Dusign 2019 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign" target="_blank" rel="noopener">
+                        <i>dusign</i>
+                    </a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=dusign.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://dusign.net/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+</body>
+
+</html>
