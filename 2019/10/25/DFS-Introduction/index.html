@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          EPE8 Introduction - Super Snail | An IT blog
+          DFS Introduction - Super Snail | An IT blog
         
     </title>
 
-    <link rel="canonical" href="https://dusign.net/2019/10/06/EPE8-Introduction/">
+    <link rel="canonical" href="https://dusign.net/2019/10/25/DFS-Introduction/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -70,7 +70,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('epe8-bg.jpg')
+            background-image: url('dfs-bg.jpg')
             /*post*/
         
     }
@@ -91,18 +91,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#python" title="python">python</a>
+                              <a class="tag" href="/tags/#c++" title="c++">c++</a>
                             
-                              <a class="tag" href="/tags/#epe8" title="epe8">epe8</a>
-                            
-                              <a class="tag" href="/tags/#code" title="code">code</a>
+                              <a class="tag" href="/tags/#algorithm" title="algorithm">algorithm</a>
                             
                         </div>
-                        <h1>EPE8 Introduction</h1>
-                        <h2 class="subheading">EPE8 is a style guide for python code.</h2>
+                        <h1>DFS Introduction</h1>
+                        <h2 class="subheading">Depth-first search is one of the most commonly used algorithms.</h2>
                         <span class="meta">
                             Posted by Dusign on
-                            2019-10-06
+                            2019-10-25
                         </span>
                     </div>
                 
@@ -223,86 +221,18 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>Standard code style in project development is not only baneficial for others to read, but also for later code maintenance and code refactoring. So standard code style is very import for developing large projects. Next, I will briefly introduce the python code style guide EPE8, hoping to help you.</p>
-<h3 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h3><p>使用 4 个空格进行代码缩进，绝对禁止制表符和空格的混用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Aligned with opening delimiter.</span></span><br><span class="line">foo = long_function_name(var_one, var_two,</span><br><span class="line">                         var_three, var_four)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add 4 spaces (an extra level of indentation) to distinguish arguments from the rest.</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">long_function_name</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        var_one, var_two, var_three,</span></span></span><br><span class="line"><span class="function"><span class="params">        var_four)</span>:</span></span><br><span class="line">    print(var_one)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Hanging indents should add a level.</span></span><br><span class="line">foo = long_function_name(</span><br><span class="line">    var_one, var_two,</span><br><span class="line">    var_three, var_four)</span><br></pre></td></tr></table></figure>
-
-<h3 id="字符数"><a href="#字符数" class="headerlink" title="字符数"></a>字符数</h3><p>每行最多不要超过 79 字符</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'/path/to/some/file/you/want/to/read'</span>) <span class="keyword">as</span> file_1, \</span><br><span class="line">     open(<span class="string">'/path/to/some/file/being/written'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> file_2:</span><br><span class="line">    file_2.write(file_1.read())</span><br></pre></td></tr></table></figure>
-
-<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>如果需要换行的话在二元运算符前面换行，如</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">income = (gross_wages</span><br><span class="line">    + taxable_interest</span><br><span class="line">    + (dividends - qualified_dividends)</span><br><span class="line">    - ira_deduction</span><br><span class="line">    - student_loan_interest)</span><br></pre></td></tr></table></figure>
-
-<h3 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h3><p>顶级函数和类定义之间使用2个空行，类内部各个方法之间使用1个空行。</p>
-<p>为了让有关联的函数成组，可以在各函数组之间有节制地添加空格来区分各个逻辑部分。相互关联的一组单行函数之间可以省略空格</p>
-<h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>程序编码使用 UTF-8</p>
-<h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><p>导入语句通常单独成行</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br></pre></td></tr></table></figure>
-<p>不能写成</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os, sys</span><br></pre></td></tr></table></figure>
-<p>但是像下面这样写是可以的</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> subprocess <span class="keyword">import</span> Popen, PIPE</span><br></pre></td></tr></table></figure>
-
-<p>导入语句应按照以下顺序进行分组</p>
-<ul>
-<li>标准库的导入</li>
-<li>相关第三方库的导入</li>
-<li>本地应用程序/库——特定库的导入<br>每组导入之间加一个空行，通常建议所有的导入都使用绝对路径</li>
-</ul>
-<p><code>__all__</code> , <code>__author__</code> , <code>__version__</code> 等这样的模块级“呆名“（也就是名字里有两个前缀下划线和两个后缀下划线），应该放在文档字符串的后面，以及除 <code>from __future__</code> 之外的import表达式前面</p>
-<h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><ul>
-<li>紧靠小括号、中括号或大括号内部禁止使用空格<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes: spam(ham[<span class="number">1</span>], &#123;eggs: <span class="number">2</span>&#125;)</span><br><span class="line">No:  spam( ham[ <span class="number">1</span> ], &#123; eggs: <span class="number">2</span> &#125; )</span><br></pre></td></tr></table></figure></li>
-<li>紧挨着逗号、分号或冒号之前禁止使用空格<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes: <span class="keyword">if</span> x == <span class="number">4</span>: <span class="keyword">print</span> x, y; x, y = y, x</span><br><span class="line">No:  <span class="keyword">if</span> x == <span class="number">4</span> : <span class="keyword">print</span> x , y ; x , y = y , x</span><br></pre></td></tr></table></figure></li>
-<li>紧挨着函数参数列表的左括号之前禁止使用空格<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes: spam(<span class="number">1</span>)</span><br><span class="line">No:  spam (<span class="number">1</span>)</span><br></pre></td></tr></table></figure></li>
-<li>紧挨着索引或切片操作的左括号之前禁止使用空格<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yes: dct[<span class="string">'key'</span>] = lst[index]</span><br><span class="line">No:  dct [<span class="string">'key'</span>] = lst [index]</span><br></pre></td></tr></table></figure></li>
-<li>没必要为了与另一条语句对齐而在运算符两边使用多个空格<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Yes: x = <span class="number">1</span></span><br><span class="line">     y = <span class="number">2</span></span><br><span class="line">     long_variable = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">No:  x             = <span class="number">1</span></span><br><span class="line">     y             = <span class="number">2</span></span><br><span class="line">     long_variable = <span class="number">3</span></span><br></pre></td></tr></table></figure></li>
-<li>始终在以下二元操作符两侧各放1个空格：赋值(<code>=</code>)、增量赋值(<code>+=</code>,<code>-=</code>)、比较(<code>==</code>,<code>&lt;</code>,<code>in</code>,<code>not</code>,<code>is</code>,<code>is not</code>等)、布尔(<code>and</code>,<code>or</code>,<code>not</code>)</li>
-<li>在数学运算符两侧添加空格</li>
-<li>用于指定关键字参数或默认参数值时，请勿在 <code>=</code> 两侧使用空格<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Yes: <span class="function"><span class="keyword">def</span> <span class="title">complex</span><span class="params">(real, imag=<span class="number">0.0</span>)</span>:</span></span><br><span class="line">         <span class="keyword">return</span> magic(r=real, i=imag)</span><br><span class="line"></span><br><span class="line">No:  <span class="function"><span class="keyword">def</span> <span class="title">complex</span><span class="params">(real, imag = <span class="number">0.0</span>)</span>:</span></span><br><span class="line">         <span class="keyword">return</span> magic(r = real, i = imag)</span><br></pre></td></tr></table></figure></li>
-<li>通常不鼓励在同一行放置多条语句</li>
-<li>避免在行尾使用空格</li>
-</ul>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
-<li><p>注释一定要和代码一致，更改代码之前先更改注释，这是一个好习惯。注释结束应该有一个 <code>。</code>，且首字母大写。</p>
-</li>
-<li><p>块注释通常适用于跟随它们的某些（或全部）代码，并缩进到与代码相同的级别。块注释的每一行开头使用一个#和一个空格（除非块注释内部缩进文本）。 </p>
-</li>
-<li><p>块注释内部的段落通常只有一个#的空行分隔。</p>
-</li>
-<li><p>有节制的使用行内注释，因为这会分散注意力</p>
-</li>
-</ul>
-<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><ul>
-<li><p>模块应该用简短全小写的名字，如果为了提升可读性，下划线也是可以用的。Python包名也应该使用简短全小写的名字，但不建议用下划线。</p>
-</li>
-<li><p>类名一般使用首字母大写的约定。 </p>
-</li>
-<li><p>注意，对于内置的变量命名有一个单独的约定：大部分内置变量是单个单词（或者两个单词连接在一起），首字母大写的命名法只用于异常名或者内部的常量。</p>
-</li>
-<li><p>函数名应该小写，如果想提高可读性可以用下划线分隔。 </p>
-</li>
-<li><p>始终要将 self 作为实例方法的的第一个参数，始终要将 cls 作为类静态方法的第一个参数。 </p>
-</li>
-<li><p>如果函数的参数名和已有的关键词冲突，在最后加单一下划线比缩写或随意拼写更好。因此 class_ 比 clss 更好。</p>
-</li>
-<li><p>使用下划线分隔小写单词以提高可读性，建议使用这样的函数命名规则</p>
-</li>
-<li><p>常量通常定义在模块级，通过下划线分隔的全大写字母命名。例如： MAX_OVERFLOW 和 TOTAL。</p>
-</li>
-</ul>
-
+                <p>DFS 是搜索的手段之一。它从某个状态开始，不断地转移状态直到无法转移，然后回退到前一步的状态，继续转移到其他状态，如此不断重复，直到找到最终的解为止。</p>
+<h3 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h3><p><img src="question.png" alt="question"></p>
+<h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><p>从任意的 W 开始，不停地把临接的部分用 ‘ . ’ 代替。1次 DFS 后与初始的这个 W 连接的所有 W 就都被替换成了 ‘ . ’ ，因此直到图中不再存在 W 为止，总共进行 DFS 的次数就是答案了。8个方向共对应了8种状态转移，每个格子作为 DFS 的参数至多被调用一次，所以复杂度为 &Omicron;(8 x N x M) = &Omicron;(N x M)。</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  dfs.cpp</span></span><br><span class="line"><span class="comment">//  DFS</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by gang du on 2019/10/23.</span></span><br><span class="line"><span class="comment">//  Copyright © 2019 dusign. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> N, M;</span><br><span class="line"><span class="keyword">char</span> field[<span class="number">100</span>][<span class="number">101</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    field[x][y] = <span class="string">'.'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> dx = <span class="number">-1</span>; dx &lt;= <span class="number">1</span>; dx++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> dy = <span class="number">-1</span>; dy &lt;= <span class="number">1</span>; dy++)&#123;</span><br><span class="line">            <span class="keyword">int</span> nx = x + dx;</span><br><span class="line">            <span class="keyword">int</span> ny = y + dy;</span><br><span class="line">            <span class="keyword">if</span>(<span class="number">0</span> &lt;= nx &amp;&amp; nx &lt; N &amp;&amp; <span class="number">0</span> &lt;= ny &amp;&amp; ny &lt; M &amp;&amp; field[nx][ny] == <span class="string">'w'</span>)</span><br><span class="line">                dfs(nx, ny);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(field[i][i] == <span class="string">'w'</span>)&#123;</span><br><span class="line">                dfs(i, j);</span><br><span class="line">                res ++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; res &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; M;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; j++)&#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; field[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2019/10/07/Picture-Processing-Class/" data-toggle="tooltip" data-placement="top" title="Picture Processing Class">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2019/10/02/MySQL-Tutorial/" data-toggle="tooltip" data-placement="top" title="MySQL Tutorial">Next Post &rarr;</a>
+                            <a href="/2019/10/23/HTML-Special-Characters/" data-toggle="tooltip" data-placement="top" title="HTML Special Characters">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -354,7 +284,7 @@
 
 <script>
 const gitment = new Gitment({
-    id: 'Sun Oct 06 2019 12:20:27 GMT+0800', // optional
+    id: 'Fri Oct 25 2019 00:09:51 GMT+0800', // optional
     owner: "dusign",
     repo: "comments",
     oauth: {
@@ -391,7 +321,7 @@ const gitment = new Gitment({
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#缩进"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">缩进</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#字符数"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">字符数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#换行"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">换行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#空行"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">空行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#编码"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">编码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#导入"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">导入</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#空格"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">空格</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#注释"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">注释</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#命名"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">命名</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Question"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Question</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li></ol>
         
         </div>
       </aside>
@@ -411,11 +341,9 @@ const gitment = new Gitment({
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#python" title="python">python</a>
+                          <a class="tag" href="/tags/#c++" title="c++">c++</a>
                         
-                          <a class="tag" href="/tags/#epe8" title="epe8">epe8</a>
-                        
-                          <a class="tag" href="/tags/#code" title="code">code</a>
+                          <a class="tag" href="/tags/#algorithm" title="algorithm">algorithm</a>
                         
                     </div>
                 </section>
@@ -448,8 +376,8 @@ const gitment = new Gitment({
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "https://dusign.net/2019/10/06/EPE8-Introduction/";
-    var disqus_url = "https://dusign.net/2019/10/06/EPE8-Introduction/";
+    var disqus_identifier = "https://dusign.net/2019/10/25/DFS-Introduction/";
+    var disqus_url = "https://dusign.net/2019/10/25/DFS-Introduction/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
