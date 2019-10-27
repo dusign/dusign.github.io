@@ -112,6 +112,104 @@
     </div>
 </header>
 
+<script>
+ 
+ !function(){
+  
+ function n(n,e,t){
+  
+ return n.getAttribute(e)||t
+  
+ }
+  
+ function e(n){
+  
+ return document.getElementsByTagName(n)
+  
+ }
+  
+ function t(){
+  
+ var t=e("script"),o=t.length,i=t[o-1];
+  
+ return{
+  
+ l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
+  
+ }
+  
+ }
+  
+ function o(){
+  
+ a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+  
+ c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+  
+ }
+  
+ function i(){
+  
+ r.clearRect(0,0,a,c);
+  
+ var n,e,t,o,m,l;
+  
+ s.forEach(function(i,x){
+  
+ for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+  
+ null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+  
+ l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+  
+ t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+  
+ }),
+  
+ x(i)
+  
+ }
+  
+ var a,c,u,m=document.createElement("canvas"),
+  
+ d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+  
+ x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+  
+ function(n){
+  
+ window.setTimeout(n,1e3/45)
+  
+ },
+  
+ w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.οnresize=o,
+  
+ window.οnmοusemοve=function(n){
+  
+ n=n||window.event,y.x=n.clientX,y.y=n.clientY
+  
+ },
+  
+ window.οnmοuseοut=function(){
+  
+ y.x=null,y.y=null
+  
+ };
+  
+ for(var s=[],f=0;d.n>f;f++){
+  
+ var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+  
+ }
+  
+ u=s.concat([y]),
+  
+ setTimeout(function(){i()},100)
+  
+ }();
+  
+</script>
+
 	
     <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -147,7 +245,7 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -161,7 +259,7 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -827,6 +925,84 @@ const gitment = new Gitment({
             </div>
         </div>
     </div>
+
+    <!--蒲公英-->
+
+    <div class="dandelion">
+        <span class="smalldan"></span>
+        <span class="bigdan"></span>
+    </div>
+
+    <style type="text/css">
+        @media screen and (max-width:600px){
+            .dandelion{display: none !important;}
+        }
+
+        .dandeline .smalldan{
+            width: 36px;
+            height: 60px;
+            left: 21px;
+            background-position: 0 -90px;
+            border: 0px solid red;
+        }
+
+        .dandeline span{
+            -webkit-animation: ball-x 3s linear 2s infinite;
+            -moz-animation: ball-x 3s linear 2s infinite;
+            animation: ball-x 3s linear 2s infinite;
+            -webkit-transform-origin: bottom center;
+            -moz-transform-origin: bottom center;
+            transform-origin: bottom center;
+        }
+
+        .dandelion span {
+            display: block;
+            position: fixed;
+            z-index:9999999999;
+            bottom: 0px;
+            background-image: url(https://www.seoblogs.cn/images/pgy.png);
+            background-repeat: no-repeat;
+            _background: none;
+        }
+
+        .dandelion .bigdan {
+            width: 64px;
+            height: 115px;
+            left: 47px;
+            background-position: -86px -36px;
+            border: 0px solid red;
+        }
+
+        @keyframes ball-x {
+            0% { transform:rotate(0deg);}
+            20% { transform:rotate(5deg); }
+            40% { transform:rotate(0deg);}
+            60% { transform:rotate(-5deg);}
+            80% { transform:rotate(0deg);}
+            100% { transform:rotate(0deg);}
+        }
+
+        @-webkit-keyframes ball-x {
+            0% { -webkit-transform:rotate(0deg);}
+            20% { -webkit-transform:rotate(5deg); }
+            40% { -webkit-transform:rotate(0deg);}
+            60% { -webkit-transform:rotate(-5deg);}
+            80% { -webkit-transform:rotate(0deg);}
+            100% { -webkit-transform:rotate(0deg);}
+        }
+
+        @-moz-keyframes ball-x {
+            0% { -moz-transform:rotate(0deg);}
+            20% { -moz-transform:rotate(5deg); }
+            40% { -moz-transform:rotate(0deg);}
+            60% { -moz-transform:rotate(-5deg);}
+            80% { -moz-transform:rotate(0deg);}
+            100% { -moz-transform:rotate(0deg);}
+        }
+
+    </style>
+
+
 </footer>
 
 <!-- jQuery -->
@@ -925,6 +1101,15 @@ const gitment = new Gitment({
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 
+    <script type="text/javascript" color="255,0,0" pointColor="255,0,0" opacity='0.7' zIndex="-2" count="100" src="/js/canvas-nest.js"></script>
+    <script type="text/javascript" src="/js/canvas-nest.umd.js"></script>
+    <script type="text/javascript">
+        var cn = new CanvasNest(document.getElementById('area-render'), {
+          color: '255,0,255',
+          count: 50,
+        });
+    </script>
+    
 </body>
 
 </html>

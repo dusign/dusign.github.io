@@ -102,6 +102,104 @@
     </div>
 </header>
 
+<script>
+ 
+ !function(){
+  
+ function n(n,e,t){
+  
+ return n.getAttribute(e)||t
+  
+ }
+  
+ function e(n){
+  
+ return document.getElementsByTagName(n)
+  
+ }
+  
+ function t(){
+  
+ var t=e("script"),o=t.length,i=t[o-1];
+  
+ return{
+  
+ l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
+  
+ }
+  
+ }
+  
+ function o(){
+  
+ a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+  
+ c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+  
+ }
+  
+ function i(){
+  
+ r.clearRect(0,0,a,c);
+  
+ var n,e,t,o,m,l;
+  
+ s.forEach(function(i,x){
+  
+ for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+  
+ null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+  
+ l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+  
+ t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+  
+ }),
+  
+ x(i)
+  
+ }
+  
+ var a,c,u,m=document.createElement("canvas"),
+  
+ d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+  
+ x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+  
+ function(n){
+  
+ window.setTimeout(n,1e3/45)
+  
+ },
+  
+ w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.οnresize=o,
+  
+ window.οnmοusemοve=function(n){
+  
+ n=n||window.event,y.x=n.clientX,y.y=n.clientY
+  
+ },
+  
+ window.οnmοuseοut=function(){
+  
+ y.x=null,y.y=null
+  
+ };
+  
+ for(var s=[],f=0;d.n>f;f++){
+  
+ var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+  
+ }
+  
+ u=s.concat([y]),
+  
+ setTimeout(function(){i()},100)
+  
+ }();
+  
+</script>
+
 	
     <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -137,7 +235,7 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -151,7 +249,7 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -207,17 +305,17 @@
             <!-- 标签云 -->
             <div id='tag_cloud' class="tags">
                 
-                    <a href="#sublime" title="sublime" rel="2">sublime</a>
-                
-                    <a href="#python" title="python" rel="3">python</a>
-                
                     <a href="#c++" title="c++" rel="10">c++</a>
-                
-                    <a href="#algorithm" title="algorithm" rel="9">algorithm</a>
                 
                     <a href="#windows" title="windows" rel="2">windows</a>
                 
                     <a href="#shutdown" title="shutdown" rel="1">shutdown</a>
+                
+                    <a href="#algorithm" title="algorithm" rel="9">algorithm</a>
+                
+                    <a href="#sublime" title="sublime" rel="2">sublime</a>
+                
+                    <a href="#python" title="python" rel="3">python</a>
                 
                     <a href="#html" title="html" rel="1">html</a>
                 
@@ -227,6 +325,16 @@
                 
                     <a href="#ccf-csp" title="ccf-csp" rel="8">ccf-csp</a>
                 
+                    <a href="#web" title="web" rel="4">web</a>
+                
+                    <a href="#django" title="django" rel="1">django</a>
+                
+                    <a href="#framework" title="framework" rel="2">framework</a>
+                
+                    <a href="#epe8" title="epe8" rel="1">epe8</a>
+                
+                    <a href="#code" title="code" rel="1">code</a>
+                
                     <a href="#校验码" title="校验码" rel="1">校验码</a>
                 
                     <a href="#奇偶校验" title="奇偶校验" rel="1">奇偶校验</a>
@@ -234,16 +342,6 @@
                     <a href="#海明校验码" title="海明校验码" rel="1">海明校验码</a>
                 
                     <a href="#CRC" title="CRC" rel="1">CRC</a>
-                
-                    <a href="#epe8" title="epe8" rel="1">epe8</a>
-                
-                    <a href="#code" title="code" rel="1">code</a>
-                
-                    <a href="#web" title="web" rel="4">web</a>
-                
-                    <a href="#django" title="django" rel="1">django</a>
-                
-                    <a href="#framework" title="framework" rel="2">framework</a>
                 
                     <a href="#hexo" title="hexo" rel="3">hexo</a>
                 
@@ -269,10 +367,6 @@
                 
                     <a href="#data read" title="data read" rel="1">data read</a>
                 
-                    <a href="#math" title="math" rel="1">math</a>
-                
-                    <a href="#formula" title="formula" rel="1">formula</a>
-                
                     <a href="#markdown" title="markdown" rel="1">markdown</a>
                 
                     <a href="#language" title="language" rel="1">language</a>
@@ -283,6 +377,10 @@
                 
                     <a href="#mariadb" title="mariadb" rel="1">mariadb</a>
                 
+                    <a href="#math" title="math" rel="1">math</a>
+                
+                    <a href="#formula" title="formula" rel="1">formula</a>
+                
                     <a href="#php" title="php" rel="1">php</a>
                 
                     <a href="#picture processing" title="picture processing" rel="1">picture processing</a>
@@ -291,17 +389,17 @@
                 
                     <a href="#OS" title="OS" rel="2">OS</a>
                 
+                    <a href="#vim" title="vim" rel="2">vim</a>
+                
                     <a href="#git" title="git" rel="1">git</a>
                 
-                    <a href="#vim" title="vim" rel="2">vim</a>
+                    <a href="#.vimrc" title=".vimrc" rel="1">.vimrc</a>
                 
                     <a href="#memory" title="memory" rel="1">memory</a>
                 
                     <a href="#computer" title="computer" rel="1">computer</a>
                 
                     <a href="#os" title="os" rel="1">os</a>
-                
-                    <a href="#.vimrc" title=".vimrc" rel="1">.vimrc</a>
                 
                     <a href="#vue.js" title="vue.js" rel="1">vue.js</a>
                 
@@ -319,6 +417,452 @@
 
             <!-- 标签列表 -->
 
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="c++">
+                    <span class="tag-text">c++</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/19/Shut-Down-Windows/">
+                        <h2 class="post-title">
+                            Shut Down Windows
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A software for automatic shutdown of windows system.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/25/DFS-Introduction/">
+                        <h2 class="post-title">
+                            DFS Introduction
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Depth-first search is one of the most commonly used algorithms.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/06/09/CCF-CSP-Questions-five/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (five)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the fifth question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/06/29/CCF-CSP-Questions-eight/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (eight)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the second question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/05/07/CCF-CSP-Questions-four/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (four)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the fourth question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/04/14/CCF-CSP-Questions-one-0/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (one)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the first question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/06/21/CCF-CSP-Questions-seven/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (seven)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the third question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/04/27/CCF-CSP-Questions-three/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (three)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the third question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/06/15/CCF-CSP-Questions-six/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (six)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the fourth question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/04/21/CCF-CSP-Questions-two/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (two)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the second question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="windows">
+                    <span class="tag-text">windows</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/19/Shut-Down-Windows/">
+                        <h2 class="post-title">
+                            Shut Down Windows
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A software for automatic shutdown of windows system.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/07/20/Windows-System-Installation/">
+                        <h2 class="post-title">
+                            Windows System Installation
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is a windows system installation tutorial.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="shutdown">
+                    <span class="tag-text">shutdown</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/19/Shut-Down-Windows/">
+                        <h2 class="post-title">
+                            Shut Down Windows
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A software for automatic shutdown of windows system.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="algorithm">
+                    <span class="tag-text">algorithm</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/25/DFS-Introduction/">
+                        <h2 class="post-title">
+                            DFS Introduction
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Depth-first search is one of the most commonly used algorithms.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/06/09/CCF-CSP-Questions-five/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (five)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the fifth question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/06/29/CCF-CSP-Questions-eight/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (eight)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the second question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/05/07/CCF-CSP-Questions-four/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (four)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the fourth question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/04/14/CCF-CSP-Questions-one-0/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (one)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the first question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/06/21/CCF-CSP-Questions-seven/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (seven)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the third question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/04/27/CCF-CSP-Questions-three/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (three)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the third question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/06/15/CCF-CSP-Questions-six/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (six)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the fourth question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/04/21/CCF-CSP-Questions-two/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (two)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the second question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="sublime">
@@ -394,25 +938,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/10/06/EPE8-Introduction/">
-                        <h2 class="post-title">
-                            EPE8 Introduction
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                EPE8 is a style guide for python code.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
                      <a href="/2019/09/30/Django-Project-Development/">
                         <h2 class="post-title">
                             Django Project Development
@@ -427,445 +952,18 @@
                 </div>
                 <hr>
                 
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="c++">
-                    <span class="tag-text">c++</span>
-                </span>
-                
                   <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/10/25/DFS-Introduction/">
+                     <a href="/2019/10/06/EPE8-Introduction/">
                         <h2 class="post-title">
-                            DFS Introduction
+                            EPE8 Introduction
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                Depth-first search is one of the most commonly used algorithms.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/19/Shut-Down-Windows/">
-                        <h2 class="post-title">
-                            Shut Down Windows
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A software for automatic shutdown of windows system.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/29/CCF-CSP-Questions-eight/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (eight)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the second question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/05/07/CCF-CSP-Questions-four/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (four)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the fourth question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/04/14/CCF-CSP-Questions-one-0/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (one)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the first question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/09/CCF-CSP-Questions-five/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (five)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the fifth question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/04/27/CCF-CSP-Questions-three/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (three)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the third question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/04/21/CCF-CSP-Questions-two/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (two)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the second question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/21/CCF-CSP-Questions-seven/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (seven)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the third question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/15/CCF-CSP-Questions-six/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (six)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the fourth question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="algorithm">
-                    <span class="tag-text">algorithm</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/25/DFS-Introduction/">
-                        <h2 class="post-title">
-                            DFS Introduction
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Depth-first search is one of the most commonly used algorithms.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/29/CCF-CSP-Questions-eight/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (eight)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the second question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/05/07/CCF-CSP-Questions-four/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (four)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the fourth question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/04/14/CCF-CSP-Questions-one-0/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (one)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the first question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/09/CCF-CSP-Questions-five/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (five)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the fifth question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/04/27/CCF-CSP-Questions-three/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (three)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the third question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/04/21/CCF-CSP-Questions-two/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (two)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the second question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/21/CCF-CSP-Questions-seven/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (seven)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the third question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/15/CCF-CSP-Questions-six/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (six)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the fourth question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="windows">
-                    <span class="tag-text">windows</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/19/Shut-Down-Windows/">
-                        <h2 class="post-title">
-                            Shut Down Windows
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A software for automatic shutdown of windows system.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/07/20/Windows-System-Installation/">
-                        <h2 class="post-title">
-                            Windows System Installation
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is a windows system installation tutorial.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="shutdown">
-                    <span class="tag-text">shutdown</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/19/Shut-Down-Windows/">
-                        <h2 class="post-title">
-                            Shut Down Windows
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A software for automatic shutdown of windows system.
+                                EPE8 is a style guide for python code.
                             </h3>
                         
                     </a>
@@ -963,6 +1061,25 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
+                     <a href="/2019/06/09/CCF-CSP-Questions-five/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (five)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the fifth question of CCF-CSP in December 2013.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
                      <a href="/2019/06/29/CCF-CSP-Questions-eight/">
                         <h2 class="post-title">
                             CCF-CSP Questions (eight)
@@ -1020,13 +1137,13 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/06/09/CCF-CSP-Questions-five/">
+                     <a href="/2019/06/21/CCF-CSP-Questions-seven/">
                         <h2 class="post-title">
-                            CCF-CSP Questions (five)
+                            CCF-CSP Questions (seven)
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                This is the fifth question of CCF-CSP in December 2013.
+                                This is the third question of CCF-CSP in December 2013.
                             </h3>
                         
                     </a>
@@ -1058,44 +1175,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/04/21/CCF-CSP-Questions-two/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (two)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the second question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/06/21/CCF-CSP-Questions-seven/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (seven)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the third question of CCF-CSP in December 2013.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
                      <a href="/2019/06/15/CCF-CSP-Questions-six/">
                         <h2 class="post-title">
                             CCF-CSP Questions (six)
@@ -1110,155 +1189,18 @@
                 </div>
                 <hr>
                 
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="校验码">
-                    <span class="tag-text">校验码</span>
-                </span>
-                
                   <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/09/10/Data-Check-Code/">
+                     <a href="/2019/04/21/CCF-CSP-Questions-two/">
                         <h2 class="post-title">
-                            Data Check Code
+                            CCF-CSP Questions (two)
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="奇偶校验">
-                    <span class="tag-text">奇偶校验</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/09/10/Data-Check-Code/">
-                        <h2 class="post-title">
-                            Data Check Code
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="海明校验码">
-                    <span class="tag-text">海明校验码</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/09/10/Data-Check-Code/">
-                        <h2 class="post-title">
-                            Data Check Code
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="CRC">
-                    <span class="tag-text">CRC</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/09/10/Data-Check-Code/">
-                        <h2 class="post-title">
-                            Data Check Code
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="epe8">
-                    <span class="tag-text">epe8</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/06/EPE8-Introduction/">
-                        <h2 class="post-title">
-                            EPE8 Introduction
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                EPE8 is a style guide for python code.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="code">
-                    <span class="tag-text">code</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/06/EPE8-Introduction/">
-                        <h2 class="post-title">
-                            EPE8 Introduction
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                EPE8 is a style guide for python code.
+                                This is the second question of CCF-CSP in March 2019.
                             </h3>
                         
                     </a>
@@ -1413,6 +1355,162 @@
                         
                             <h3 class="post-subtitle">
                                 Vue is a progressive JavaScript framework, which is a lightweight front-end framework, and has a large number of users in China.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="epe8">
+                    <span class="tag-text">epe8</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/06/EPE8-Introduction/">
+                        <h2 class="post-title">
+                            EPE8 Introduction
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                EPE8 is a style guide for python code.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="code">
+                    <span class="tag-text">code</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/06/EPE8-Introduction/">
+                        <h2 class="post-title">
+                            EPE8 Introduction
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                EPE8 is a style guide for python code.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="校验码">
+                    <span class="tag-text">校验码</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/09/10/Data-Check-Code/">
+                        <h2 class="post-title">
+                            Data Check Code
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="奇偶校验">
+                    <span class="tag-text">奇偶校验</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/09/10/Data-Check-Code/">
+                        <h2 class="post-title">
+                            Data Check Code
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="海明校验码">
+                    <span class="tag-text">海明校验码</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/09/10/Data-Check-Code/">
+                        <h2 class="post-title">
+                            Data Check Code
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="CRC">
+                    <span class="tag-text">CRC</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/09/10/Data-Check-Code/">
+                        <h2 class="post-title">
+                            Data Check Code
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
                             </h3>
                         
                     </a>
@@ -1925,58 +2023,6 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="math">
-                    <span class="tag-text">math</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/14/Mathjax-Tutorial/">
-                        <h2 class="post-title">
-                            Mathjax Tutorial
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A JavaScript display engine for mathematics that works in all browsers.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="formula">
-                    <span class="tag-text">formula</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/14/Mathjax-Tutorial/">
-                        <h2 class="post-title">
-                            Mathjax Tutorial
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A JavaScript display engine for mathematics that works in all browsers.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="markdown">
                     <span class="tag-text">markdown</span>
                 </span>
@@ -2097,6 +2143,58 @@
                         
                             <h3 class="post-subtitle">
                                 MySQL is one of the most widely used databases. It adopts a dual authorization policy and is divided into a community version and a commercial version. Due to its small size, high speed and low cost, it is widely used by small and medium-sized websites.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="math">
+                    <span class="tag-text">math</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/14/Mathjax-Tutorial/">
+                        <h2 class="post-title">
+                            Mathjax Tutorial
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A JavaScript display engine for mathematics that works in all browsers.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="formula">
+                    <span class="tag-text">formula</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/14/Mathjax-Tutorial/">
+                        <h2 class="post-title">
+                            Mathjax Tutorial
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A JavaScript display engine for mathematics that works in all browsers.
                             </h3>
                         
                     </a>
@@ -2249,6 +2347,51 @@
             </div>
             
             <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="vim">
+                    <span class="tag-text">vim</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/09/Vim-Commands-and-Shortcuts/">
+                        <h2 class="post-title">
+                            Usage of Vim
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Vim is a well-known powerful, highly customizable text editor.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/03/17/Vim-configuration/">
+                        <h2 class="post-title">
+                            Vim configuration
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This  is a vim configuration.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="git">
                     <span class="tag-text">git</span>
                 </span>
@@ -2275,28 +2418,9 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="vim">
-                    <span class="tag-text">vim</span>
+                <span class="fa fa-tag listing-seperator" id=".vimrc">
+                    <span class="tag-text">.vimrc</span>
                 </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/09/Vim-Commands-and-Shortcuts/">
-                        <h2 class="post-title">
-                            Usage of Vim
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Vim is a well-known powerful, highly customizable text editor.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
                 
                   <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -2388,32 +2512,6 @@
                         
                             <h3 class="post-subtitle">
                                 Memory management is one of the main functions of the operation system.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id=".vimrc">
-                    <span class="tag-text">.vimrc</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/03/17/Vim-configuration/">
-                        <h2 class="post-title">
-                            Vim configuration
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This  is a vim configuration.
                             </h3>
                         
                     </a>
@@ -2659,6 +2757,84 @@
             </div>
         </div>
     </div>
+
+    <!--蒲公英-->
+
+    <div class="dandelion">
+        <span class="smalldan"></span>
+        <span class="bigdan"></span>
+    </div>
+
+    <style type="text/css">
+        @media screen and (max-width:600px){
+            .dandelion{display: none !important;}
+        }
+
+        .dandeline .smalldan{
+            width: 36px;
+            height: 60px;
+            left: 21px;
+            background-position: 0 -90px;
+            border: 0px solid red;
+        }
+
+        .dandeline span{
+            -webkit-animation: ball-x 3s linear 2s infinite;
+            -moz-animation: ball-x 3s linear 2s infinite;
+            animation: ball-x 3s linear 2s infinite;
+            -webkit-transform-origin: bottom center;
+            -moz-transform-origin: bottom center;
+            transform-origin: bottom center;
+        }
+
+        .dandelion span {
+            display: block;
+            position: fixed;
+            z-index:9999999999;
+            bottom: 0px;
+            background-image: url(https://www.seoblogs.cn/images/pgy.png);
+            background-repeat: no-repeat;
+            _background: none;
+        }
+
+        .dandelion .bigdan {
+            width: 64px;
+            height: 115px;
+            left: 47px;
+            background-position: -86px -36px;
+            border: 0px solid red;
+        }
+
+        @keyframes ball-x {
+            0% { transform:rotate(0deg);}
+            20% { transform:rotate(5deg); }
+            40% { transform:rotate(0deg);}
+            60% { transform:rotate(-5deg);}
+            80% { transform:rotate(0deg);}
+            100% { transform:rotate(0deg);}
+        }
+
+        @-webkit-keyframes ball-x {
+            0% { -webkit-transform:rotate(0deg);}
+            20% { -webkit-transform:rotate(5deg); }
+            40% { -webkit-transform:rotate(0deg);}
+            60% { -webkit-transform:rotate(-5deg);}
+            80% { -webkit-transform:rotate(0deg);}
+            100% { -webkit-transform:rotate(0deg);}
+        }
+
+        @-moz-keyframes ball-x {
+            0% { -moz-transform:rotate(0deg);}
+            20% { -moz-transform:rotate(5deg); }
+            40% { -moz-transform:rotate(0deg);}
+            60% { -moz-transform:rotate(-5deg);}
+            80% { -moz-transform:rotate(0deg);}
+            100% { -moz-transform:rotate(0deg);}
+        }
+
+    </style>
+
+
 </footer>
 
 <!-- jQuery -->
@@ -2757,6 +2933,15 @@
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 
+    <script type="text/javascript" color="255,0,0" pointColor="255,0,0" opacity='0.7' zIndex="-2" count="100" src="/js/canvas-nest.js"></script>
+    <script type="text/javascript" src="/js/canvas-nest.umd.js"></script>
+    <script type="text/javascript">
+        var cn = new CanvasNest(document.getElementById('area-render'), {
+          color: '255,0,255',
+          count: 50,
+        });
+    </script>
+    
 </body>
 
 </html>
