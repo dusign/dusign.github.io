@@ -25,7 +25,7 @@
 			//opacity
 			c: get_attribute(script, "color", "0,133,161"),
 			//color
-			n: get_attribute(script, "count", 99) //count
+			n: get_attribute(script, "count", 260) //count
 		};
 	}
 	//设置canvas的高宽
