@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="It&#39;s an IT blog">
+    <meta name="keyword"  content="dusign, super snail, dugang, IT blog, snail">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Hexo-Theme-Snail - Super Snail | An IT blog
+        
+    </title>
+
+    <link rel="canonical" href="https://dusign.net/2019/11/01/Hexo-Theme-Snail/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    
+      <link rel="stylesheet" href="/css/beantech.min.css">
+      <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    
+      <link rel="stylesheet" href="/css/toc.css">
+    
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <!--<link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    
+      <link rel="stylesheet" href="/css/font-awesome.css">
+    
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    
+        <!-- background effects start -->
+        
+        <!-- background effects end -->
+    
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('snail-bg.jpg')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/Just-do-it-white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#dusign" title="dusign">dusign</a>
+                            
+                              <a class="tag" href="/tags/#hexo-theme-snail" title="hexo-theme-snail">hexo-theme-snail</a>
+                            
+                              <a class="tag" href="/tags/#snail" title="snail">snail</a>
+                            
+                              <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
+                            
+                        </div>
+                        <h1>Hexo-Theme-Snail</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Dusign on
+                            2019-11-01
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Super Snail</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                    <li>
+                        <a href="https://blog.csdn.net/d_Nail" target="_blank">Chinese Blog</a>
+                    </li>
+                    <li>
+                        <a href="http://www.shmyjd.net" target="_blank">Store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="hexo-theme-snail"><a href="#hexo-theme-snail" class="headerlink" title="hexo-theme-snail"></a>hexo-theme-snail</h1><p><a href="https://www.dusign.net" target="_blank" rel="noopener">View Live Super Snail Blog →</a></p>
+<p>Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.</p>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
+<li>light color theme and star theme</li>
+<li>diversified comment system</li>
+<li>notice tips</li>
+<li>share to other platforms (under development)</li>
+<li>picture sharing (under development)</li>
+</ul>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h4 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h4 id="Setup-your-blog"><a href="#Setup-your-blog" class="headerlink" title="Setup your blog"></a>Setup your blog</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+<h4 id="Installation-Theme"><a href="#Installation-Theme" class="headerlink" title="Installation Theme"></a>Installation Theme</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ rm -rf <span class="built_in">source</span></span><br><span class="line">$ rm _config.yml package.json README.md LICENSE</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/dusign/hexo-theme-snail.git</span><br><span class="line">$ mv ./hexo-theme-snail/snail ./themes</span><br><span class="line">$ mv ./hexo-theme-snail/* ./</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<h4 id="Set-Theme"><a href="#Set-Theme" class="headerlink" title="Set Theme"></a>Set Theme</h4><p>Modify the value of <code>theme:</code> in <code>_config.yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">snail</span></span><br></pre></td></tr></table></figure>
+<h4 id="Start-the-Server"><a href="#Start-the-Server" class="headerlink" title="Start the Server"></a>Start the Server</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><h4 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h4><p>Replace the following information with your own.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> </span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">At</span> <span class="string">the</span> <span class="string">bottom</span> <span class="string">of</span> <span class="string">the</span> <span class="string">well,</span> <span class="string">it</span> <span class="string">is</span> <span class="string">destined</span> <span class="string">to</span> <span class="string">see</span> <span class="string">only</span> <span class="string">the</span> <span class="string">sky</span> <span class="string">at</span> <span class="string">the</span> <span class="string">wellhead.</span> </span><br><span class="line">          <span class="string">However,</span> <span class="string">the</span> <span class="string">starting</span> <span class="string">point</span> <span class="string">only</span> <span class="string">affects</span> <span class="string">the</span> <span class="string">process</span> <span class="string">of</span> <span class="string">reaching</span> <span class="string">your</span> <span class="string">peak</span> <span class="string">and</span> <span class="string">does</span> <span class="string">not</span> <span class="string">determine</span> <span class="string">the</span> <span class="string">height</span> <span class="string">you</span> <span class="string">reach.</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Dusign</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">en</span></span><br><span class="line"><span class="attr">timezone:</span></span><br></pre></td></tr></table></figure>
+<h4 id="Site-Settings"><a href="#Site-Settings" class="headerlink" title="Site Settings"></a>Site Settings</h4><p>Put customized pictures in <code>img</code> directory.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site settings</span></span><br><span class="line"><span class="attr">SEOTitle:</span> <span class="string">Hexo-theme-snail</span></span><br><span class="line"><span class="attr">email:</span> <span class="string">hexo-theme-snail@mail.com</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">"A hexo theme"</span></span><br><span class="line"><span class="attr">keyword:</span> <span class="string">"dusign, hexo-theme-snail"</span></span><br><span class="line"><span class="attr">header-img:</span> <span class="string">img/header_img/home-bg-1-dark.jpg</span></span><br><span class="line"><span class="attr">signature:</span> <span class="literal">true</span> <span class="comment">#show signature</span></span><br><span class="line"><span class="attr">signature-img:</span> <span class="string">img/signature/Just-do-it-white.png</span></span><br></pre></td></tr></table></figure>
+<h4 id="SNS-Settings"><a href="#SNS-Settings" class="headerlink" title="SNS Settings"></a>SNS Settings</h4><p>If you don’t want to display it, you can delete it directly.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># SNS settings</span></span><br><span class="line"><span class="attr">github_username:</span>    <span class="string">dusign</span></span><br><span class="line"><span class="attr">twitter_username:</span>   <span class="string">dusignr</span></span><br><span class="line"><span class="attr">facebook_username:</span>  <span class="string">Gang</span> <span class="string">Du</span></span><br><span class="line"><span class="attr">zhihu_username:</span> <span class="string">dusignr</span></span><br></pre></td></tr></table></figure>
+<h4 id="Sidebar-Settings"><a href="#Sidebar-Settings" class="headerlink" title="Sidebar Settings"></a>Sidebar Settings</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Settings</span></span><br><span class="line"><span class="attr">sidebar:</span> <span class="literal">true</span>                      <span class="comment"># whether or not using Sidebar.</span></span><br><span class="line"><span class="attr">sidebar-about-description:</span> <span class="string">"Welcome to visit, I'm Dusign!"</span></span><br><span class="line"><span class="attr">sidebar-avatar:</span> <span class="string">img/ironman-draw.png</span>      <span class="comment"># use absolute URL, seeing it's used in both `/` and `/about/`</span></span><br><span class="line"><span class="attr">widgets:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">featured-tags</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">short-about</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">recent-posts</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">friends-blog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">archive</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">category</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># widget behavior</span></span><br><span class="line"><span class="comment">## Archive</span></span><br><span class="line"><span class="attr">archive_type:</span> <span class="string">'monthly'</span></span><br><span class="line"><span class="attr">show_count:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## Featured Tags</span></span><br><span class="line"><span class="attr">featured-tags:</span> <span class="literal">true</span>                     <span class="comment"># whether or not using Feature-Tags</span></span><br><span class="line"><span class="attr">featured-condition-size:</span> <span class="number">1</span>              <span class="comment"># A tag will be featured if the size of it is more than this condition value</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## Friends</span></span><br><span class="line"><span class="attr">friends:</span> <span class="string">[</span></span><br><span class="line">    <span class="string">&#123;</span></span><br><span class="line"><span class="attr">        title:</span> <span class="string">"Dusign's Blog"</span><span class="string">,</span></span><br><span class="line"><span class="attr">        href:</span> <span class="string">"https://blog.csdn.net/d_Nail"</span></span><br><span class="line">    <span class="string">&#125;,&#123;</span></span><br><span class="line"><span class="attr">        title:</span> <span class="string">"Dusign's Web"</span><span class="string">,</span></span><br><span class="line"><span class="attr">        href:</span> <span class="string">"#"</span></span><br><span class="line">    <span class="string">&#125;,&#123;</span></span><br><span class="line"><span class="attr">        title:</span> <span class="string">"Dusign's Github"</span><span class="string">,</span></span><br><span class="line"><span class="attr">        href:</span> <span class="string">"https://github.com/dusign"</span></span><br><span class="line">    <span class="string">&#125;,&#123;</span></span><br><span class="line"><span class="attr">        title:</span> <span class="string">"Other"</span><span class="string">,</span></span><br><span class="line"><span class="attr">        href:</span> <span class="string">"#"</span></span><br><span class="line">    <span class="string">&#125;</span></span><br><span class="line"><span class="string">]</span></span><br></pre></td></tr></table></figure>
+<h4 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">snail</span></span><br></pre></td></tr></table></figure>
+<h4 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span></span><br><span class="line"><span class="attr">      github:</span> <span class="string">github.repository.address</span></span><br><span class="line"><span class="attr">      coding:</span> <span class="string">coding.repository.address</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h4 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h4><p>See httpymls://github.com/imsun/gitment for detailed configuration method.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Comment</span></span><br><span class="line"><span class="comment">## This comment system is gitment</span></span><br><span class="line"><span class="comment">## gitment url: https://github.com/imsun/gitment</span></span><br><span class="line"><span class="attr">comment:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  owner:</span></span><br><span class="line"><span class="attr">  repo:</span></span><br><span class="line"><span class="attr">  client_id:</span></span><br><span class="line"><span class="attr">  client_secret:</span></span><br></pre></td></tr></table></figure>
+<h4 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Tip</span></span><br><span class="line"><span class="attr">tip:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  content:</span> <span class="string">欢迎访问</span> <span class="string">&lt;a</span> <span class="string">href="https://www.dusign.net"</span> <span class="string">target="dusign"&gt;dusign&lt;/a&gt;</span> <span class="string">的博客，博客系统一键分享的功能还在完善中，请大家耐心等待。</span></span><br><span class="line">          <span class="string">若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。</span></span><br><span class="line">          <span class="string">评论点赞需要github账号登录，如果没有账号的话请点击</span> </span><br><span class="line">          <span class="string">&lt;a</span> <span class="string">href="https://github.com"</span> <span class="string">target="view_window"</span> <span class="string">&gt; github &lt;/a&gt; 注册， 谢谢 !</span></span><br></pre></td></tr></table></figure>
+<h4 id="Color-Sheme"><a href="#Color-Sheme" class="headerlink" title="Color Sheme"></a>Color Sheme</h4><p>Set the <code>enable</code> value of the desired color sheme to <code>true</code>. If the value of <code>bg_effects.star.enable</code> is <code>true</code>, please modify the value of <code>highlight_theme</code> in <code>./themes/snail/_config.yml</code> to <code>night</code>.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Color Sheme</span></span><br><span class="line"><span class="comment">## If there is no effect after modification, please empty the cache and try again.</span></span><br><span class="line"><span class="comment">## ⚠️ The following special effects will take up a lot of cpu resorces, please open it carefully.</span></span><br><span class="line"><span class="attr">bg_effects:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  line:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    color:</span> <span class="number">129</span><span class="string">,200,61</span></span><br><span class="line"><span class="attr">    pointColor:</span> <span class="number">129</span><span class="string">,200,61</span></span><br><span class="line"><span class="attr">    opacity:</span> <span class="number">0.7</span></span><br><span class="line"><span class="attr">    zIndex:</span> <span class="bullet">-9</span></span><br><span class="line"><span class="attr">    count:</span> <span class="number">99</span></span><br><span class="line"><span class="attr">  mouse_click:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    content:</span> <span class="string">'"🌱","just do it","🌾","🍀","don'</span><span class="string">'t give up","🍂","🌻","try it again","🍃","never say die","🌵","🌿","🌴"'</span></span><br><span class="line"><span class="attr">    color:</span> <span class="string">'"rgb(121,93,179)"</span></span><br><span class="line"><span class="string">          ,"rgb(76,180,231)"</span></span><br><span class="line"><span class="string">          ,"rgb(184,90,154)"</span></span><br><span class="line"><span class="string">          ,"rgb(157,211,250)"</span></span><br><span class="line"><span class="string">          ,"rgb(255,0,0)"</span></span><br><span class="line"><span class="string">          ,"rgb(242,153,29)"</span></span><br><span class="line"><span class="string">          ,"rgb(23,204,16)"</span></span><br><span class="line"><span class="string">          ,"rgb(222,0,0)"</span></span><br><span class="line"><span class="string">          ,"rgb(22,36,92)"</span></span><br><span class="line"><span class="string">          ,"rgb(127,24,116)"</span></span><br><span class="line"><span class="string">          ,"rgb(119,195,79)"</span></span><br><span class="line"><span class="string">          ,"rgb(4,77,34)"</span></span><br><span class="line"><span class="string">          ,"rgb(122,2,60)"'</span></span><br><span class="line"><span class="attr">  star:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Releases"><a href="#Releases" class="headerlink" title="Releases"></a>Releases</h2><p>V1.0</p>
+<ul>
+<li>fix the bugs</li>
+<li>add comment system</li>
+<li>add notice tips</li>
+<li>add star sheme</li>
+</ul>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>Apache License 2.0 Copyright(c) 2018-2020 <a href="https://github.com/dusign" target="_blank" rel="noopener">Dusign</a>   </p>
+<p><a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">hexo-theme-snail</a> is derived from <a href="https://github.com/Huxpro/huxpro.github.io" target="_blank" rel="noopener">Huxpro</a> Apache License 2.0. Copyright (c) 2015-2020 Huxpro</p>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/10/31/BFS-Introduction/" data-toggle="tooltip" data-placement="top" title="BFS Introduction">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <div class="comment_notes_blank"></div>
+
+                <!-- tip start -->
+                
+                <div class="visitor_notice">
+                    <img 
+                        src="/img/notice.png" 
+                        alt="notice"
+                        title="notice"/>
+                    <p class="notice">
+                        欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客，博客系统一键分享的功能还在完善中，请大家耐心等待。 若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。 评论点赞需要github账号登录，如果没有账号的话请点击 <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
+                    </p>
+                </div>
+                <div class="comment_notes">
+                    <p>
+                        If you like this blog or find it useful for you, you are welcome to comment on it. 
+                        You are also welcome to share this blog, so that more people can participate in it.
+                        If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- gitment start -->
+                
+                <hr>
+                <div id="blog_comments"></div>
+
+<!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+<!--
+<link rel="stylesheet" href="/css/gitment.css">
+<script type="text/javascript" src="/js/gitment.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<!--
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+-->
+
+<script>
+const gitment = new Gitment({
+    id: 'Fri Nov 01 2019 22:02:12 GMT+0800', // optional
+    owner: "dusign",
+    repo: "comments",
+    oauth: {
+      client_id: "14d5194dbf45604a7488",
+      client_secret: "b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc",
+    },
+    // ...
+    // For more available options, check out the documentation below
+  })
+  
+  gitment.render('blog_comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
+                
+                <!-- gitment end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#hexo-theme-snail"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">hexo-theme-snail</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Features"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Features</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Quick-Start"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Install-Hexo"><span class="toc-nav-number">1.2.0.1.</span> <span class="toc-nav-text">Install Hexo</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Setup-your-blog"><span class="toc-nav-number">1.2.0.2.</span> <span class="toc-nav-text">Setup your blog</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Installation-Theme"><span class="toc-nav-number">1.2.0.3.</span> <span class="toc-nav-text">Installation Theme</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Set-Theme"><span class="toc-nav-number">1.2.0.4.</span> <span class="toc-nav-text">Set Theme</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Start-the-Server"><span class="toc-nav-number">1.2.0.5.</span> <span class="toc-nav-text">Start the Server</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Configuration"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Configuration</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Site"><span class="toc-nav-number">1.3.0.1.</span> <span class="toc-nav-text">Site</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Site-Settings"><span class="toc-nav-number">1.3.0.2.</span> <span class="toc-nav-text">Site Settings</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#SNS-Settings"><span class="toc-nav-number">1.3.0.3.</span> <span class="toc-nav-text">SNS Settings</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Sidebar-Settings"><span class="toc-nav-number">1.3.0.4.</span> <span class="toc-nav-text">Sidebar Settings</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Theme"><span class="toc-nav-number">1.3.0.5.</span> <span class="toc-nav-text">Theme</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Deployment"><span class="toc-nav-number">1.3.0.6.</span> <span class="toc-nav-text">Deployment</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Comment"><span class="toc-nav-number">1.3.0.7.</span> <span class="toc-nav-text">Comment</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Tip"><span class="toc-nav-number">1.3.0.8.</span> <span class="toc-nav-text">Tip</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Color-Sheme"><span class="toc-nav-number">1.3.0.9.</span> <span class="toc-nav-text">Color Sheme</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Releases"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Releases</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#License"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">License</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#dusign" title="dusign">dusign</a>
+                        
+                          <a class="tag" href="/tags/#hexo-theme-snail" title="hexo-theme-snail">hexo-theme-snail</a>
+                        
+                          <a class="tag" href="/tags/#snail" title="snail">snail</a>
+                        
+                          <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Dusign&#39;s Web</a></li>
+                    
+                        <li><a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a></li>
+                    
+                        <li><a href="#" target="_blank">Other</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+
+
+    <style  type="text/css">
+        .notice {
+            color:rgba(51,51,51,0.9);
+            margin:0px;
+            padding:0px;
+        }
+
+        .visitor_notice a {
+            text-decoration:none;
+            color:rgba(51,51,51,0.9);
+            font-weight:normal;
+            font-style:italic;
+        }
+
+        .visitor_notice a:hover {
+            text-decoration:none;
+            color:rgba(51,51,51,0.9);
+            font-weight:bolder;
+            font-style:italic;
+        }
+    </style>
+
+
+<style  type="text/css">
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+
+        .comment_notes_blank {
+            height:100px;
+        }
+        
+        .comment_notes {
+            color:rgba(51,51,51,0.9);
+            text-align:left;
+            font-style:italic;
+        }
+
+        .visitor_notice {
+            border:1px solid rgba(209,216,220,0.9);
+            padding:20px 20px 20px 20px;
+            border-radius:10px;
+        }
+
+        .visitor_notice img{
+            height:40px;
+            width:40px;
+            float:left;
+            position:relative;
+            margin:0px 10px 0px 0px;
+            padding:0px;
+            top:0px;
+            left:0px;
+        }
+    }
+
+    .comment_notes_blank {
+        height:100px;
+    }
+    
+    .comment_notes {
+        color:rgba(51,51,51,0.9);
+        text-align:left;
+        font-style:italic;
+    }
+
+    .visitor_notice {
+        border:1px solid rgba(209,216,220,0.9);
+        padding:20px 20px 20px 20px;
+        border-radius:10px;
+    }
+
+    .visitor_notice img{
+        height:40px;
+        width:40px;
+        float:left;
+        position:relative;
+        margin:0px 10px 0px 0px;
+        padding:0px;
+        top:0px;
+        left:0px;
+    }
+
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/dusign">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Dusign 2019 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign" target="_blank" rel="noopener">
+                        <i>dusign</i>
+                    </a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=dusign.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://dusign.net/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects start -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+</body>
+
+</html>

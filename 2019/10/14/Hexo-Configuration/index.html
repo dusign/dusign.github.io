@@ -46,7 +46,10 @@
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    
+      <link rel="stylesheet" href="/css/font-awesome.css">
+    
 
 
     <!-- Hux Delete, sad but pending in China
@@ -245,7 +248,7 @@
 <p>如果你安装了 hexo-math 包，卸载再安装 hexo-renderer-mathjax 包<br><code>npm uninstall hexo-math --save</code></p>
 <p>安装 mathjax<br><code>npm install hexo-renderer-mathjax --save</code></p>
 <p>更新 mathjax 的 CDN 链接，打开 <code>node_modules/hexo-renderer-mathjax/mathjax.html</code>, 修改 <code>&lt;scripts&gt;</code> 标签</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h2><p>Valine 诞生于2017年8月7日，是一款基于LeanCloud的快速、简洁且高效的无后端评论系统。理论上支持但不限于静态博客，目前已有Hexo、Jekyll、Typecho、Hugo、Ghost 等博客程序在使用Valine。</p>
 <p>valine 基于 LeanCloud，使用的话需要通过支付宝实名认证，还要上传 面部照片，需要的信息太多，所以笔者没有注册，故 valine 的使用方法这里就不多介绍了，需要使用的话点击 <a href="https://valine.js.org" target="_blank" rel="noopener">valine</a> 访问 valine 官网按照文档使用。</p>
@@ -256,10 +259,10 @@
 <p>配置需要评论的页面，博客页面为 <code>post.ejs</code>, 需要评论的地方加<br><code>&lt;%- partial(&#39;_partial/comment&#39;) %&gt;</code></p>
 <p>连接服务器上的 js 和 css 不太安全，有时候如果别人的服务器出错会导致你的页面出错，所以最好的办法是将 css 和 js 文件下载下来，本地引入，以 mac 系统为例，使用 wget 下载<br><code>wget https://imsun.github.io/gitment/style/default.css</code><br><code>wget https://imsun.github.io/gitment/dist/gitment.browser.js</code><br>下载之后放在 <code>Blog/themes/source/css</code> 和 <code>Blog/themes/source/js</code> 文件夹中，并改名为<code>gitment.css</code> 和 <code>gitment.js</code></p>
 <p>改名避免和本地文件冲突，本地引入代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/gitment.css&quot;&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/gitment.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/css/gitment.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/gitment.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>登录报错 [object XMLHttpRequestProgressEvent], 改用如下引入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css&quot;/&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <p>然后就可以正确使用了</p>
 
                 
@@ -347,10 +350,6 @@ const gitment = new Gitment({
 
                 <!-- disqus comment start -->
                 
-                    <div class="comment">
-                        <div id="disqus_thread" class="disqus-thread"></div>
-                    </div>
-                
                 <!-- disqus comment end -->
             </div>
             
@@ -415,21 +414,6 @@ const gitment = new Gitment({
 </article>
 
 
-<!-- disqus embedded js code start (one page only need to embed once) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "https://dusign.net/2019/10/14/Hexo-Configuration/";
-    var disqus_url = "https://dusign.net/2019/10/14/Hexo-Configuration/";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus embedded js code start end -->
-
 
 
 <!-- async load function -->
@@ -476,7 +460,7 @@ const gitment = new Gitment({
             font-weight:bolder;
             font-style:italic;
         }
-    </style>>
+    </style>
 
 
 <style  type="text/css">
@@ -726,7 +710,7 @@ const gitment = new Gitment({
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;❤&#34;,&#34;just do it&#34;,&#34;♪&#34;,&#34;☀&#34;,&#34;don&#39;t give up&#34;,&#34;☁&#34;,&#34;☘&#34;,&#34;try it again&#34;,&#34;♫&#34;,&#34;never say die&#34;,&#34;☕&#34;,&#34;♬&#34;,&#34;★&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
         
 
         <!-- background effects end -->
