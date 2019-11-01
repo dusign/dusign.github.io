@@ -329,7 +329,7 @@ pre code {
     font-size: 20px;
   }
   .navbar-custom .navbar-brand {
-    color: black;
+    color: white;
     padding: 20px;
     line-height: 20px;
   }
@@ -367,21 +367,21 @@ pre code {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -61px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid #f2f2f2;
+    background-color: rgba(10,10,10, 0.8);
+    border-bottom: 1px solid #2d2d2d;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
   }
   .navbar-custom.is-fixed .navbar-brand {
-    color: #404040;
+    color: rgb(240,240,240);
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
     color: rgba(255,255,255,1);
   }
   .navbar-custom.is-fixed .nav li a {
-    color: #404040;
+    color: rgb(240,240,240);
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
@@ -506,7 +506,7 @@ pre code {
   }
 }
 .post-preview > a {
-  color: #404040;
+  color: rgb(200,200,200);
 }
 .post-preview > a:hover,
 .post-preview > a:focus {
