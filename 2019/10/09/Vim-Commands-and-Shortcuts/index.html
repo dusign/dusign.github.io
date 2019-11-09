@@ -183,13 +183,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -198,6 +191,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -260,30 +260,30 @@
                 <p>Vim is a well-known powerful and highly customizable text editor, which is loved by many developers. But the use of vim is still a bit difficult, there are many shortcuts and commands to remember. Next, I will introduce the use of vim.</p>
 <h2 id="Vim命令"><a href="#Vim命令" class="headerlink" title="Vim命令"></a>Vim命令</h2><p>Vim 有插入模式（insert）、正常模式（normal）、可视化模式（visual）以及命令行模式，四种模式之间的转换方法如下<br><img src="pattern.png" alt="pattern"></p>
 <h3 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h3><p>刚打开 vim 就是一般模式，左下角有 <code>NORMAL</code>,一般模式可以查看文件，修改文件，具体操作方法如下</p>
-<h4 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h4><p><code>h</code> 或 <code>←</code> –&gt; 光标左移一个字符<br><code>j</code> 或 <code>↓</code> –&gt; 光标下移一个字符<br><code>k</code> 或 <code>↑</code> –&gt; 光标上移一个字符<br><code>l</code> 或 <code>→</code> –&gt; 光标右移一个字符</p>
+<h4 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h4><p><code>h</code> 或 <code>←</code> —&gt; 光标左移一个字符<br><code>j</code> 或 <code>↓</code> —&gt; 光标下移一个字符<br><code>k</code> 或 <code>↑</code> —&gt; 光标上移一个字符<br><code>l</code> 或 <code>→</code> —&gt; 光标右移一个字符</p>
 <blockquote>
 <p>加上相应的数字之后可以移动多行，如 <code>30j</code> 是下移 30 行</p>
 </blockquote>
-<p><code>ctrl + f</code> –&gt; 屏幕下移一页<br><code>ctrl + b</code> –&gt; 屏幕上移一页<br><code>ctrl + d</code> –&gt; 屏幕下移半页<br><code>ctrl + u</code> –&gt; 屏幕上移半页</p>
-<p><code>+</code> –&gt; 光标移动到非空格符的下一行<br><code>-</code> –&gt; 光标移动到非空格符的上一行</p>
-<p><code>n + space</code> –&gt; 光标会向右移动这一行的 n 个字符</p>
-<p><code>0</code> 或 <code>home</code> –&gt; （数字 0）移动到这一行的最前面字符处<br><code>$</code> 或 <code>end</code> –&gt; 移动到这一行的最后面字符处 </p>
-<p><code>H</code> –&gt; 光标移动到这个屏幕的最上方那一行的第一个字符<br><code>M</code> –&gt; 光标移动到这个屏幕的中央那一行的第一个字符<br><code>L</code> –&gt; 光标移动到这个屏幕的最下方那一行的第一个字符<br><code>G</code> –&gt; 移动到这个档案的最后一行<br><code>nG</code> –&gt; n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)<br><code>gg</code> –&gt; 移动到这个档案的第一行<br><code>n + enter</code> –&gt; n 为数字。光标向下移动 n 行</p>
-<h4 id="搜索替换"><a href="#搜索替换" class="headerlink" title="搜索替换"></a>搜索替换</h4><p><code>/word</code> –&gt; 向下搜索字符串<br><code>?word</code> –&gt; 向上搜索字符串</p>
-<p><code>n</code> –&gt; 重复前一个动作，经常与搜索命令一起用，为重复搜索<br><code>N</code> –&gt; 反向进行前一个动作，经常与搜索命令一起用，为反向重复搜索</p>
-<p><code>:n1,n2s/word1/word2/g</code> –&gt; n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2<br><code>:1,$s/word1/word2/g</code> 或 <code>:%s/word1/word2/g</code> –&gt; 从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2<br><code>:1,$s/word1/word2/gc</code> 或 <code>:%s/word1/word2/gc</code> –&gt; 从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代</p>
-<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><p><code>x</code>,<code>X</code> –&gt; 在一行字当中，<code>x</code> 为向后删除一个字符 (相当于 <code>[del]</code>)， <code>X</code> 为向前删除一个字符(相当于 <code>[backspace]</code>)<br><code>nx</code> –&gt; n 为数字，连续向后删除 n 个字符<br><code>dd</code> –&gt; 删除游标所在的那一整行<br><code>ndd</code> –&gt; n 为数字。删除光标所在的向下 n 行<br><code>d1G</code> –&gt; 删除光标所在到第 1 行的所有数据<br><code>dG</code> –&gt; 删除光标所在到最后一行的所有数据<br><code>d$</code> –&gt; 删除游标所在处，到该行的最后一个字符<br><code>d0</code> –&gt; 那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符<br><code>y</code> –&gt; 复制<br><code>yy</code> –&gt; 复制游标所在的那一行<br><code>nyy</code> –&gt; n 为数字。复制光标所在的向下 n 行<br><code>y1G</code> –&gt; 复制游标所在行到第一行的所有数据<br><code>yG</code> –&gt; 复制游标所在行到最后一行的所有数据<br><code>y0</code> –&gt; 复制光标所在的那个字符到该行行首的所有数据<br><code>y$</code> –&gt; 复制光标所在的那个字符到该行行尾的所有数据<br><code>p</code>,<code>P</code> –&gt; <code>p</code> 为将已复制的数据在光标下一行贴上，<code>P</code> 则为贴在游标上一行<br><code>c</code> –&gt; 重复删除多个数据，例如向下删除 10 行为 <code>10cj</code><br><code>u</code> –&gt; 复原前一个动作，相当于word的 <code>undo</code><br><code>ctrl + r</code> –&gt; 重做上一个动作，相当于word的 <code>redo</code><br><code>.</code> –&gt; 重复前一个动作<br><code>:%d</code> –&gt; 清空文档（%表示所有行）</p>
-<h3 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h3><p><code>i</code>,<code>I</code> –&gt; 进入输入模式，<code>i</code> 从目前光标所在处输入， <code>I</code> 在目前所在行的第一个非空格符处开始输入<br><code>a</code>,<code>A</code> –&gt; 进入输入模式，<code>a</code> 从目前光标所在的下一个字符处开始输入， <code>A</code> 从光标所在行的最后一个字符处开始输入<br><code>o</code>,<code>O</code> –&gt; 进入输入模式，<code>o</code> 在目前光标所在的下一行处输入新的一行， <code>O</code> 在目前光标所在处的上一行输入新的一行<br><code>r</code>,<code>R</code> –&gt; 进入取代模式，<code>r</code> 只会取代光标所在的那一个字符一次，<code>R</code> 会一直取代光标所在的文字，直到按下 ESC 为止</p>
+<p><code>ctrl + f</code> —&gt; 屏幕下移一页<br><code>ctrl + b</code> —&gt; 屏幕上移一页<br><code>ctrl + d</code> —&gt; 屏幕下移半页<br><code>ctrl + u</code> —&gt; 屏幕上移半页</p>
+<p><code>+</code> —&gt; 光标移动到非空格符的下一行<br><code>-</code> —&gt; 光标移动到非空格符的上一行</p>
+<p><code>n + space</code> —&gt; 光标会向右移动这一行的 n 个字符</p>
+<p><code>0</code> 或 <code>home</code> —&gt; （数字 0）移动到这一行的最前面字符处<br><code>$</code> 或 <code>end</code> —&gt; 移动到这一行的最后面字符处 </p>
+<p><code>H</code> —&gt; 光标移动到这个屏幕的最上方那一行的第一个字符<br><code>M</code> —&gt; 光标移动到这个屏幕的中央那一行的第一个字符<br><code>L</code> —&gt; 光标移动到这个屏幕的最下方那一行的第一个字符<br><code>G</code> —&gt; 移动到这个档案的最后一行<br><code>nG</code> —&gt; n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)<br><code>gg</code> —&gt; 移动到这个档案的第一行<br><code>n + enter</code> —&gt; n 为数字。光标向下移动 n 行</p>
+<h4 id="搜索替换"><a href="#搜索替换" class="headerlink" title="搜索替换"></a>搜索替换</h4><p><code>/word</code> —&gt; 向下搜索字符串<br><code>?word</code> —&gt; 向上搜索字符串</p>
+<p><code>n</code> —&gt; 重复前一个动作，经常与搜索命令一起用，为重复搜索<br><code>N</code> —&gt; 反向进行前一个动作，经常与搜索命令一起用，为反向重复搜索</p>
+<p><code>:n1,n2s/word1/word2/g</code> —&gt; n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2<br><code>:1,$s/word1/word2/g</code> 或 <code>:%s/word1/word2/g</code> —&gt; 从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2<br><code>:1,$s/word1/word2/gc</code> 或 <code>:%s/word1/word2/gc</code> —&gt; 从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代</p>
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><p><code>x</code>,<code>X</code> —&gt; 在一行字当中，<code>x</code> 为向后删除一个字符 (相当于 <code>[del]</code>)， <code>X</code> 为向前删除一个字符(相当于 <code>[backspace]</code>)<br><code>nx</code> —&gt; n 为数字，连续向后删除 n 个字符<br><code>dd</code> —&gt; 删除游标所在的那一整行<br><code>ndd</code> —&gt; n 为数字。删除光标所在的向下 n 行<br><code>d1G</code> —&gt; 删除光标所在到第 1 行的所有数据<br><code>dG</code> —&gt; 删除光标所在到最后一行的所有数据<br><code>d$</code> —&gt; 删除游标所在处，到该行的最后一个字符<br><code>d0</code> —&gt; 那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符<br><code>y</code> —&gt; 复制<br><code>yy</code> —&gt; 复制游标所在的那一行<br><code>nyy</code> —&gt; n 为数字。复制光标所在的向下 n 行<br><code>y1G</code> —&gt; 复制游标所在行到第一行的所有数据<br><code>yG</code> —&gt; 复制游标所在行到最后一行的所有数据<br><code>y0</code> —&gt; 复制光标所在的那个字符到该行行首的所有数据<br><code>y$</code> —&gt; 复制光标所在的那个字符到该行行尾的所有数据<br><code>p</code>,<code>P</code> —&gt; <code>p</code> 为将已复制的数据在光标下一行贴上，<code>P</code> 则为贴在游标上一行<br><code>c</code> —&gt; 重复删除多个数据，例如向下删除 10 行为 <code>10cj</code><br><code>u</code> —&gt; 复原前一个动作，相当于word的 <code>undo</code><br><code>ctrl + r</code> —&gt; 重做上一个动作，相当于word的 <code>redo</code><br><code>.</code> —&gt; 重复前一个动作<br><code>:%d</code> —&gt; 清空文档（%表示所有行）</p>
+<h3 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h3><p><code>i</code>,<code>I</code> —&gt; 进入输入模式，<code>i</code> 从目前光标所在处输入， <code>I</code> 在目前所在行的第一个非空格符处开始输入<br><code>a</code>,<code>A</code> —&gt; 进入输入模式，<code>a</code> 从目前光标所在的下一个字符处开始输入， <code>A</code> 从光标所在行的最后一个字符处开始输入<br><code>o</code>,<code>O</code> —&gt; 进入输入模式，<code>o</code> 在目前光标所在的下一行处输入新的一行， <code>O</code> 在目前光标所在处的上一行输入新的一行<br><code>r</code>,<code>R</code> —&gt; 进入取代模式，<code>r</code> 只会取代光标所在的那一个字符一次，<code>R</code> 会一直取代光标所在的文字，直到按下 ESC 为止</p>
 <h3 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h3><p>在命令行模式中可以输入会被解释成并执行的文本</p>
-<h4 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h4><p><code>:w</code> –&gt; 保存文件<br><code>:q</code> –&gt; 退出vim<br><code>:wq</code> –&gt; 保存并退出vim<br><code>ZZ</code> –&gt; 保存后退出<br><code>ZQ</code> –&gt; 不保存退出，Q表示放弃<br><code>:w [filename]</code> –&gt; 将编辑的数据储存成另一个档案（相当于另存为）<br><code>:r [filename]</code> –&gt; 在编辑的数据中，读入另一个档案的数据。亦即将 <code>[filename]</code> 这个档案内容加到游标所在行后面<br><code>:! command</code> –&gt; 暂时离开 <code>vim</code> 到指令行模式下执行 <code>command</code> 的显示结果<br><code>:n</code> –&gt; n为数字，跳转到第 n 行<br><code>:n</code> –&gt; 打开新文件<br><code>:edit /path/to/file</code> –&gt; 在vim中打开文件<br><code>:saveas file</code> –&gt; 将文件另存为file，但不退出<br><code>:pwd</code> –&gt; 显示当前路径<br><code>:e.</code> –&gt; 打开当前目录</p>
+<h4 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h4><p><code>:w</code> —&gt; 保存文件<br><code>:q</code> —&gt; 退出vim<br><code>:wq</code> —&gt; 保存并退出vim<br><code>ZZ</code> —&gt; 保存后退出<br><code>ZQ</code> —&gt; 不保存退出，Q表示放弃<br><code>:w [filename]</code> —&gt; 将编辑的数据储存成另一个档案（相当于另存为）<br><code>:r [filename]</code> —&gt; 在编辑的数据中，读入另一个档案的数据。亦即将 <code>[filename]</code> 这个档案内容加到游标所在行后面<br><code>:! command</code> —&gt; 暂时离开 <code>vim</code> 到指令行模式下执行 <code>command</code> 的显示结果<br><code>:n</code> —&gt; n为数字，跳转到第 n 行<br><code>:n</code> —&gt; 打开新文件<br><code>:edit /path/to/file</code> —&gt; 在vim中打开文件<br><code>:saveas file</code> —&gt; 将文件另存为file，但不退出<br><code>:pwd</code> —&gt; 显示当前路径<br><code>:e.</code> —&gt; 打开当前目录</p>
 <blockquote>
 <p><code>!</code> 表示强制，可以和 <code>:w</code>、<code>:q</code> 等一起使用，为强制执行</p>
 </blockquote>
-<h4 id="窗口操作"><a href="#窗口操作" class="headerlink" title="窗口操作"></a>窗口操作</h4><p><code>:tabo</code> –&gt; 关闭所有窗口<br><code>:vsp</code>,<code>:sp</code> –&gt; 垂直/水平分割视窗<br><code>:diffs</code> –&gt; 分割视窗并比较档案<br><code>C-w p</code> –&gt; 跳转至前一个分割视窗<br><code>C-w w</code> –&gt; 在窗口间循环切换<br><code>C-w h</code> –&gt; 切换到左边的窗口<br><code>C-w j</code> –&gt; 切换到下边的窗口<br><code>C-w k</code> –&gt; 切换到上边的窗口<br><code>C-w l</code> –&gt; 切换到右边的窗口<br><code>C-w +</code> –&gt; 纵向扩大窗口<br><code>C-w -</code> –&gt; 纵向缩小窗口<br><code>:close</code> –&gt; 关闭当前窗口，但不能关闭最后一个</p>
-<h2 id="插件命令"><a href="#插件命令" class="headerlink" title="插件命令"></a>插件命令</h2><h3 id="NERDCommenter"><a href="#NERDCommenter" class="headerlink" title="NERDCommenter"></a>NERDCommenter</h3><p><code>&lt;leader&gt;cc</code> –&gt; 加注释<br><code>&lt;leader&gt;cu</code> –&gt; 解开注释<br><code>&lt;leader&gt;c&lt;space&gt;</code> –&gt; 加上解开注释智能判断<br><code>&lt;leader&gt;cs</code> –&gt; 以“性感”的方式注释<br><code>&lt;leader&gt;cA</code> –&gt; 行尾添加注释并进入Insert模式<br><code>n&lt;leader&gt;cc</code> –&gt; 以下n行添加注释<br><code>n&lt;leader&gt;cu</code> –&gt; 以下n行取消注释<br><code>n&lt;leader&gt;cm</code> –&gt; 为光标以下n行添加块注释</p>
-<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a>Doxygen</h3><p><code>:DoxLic</code> –&gt; 生成License<br><code>:DoxAuthor</code> –&gt; 插入文档注释，会提示输入版本号<br><code>:Dox</code> –&gt; // 插入注释<br><code>:DoxBlock</code> –&gt; // 插入一个注释块</p>
-<h3 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h3><p><code>:NERDTree</code> –&gt; 显示 NERDTree 即左边边目录栏</p>
-<h3 id="Tagbar"><a href="#Tagbar" class="headerlink" title="Tagbar"></a>Tagbar</h3><p><code>:TagBarToggle</code> –&gt; 显示 Tagbar 即右边函数栏</p>
+<h4 id="窗口操作"><a href="#窗口操作" class="headerlink" title="窗口操作"></a>窗口操作</h4><p><code>:tabo</code> —&gt; 关闭所有窗口<br><code>:vsp</code>,<code>:sp</code> —&gt; 垂直/水平分割视窗<br><code>:diffs</code> —&gt; 分割视窗并比较档案<br><code>C-w p</code> —&gt; 跳转至前一个分割视窗<br><code>C-w w</code> —&gt; 在窗口间循环切换<br><code>C-w h</code> —&gt; 切换到左边的窗口<br><code>C-w j</code> —&gt; 切换到下边的窗口<br><code>C-w k</code> —&gt; 切换到上边的窗口<br><code>C-w l</code> —&gt; 切换到右边的窗口<br><code>C-w +</code> —&gt; 纵向扩大窗口<br><code>C-w -</code> —&gt; 纵向缩小窗口<br><code>:close</code> —&gt; 关闭当前窗口，但不能关闭最后一个</p>
+<h2 id="插件命令"><a href="#插件命令" class="headerlink" title="插件命令"></a>插件命令</h2><h3 id="NERDCommenter"><a href="#NERDCommenter" class="headerlink" title="NERDCommenter"></a>NERDCommenter</h3><p><code>&lt;leader&gt;cc</code> —&gt; 加注释<br><code>&lt;leader&gt;cu</code> —&gt; 解开注释<br><code>&lt;leader&gt;c&lt;space&gt;</code> —&gt; 加上解开注释智能判断<br><code>&lt;leader&gt;cs</code> —&gt; 以“性感”的方式注释<br><code>&lt;leader&gt;cA</code> —&gt; 行尾添加注释并进入Insert模式<br><code>n&lt;leader&gt;cc</code> —&gt; 以下n行添加注释<br><code>n&lt;leader&gt;cu</code> —&gt; 以下n行取消注释<br><code>n&lt;leader&gt;cm</code> —&gt; 为光标以下n行添加块注释</p>
+<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a>Doxygen</h3><p><code>:DoxLic</code> —&gt; 生成License<br><code>:DoxAuthor</code> —&gt; 插入文档注释，会提示输入版本号<br><code>:Dox</code> —&gt; // 插入注释<br><code>:DoxBlock</code> —&gt; // 插入一个注释块</p>
+<h3 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h3><p><code>:NERDTree</code> —&gt; 显示 NERDTree 即左边边目录栏</p>
+<h3 id="Tagbar"><a href="#Tagbar" class="headerlink" title="Tagbar"></a>Tagbar</h3><p><code>:TagBarToggle</code> —&gt; 显示 Tagbar 即右边函数栏</p>
 
                 
                 <hr>
@@ -638,6 +638,9 @@ const gitment = new Gitment({
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!-- Search -->
+<script src="/js/search.js"></script>
+
 <!-- async load function -->
 <script>
     function async(u, c) {
@@ -732,11 +735,28 @@ const gitment = new Gitment({
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
         
 
         <!-- background effects end -->
     
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

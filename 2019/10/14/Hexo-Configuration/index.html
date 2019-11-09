@@ -183,13 +183,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -198,6 +191,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -266,23 +266,15 @@
 <p>安装 kramed<br><code>npm install hexo-renderer-kramed --save</code></p>
 <p>如果你安装了 hexo-math 包，卸载再安装 hexo-renderer-mathjax 包<br><code>npm uninstall hexo-math --save</code></p>
 <p>安装 mathjax<br><code>npm install hexo-renderer-mathjax --save</code></p>
-<p>更新 mathjax 的 CDN 链接，打开 <code>node_modules/hexo-renderer-mathjax/mathjax.html</code>, 修改 <code>&lt;scripts&gt;</code> 标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<p>更新 mathjax 的 CDN 链接，打开 <code>node_modules/hexo-renderer-mathjax/mathjax.html</code>, 修改 <code>&lt;scripts&gt;</code> 标签<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h2><p>Valine 诞生于2017年8月7日，是一款基于LeanCloud的快速、简洁且高效的无后端评论系统。理论上支持但不限于静态博客，目前已有Hexo、Jekyll、Typecho、Hugo、Ghost 等博客程序在使用Valine。</p>
 <p>valine 基于 LeanCloud，使用的话需要通过支付宝实名认证，还要上传 面部照片，需要的信息太多，所以笔者没有注册，故 valine 的使用方法这里就不多介绍了，需要使用的话点击 <a href="https://valine.js.org" target="_blank" rel="noopener">valine</a> 访问 valine 官网按照文档使用。</p>
 <h2 id="Gitment"><a href="#Gitment" class="headerlink" title="Gitment"></a>Gitment</h2><p>访问 <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">New OAuth App</a> 注册新的 OAuth 应用程序<br>获得 <code>Client ID</code> 和 <code>Client Secret</code></p>
-<p>修改主题模版</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"blog_comments"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span></span><br><span class="line"><span class="actionscript">    id: <span class="string">'&lt;%= page.date %&gt;'</span>, <span class="comment">// optional</span></span></span><br><span class="line"><span class="actionscript">    owner: <span class="string">'dusign'</span>,</span></span><br><span class="line"><span class="actionscript">    repo: <span class="string">'comments'</span>,</span></span><br><span class="line">    oauth: &#123;</span><br><span class="line"><span class="actionscript">      client_id: <span class="string">'14d5194dbf45604a7488'</span>,</span></span><br><span class="line"><span class="actionscript">      client_secret: <span class="string">'b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc'</span>,</span></span><br><span class="line">    &#125;,</span><br><span class="line"><span class="actionscript">    <span class="comment">// ...</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// For more available options, check out the documentation below</span></span></span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line"><span class="actionscript">  gitment.render(<span class="string">'blog_comments'</span>)</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// or</span></span></span><br><span class="line"><span class="actionscript">  <span class="comment">// gitment.render(document.getElementById('comments'))</span></span></span><br><span class="line"><span class="actionscript">  <span class="comment">// or</span></span></span><br><span class="line"><span class="actionscript">  <span class="comment">// document.body.appendChild(gitment.render())</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<p>修改主题模版<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"blog_comments"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span></span><br><span class="line"><span class="actionscript">    id: <span class="string">'&lt;%= page.date %&gt;'</span>, <span class="comment">// optional</span></span></span><br><span class="line"><span class="actionscript">    owner: <span class="string">'dusign'</span>,</span></span><br><span class="line"><span class="actionscript">    repo: <span class="string">'comments'</span>,</span></span><br><span class="line">    oauth: &#123;</span><br><span class="line"><span class="actionscript">      client_id: <span class="string">'14d5194dbf45604a7488'</span>,</span></span><br><span class="line"><span class="actionscript">      client_secret: <span class="string">'b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc'</span>,</span></span><br><span class="line">    &#125;,</span><br><span class="line"><span class="actionscript">    <span class="comment">// ...</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// For more available options, check out the documentation below</span></span></span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line"><span class="actionscript">  gitment.render(<span class="string">'blog_comments'</span>)</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// or</span></span></span><br><span class="line"><span class="actionscript">  <span class="comment">// gitment.render(document.getElementById('comments'))</span></span></span><br><span class="line"><span class="actionscript">  <span class="comment">// or</span></span></span><br><span class="line"><span class="actionscript">  <span class="comment">// document.body.appendChild(gitment.render())</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>配置需要评论的页面，博客页面为 <code>post.ejs</code>, 需要评论的地方加<br><code>&lt;%- partial(&#39;_partial/comment&#39;) %&gt;</code></p>
 <p>连接服务器上的 js 和 css 不太安全，有时候如果别人的服务器出错会导致你的页面出错，所以最好的办法是将 css 和 js 文件下载下来，本地引入，以 mac 系统为例，使用 wget 下载<br><code>wget https://imsun.github.io/gitment/style/default.css</code><br><code>wget https://imsun.github.io/gitment/dist/gitment.browser.js</code><br>下载之后放在 <code>Blog/themes/source/css</code> 和 <code>Blog/themes/source/js</code> 文件夹中，并改名为<code>gitment.css</code> 和 <code>gitment.js</code></p>
-<p>改名避免和本地文件冲突，本地引入代码如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/css/gitment.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/gitment.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>登录报错 [object XMLHttpRequestProgressEvent], 改用如下引入</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p>然后就可以正确使用了</p>
+<p>改名避免和本地文件冲突，本地引入代码如下<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/css/gitment.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/gitment.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>登录报错 [object XMLHttpRequestProgressEvent], 改用如下引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"</span>/&gt;</span></span><br></pre></td></tr></table></figure><br>然后就可以正确使用了</p>
 
                 
                 <hr>
@@ -637,6 +629,9 @@ const gitment = new Gitment({
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!-- Search -->
+<script src="/js/search.js"></script>
+
 <!-- async load function -->
 <script>
     function async(u, c) {
@@ -731,11 +726,28 @@ const gitment = new Gitment({
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
         
 
         <!-- background effects end -->
     
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

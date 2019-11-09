@@ -181,13 +181,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -196,6 +189,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -258,12 +258,8 @@
                 <p>Sublime text3是一款跨平台的非常好用的编辑器，插件多，界面酷，属于轻量级的编辑器。经过配置，可以作为Python的编译器使用，下面是我的配置方法，以Windows为例。</p>
 <h2 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h2><p>直接去Python官网下载安装，安装比较简单，这里不再赘述<br><img src="python.png" alt="python"></p>
 <h2 id="配置Sublime"><a href="#配置Sublime" class="headerlink" title="配置Sublime"></a>配置Sublime</h2><p>点击Tools -&gt; Build System -&gt; New Build System…</p>
-<p>复制下面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;cmd&quot;: [&quot;D:\Python36\python.exe&quot;,&quot;-u&quot;,&quot;$file&quot;],</span><br><span class="line">&quot;file_regex&quot;: &quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;,</span><br><span class="line">&quot;selector&quot;: &quot;source.python&quot;,</span><br><span class="line">&quot;encoding&quot;: &quot;cp936&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>“D:\Python36\python.exe” 是你的python安装路径，然后保存为 Python.sublime-build</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>再编辑器里新建Python文件，输入下面代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">array = [1,2,5,3,6,8,4]</span><br><span class="line">for i in range(len(array)-1,0,-1):</span><br><span class="line">    for j in range(0,i):</span><br><span class="line">        if array[j]&gt;array[j+1]:</span><br><span class="line">            array[j],array[j+1] = array[j+1],array[j]</span><br><span class="line">print (array)</span><br></pre></td></tr></table></figure>
-<p>然后按 Ctrl+b 会出现如下图所示的运行结果，说明配置成功<br><img src="result.png" alt="result"></p>
+<p>复制下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;cmd&quot;: [&quot;D:\Python36\python.exe&quot;,&quot;-u&quot;,&quot;$file&quot;],</span><br><span class="line">&quot;file_regex&quot;: &quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;,</span><br><span class="line">&quot;selector&quot;: &quot;source.python&quot;,</span><br><span class="line">&quot;encoding&quot;: &quot;cp936&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>“D:\Python36\python.exe” 是你的python安装路径，然后保存为 Python.sublime-build</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>再编辑器里新建Python文件，输入下面代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">array = [1,2,5,3,6,8,4]</span><br><span class="line">for i in range(len(array)-1,0,-1):</span><br><span class="line">    for j in range(0,i):</span><br><span class="line">        if array[j]&gt;array[j+1]:</span><br><span class="line">            array[j],array[j+1] = array[j+1],array[j]</span><br><span class="line">print (array)</span><br></pre></td></tr></table></figure><br>然后按 Ctrl+b 会出现如下图所示的运行结果，说明配置成功<br><img src="result.png" alt="result"></p>
 
                 
                 <hr>
@@ -612,6 +608,9 @@ const gitment = new Gitment({
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!-- Search -->
+<script src="/js/search.js"></script>
+
 <!-- async load function -->
 <script>
     function async(u, c) {
@@ -706,11 +705,28 @@ const gitment = new Gitment({
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
         
 
         <!-- background effects end -->
     
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

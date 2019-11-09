@@ -156,13 +156,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -171,6 +164,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -387,9 +387,9 @@ Analysis从任意的 W 开始，不停地把临接的部分用 ‘ . ’ 代替�
 箭头类
 
 
+
 符号
-HTML
-......
+HTML......
         </div>
     </a>
     
@@ -599,6 +599,16 @@ You only need......
     sidebar-container
 ">
     
+        <!-- Friends Blog -->
+
+<h5>SEARCH</h5>
+<div class="search-article" class="tags">
+	<input id="search-kw" type="text" name="search_article" placeholder="Enter keywords for search" />
+	<div class="search-img"><img src="/img/search.png" alt="search"/></div>
+</div>
+
+        <hr>
+    
         <!-- Featured Tags -->
 
 <section>
@@ -631,9 +641,9 @@ You only need......
             
         
             
-            <a href="/tags/#html" title="html" rel="2">html</a>
-            
         
+            
+            <a href="/tags/#html" title="html" rel="2">html</a>
             
         
             
@@ -663,6 +673,18 @@ You only need......
             
         
             
+        
+            
+        
+            
+            <a href="/tags/#mathjax" title="mathjax" rel="2">mathjax</a>
+            
+        
+            
+            <a href="/tags/#blog" title="blog" rel="2">blog</a>
+            
+        
+            
             <a href="/tags/#web" title="web" rel="4">web</a>
             
         
@@ -677,23 +699,11 @@ You only need......
             
         
             
-            <a href="/tags/#mathjax" title="mathjax" rel="2">mathjax</a>
-            
         
-            
-            <a href="/tags/#blog" title="blog" rel="2">blog</a>
             
         
             
             <a href="/tags/#editor" title="editor" rel="3">editor</a>
-            
-        
-            
-        
-            
-        
-            
-        
             
         
             
@@ -725,11 +735,11 @@ You only need......
             
         
             
-            <a href="/tags/#OS" title="OS" rel="2">OS</a>
+            <a href="/tags/#github" title="github" rel="2">github</a>
             
         
             
-            <a href="/tags/#github" title="github" rel="2">github</a>
+            <a href="/tags/#OS" title="OS" rel="2">OS</a>
             
         
             
@@ -1012,6 +1022,9 @@ You only need......
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!-- Search -->
+<script src="/js/search.js"></script>
+
 <!-- async load function -->
 <script>
     function async(u, c) {
@@ -1106,11 +1119,28 @@ You only need......
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
         
 
         <!-- background effects end -->
     
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 
