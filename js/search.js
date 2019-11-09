@@ -85,7 +85,7 @@ var searchFunc = function(path, search_id, content_id) {
                                 // highlight all keywords
                                 keywords.forEach(function (keyword) {
                                     var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\"><i style='color:rgb(231,133,104);'><b>" + keyword + "</b></i></em>");
                                 });
 
                                 str += "<p class=\"search-result\">" + match_content + "...</p>"
@@ -100,3 +100,12 @@ var searchFunc = function(path, search_id, content_id) {
         }
     });
 }
+
+$(document).ready(function(){
+    $("#local-search-input").bind('keypress',function(event){
+        if(event.keyCode=='13'){
+            //$(this).val('');
+            alert('search');
+        }
+    })
+});

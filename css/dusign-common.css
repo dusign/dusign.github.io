@@ -12,6 +12,9 @@
 }
 
 /* search */
+#local-search-input{
+	color:rgb(153,153,153);
+}
 #local-search-result{ /* div */
 	background:rgba(245,245,245,0.9);
 	margin:0px;
