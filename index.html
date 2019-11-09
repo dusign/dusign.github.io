@@ -599,8 +599,8 @@ You only need......
     sidebar-container
 ">
     
-        <!-- Friends Blog -->
-
+        
+<!--
 <h5>SEARCH</h5>
 <div class="search-article" class="tags">
 	<input id="search-kw" type="text" name="search_article" placeholder="Enter keywords for search" />
@@ -611,6 +611,14 @@ You only need......
 			onMouseOver="this.src='/img/search-focus.png'" 
 			onMouseOut="this.src='/img/search.png'"/>
 	</div>
+</div>-->
+
+<h5>SEARCH</h5>
+<div id="site_search">
+	<div class="form-group">
+	<input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+	</div>  
+	<div id="local-search-result"></div>
 </div>
 
         <hr>
@@ -641,9 +649,21 @@ You only need......
             
         
             
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#hexo" title="hexo" rel="3">hexo</a>
+            
+        
+            
             <a href="/tags/#algorithm" title="algorithm" rel="10">algorithm</a>
             
         
+            
+            <a href="/tags/#ccf-csp" title="ccf-csp" rel="8">ccf-csp</a>
             
         
             
@@ -657,8 +677,6 @@ You only need......
             
         
             
-            <a href="/tags/#ccf-csp" title="ccf-csp" rel="8">ccf-csp</a>
-            
         
             
         
@@ -667,7 +685,17 @@ You only need......
             
         
             
-            <a href="/tags/#hexo" title="hexo" rel="3">hexo</a>
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#mathjax" title="mathjax" rel="2">mathjax</a>
+            
+        
+            
+            <a href="/tags/#blog" title="blog" rel="2">blog</a>
             
         
             
@@ -689,21 +717,9 @@ You only need......
             
         
             
-        
-            
-        
-            
             <a href="/tags/#editor" title="editor" rel="3">editor</a>
             
         
-            
-        
-            
-            <a href="/tags/#mathjax" title="mathjax" rel="2">mathjax</a>
-            
-        
-            
-            <a href="/tags/#blog" title="blog" rel="2">blog</a>
             
         
             
@@ -727,31 +743,23 @@ You only need......
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-            <a href="/tags/#OS" title="OS" rel="2">OS</a>
-            
-        
-            
             <a href="/tags/#github" title="github" rel="2">github</a>
             
         
             
         
             
+        
+            
+        
+            
+        
+            
             <a href="/tags/#vim" title="vim" rel="2">vim</a>
+            
+        
+            
+            <a href="/tags/#OS" title="OS" rel="2">OS</a>
             
         
             
@@ -1043,24 +1051,6 @@ You only need......
     }
 </script>
 
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
-
 
 <!-- jquery.tagcloud.js -->
 <script>
@@ -1109,6 +1099,18 @@ You only need......
 <!-- Baidu Tongji -->
 
 
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
 <!-- busuanzi -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -1125,11 +1127,28 @@ You only need......
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
         
 
         <!-- background effects end -->
     
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 
