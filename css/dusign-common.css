@@ -12,8 +12,33 @@
 }
 
 /* search */
-#local-search-input{
-	color:rgb(153,153,153);
+#site_search{
+	border:0px;
+}
+.form-group{
+	border:0px;
+}
+#local-search-input{}
+#local-search-input::-webkit-input-placeholder{
+    color:rgb(217,217,217);
+    font-family: "Montserrat", sans-serif;
+  	-webkit-font-smoothing: antialiased;
+}
+#local-search-input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:rgb(217,217,217);
+    font-family: "Montserrat", sans-serif;
+  	-webkit-font-smoothing: antialiased;
+}
+#local-search-input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:rgb(217,217,217);
+    font-family: "Montserrat", sans-serif;
+  	-webkit-font-smoothing: antialiased;
+}
+#local-search-input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:rgb(217,217,217);
+    font-family: "Montserrat", sans-serif;
+  	-webkit-font-smoothing: antialiased;
+
 }
 #local-search-result{ /* div */
 	background:rgba(245,245,245,0.9);
