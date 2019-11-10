@@ -20,14 +20,14 @@
         
     </title>
 
-    <link rel="canonical" href="https://dusign.net/2019/11/01/Hexo-Theme-Snail/">
+    <link rel="canonical" href="https://www.dusign.net/2019/11/01/Hexo-Theme-Snail/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <!-- Custom CSS --> 
     
-      <link rel="stylesheet" href="/css/beantech.min.css">
+      <link rel="stylesheet" href="/css/dusign-light.css">
       <!-- background effects end -->
     
     
@@ -192,14 +192,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -272,7 +272,7 @@
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 <h3 id="Setup-your-blog"><a href="#Setup-your-blog" class="headerlink" title="Setup your blog"></a>Setup your blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
 <h3 id="Installation-Theme"><a href="#Installation-Theme" class="headerlink" title="Installation Theme"></a>Installation Theme</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ rm -rf <span class="built_in">source</span></span><br><span class="line">$ rm _config.yml package.json README.md LICENSE</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/dusign/hexo-theme-snail.git</span><br><span class="line">$ mv ./hexo-theme-snail/snail ./themes</span><br><span class="line">$ mv ./hexo-theme-snail/* ./</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<h3 id="Install-Mathjax"><a href="#Install-Mathjax" class="headerlink" title="Install Mathjax"></a>Install Mathjax</h3><p>To install Mathjax, please click <a href="https://www.dusign.net/2019/10/14/Hexo-Configuration/" target="_blank" rel="noopener">https://www.dusign.net/2019/10/14/Hexo-Configuration/</a> for a detailed tutorial.</p>
+<h3 id="Install-Mathjax"><a href="#Install-Mathjax" class="headerlink" title="Install Mathjax"></a>Install Mathjax</h3><p>To install Mathjax, please click <a href="https://www.dusign.net/2019/10/14/Hexo-Configuration/">https://www.dusign.net/2019/10/14/Hexo-Configuration/</a> for a detailed tutorial.</p>
 <h3 id="Install-WordCount"><a href="#Install-WordCount" class="headerlink" title="Install WordCount"></a>Install WordCount</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
 <p>See <a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="noopener">https://github.com/willin/hexo-wordcount</a> for detailed configuration method.</p>
 <h3 id="Set-Theme"><a href="#Set-Theme" class="headerlink" title="Set Theme"></a>Set Theme</h3><p>Modify the value of <code>theme:</code> in <code>_config.yml</code><br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">snail</span></span><br></pre></td></tr></table></figure></p>
@@ -698,7 +698,7 @@ const gitment = new Gitment({
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("https://dusign.net/js/jquery.tagcloud.js",function(){
+        async("https://www.dusign.net/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
