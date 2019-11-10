@@ -77,6 +77,21 @@
 	padding:0px;
 	font-size:12px;
 }
+/* Top */
+.top_logo{
+	height:30px;
+	width:30px;
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	top:-7px;
+	left:0px;
+	cursor:default!important;
+}
+
+
+
+
 
 
 
