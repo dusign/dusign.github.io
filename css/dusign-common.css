@@ -89,7 +89,8 @@
 }
 /* gitment */
 #blog_comments textarea{
-	resize:none;
+	resize:none!important;
+	font-size:13px;
 }
 .gitment_container{}
 .gitment-header-issue-link{
@@ -97,11 +98,13 @@
 }
 .gitment-editor-submit{
 }
-.gitment-comments-list{
-
-}
+.hello_visitor{}
 .gitment-comment-main{
 	border:1px solid rgb(191,191,191);
+}
+.gitment-comment-main p{
+	color:red;
+	font-size:13px;
 }
 .gitment-comment-main:hover{
 	border:1px solid rgba(102,175,233,0.6);
