@@ -133,18 +133,18 @@
 			-o-transform: translateX(0%) translateZ(0) scaleY(1);
 	    }
 	    50% {
-	        transform: translateX(-25%) translateZ(0) scaleY(0.9);
-			-ms-transform: translateX(-25%) translateZ(0) scaleY(0.9);
-			-moz-transform: translateX(-25%) translateZ(0) scaleY(0.9);
-			-webkit-transform: translateX(-25%) translateZ(0) scaleY(0.9);
-			-o-transform: translateX(-25%) translateZ(0) scaleY(0.9);
+	        transform: translateX(-50%) translateZ(0) scaleY(0.9);
+			-ms-transform: translateX(-50%) translateZ(0) scaleY(0.9);
+			-moz-transform: translateX(-50%) translateZ(0) scaleY(0.9);
+			-webkit-transform: translateX(-50%) translateZ(0) scaleY(0.9);
+			-o-transform: translateX(-50%) translateZ(0) scaleY(0.9);
 	    }
 	    100% {
-	        transform: translateX(-50%) translateZ(0) scaleY(1);
-			-ms-transform: translateX(-50%) translateZ(0) scaleY(1);
-			-moz-transform: translateX(-50%) translateZ(0) scaleY(1);
-			-webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
-			-o-transform: translateX(-50%) translateZ(0) scaleY(1);
+	        transform: translateX(-100%) translateZ(0) scaleY(1);
+			-ms-transform: translateX(-100%) translateZ(0) scaleY(1);
+			-moz-transform: translateX(-100%) translateZ(0) scaleY(1);
+			-webkit-transform: translateX(-100%) translateZ(0) scaleY(1);
+			-o-transform: translateX(-100%) translateZ(0) scaleY(1);
 	    }
 	}
 	.waveWrapper {
@@ -159,21 +159,30 @@
 	    background-color: transparent;
 	    z-index: 5;
 	}
-	.wave {
+	.wave{
+		position: absolute;
 		margin: 0px;
 		padding: 0px;
-	    position: absolute;
-	    left: 0px;
-	    right: 0px;
-	    bottom: 0px;
-	    width: 200%;
-	    height: 100%;
-	    background-repeat: repeat no-repeat;
+		width: calc(100% + 0.26px);
+		height: 100%;
+		background-repeat: repeat no-repeat;
 	    background-position: 0px bottom;
-	    transform-origin: center bottom;
-	    background-size: 40% 60px;
+	    transform-origin: left bottom;
+	    background-size: 100% 60px;
+	}
+	.wave_before{
+		left: 0px;
+	    bottom: 0px;
+		animation: move_wave 20s linear infinite;
+		-webkit-animation:move_wave 20s linear infinite;
+	}
+	.wave_after {
+		left: 100%;
+	    bottom: 0px;
 	    animation: move_wave 20s linear infinite;
 		-webkit-animation:move_wave 20s linear infinite;
+		/*animation-delay:10s;*/
+		/*-webkit-animation-delay:10s;*/
 	}
 }
 @media (max-width: 888px) {
@@ -186,18 +195,18 @@
 			-o-transform: translateX(0%) translateZ(0) scaleY(1);
 	    }
 	    50% {
-	        transform: translateX(-25%) translateZ(0) scaleY(0.9);
-			-ms-transform: translateX(-25%) translateZ(0) scaleY(0.9);
-			-moz-transform: translateX(-25%) translateZ(0) scaleY(0.9);
-			-webkit-transform: translateX(-25%) translateZ(0) scaleY(0.9);
-			-o-transform: translateX(-25%) translateZ(0) scaleY(0.9);
+	        transform: translateX(-50%) translateZ(0) scaleY(0.9);
+			-ms-transform: translateX(-50%) translateZ(0) scaleY(0.9);
+			-moz-transform: translateX(-50%) translateZ(0) scaleY(0.9);
+			-webkit-transform: translateX(-50%) translateZ(0) scaleY(0.9);
+			-o-transform: translateX(-50%) translateZ(0) scaleY(0.9);
 	    }
 	    100% {
-	        transform: translateX(-50%) translateZ(0) scaleY(1);
-			-ms-transform: translateX(-50%) translateZ(0) scaleY(1);
-			-moz-transform: translateX(-50%) translateZ(0) scaleY(1);
-			-webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
-			-o-transform: translateX(-50%) translateZ(0) scaleY(1);
+	        transform: translateX(-100%) translateZ(0) scaleY(1);
+			-ms-transform: translateX(-100%) translateZ(0) scaleY(1);
+			-moz-transform: translateX(-100%) translateZ(0) scaleY(1);
+			-webkit-transform: translateX(-100%) translateZ(0) scaleY(1);
+			-o-transform: translateX(-100%) translateZ(0) scaleY(1);
 	    }
 	}
 	.waveWrapper {
@@ -212,21 +221,30 @@
 	    background-color: transparent;
 	    z-index: 5;
 	}
-	.wave {
+	.wave{
+		position: absolute;
 		margin: 0px;
 		padding: 0px;
-	    position: absolute;
-	    left: 0px;
-	    right: 0px;
-	    bottom: 0px;
-	    width: 200%;
-	    height: 100%;
-	    background-repeat: repeat no-repeat;
+		width: calc(200% + 0.26px);
+		height: 100%;
+		background-repeat: repeat no-repeat;
 	    background-position: 0px bottom;
-	    transform-origin: center bottom;
-	    background-size: 80% 60px;
-	    animation: move_wave 10s linear infinite;
-	    -webkit-animation:move_wave 10s linear infinite;
+	    transform-origin: left bottom;
+	    background-size: 100% 60px;
+	}
+	.wave_before{
+		left: 0px;
+	    bottom: 0px;
+		animation: move_wave 20s linear infinite;
+		-webkit-animation:move_wave 20s linear infinite;
+	}
+	.wave_after {
+		left: 200%;
+	    bottom: 0px;
+	    animation: move_wave 20s linear infinite;
+		-webkit-animation:move_wave 20s linear infinite;
+		/*animation-delay:10s;*/
+		/*-webkit-animation-delay:10s;*/
 	}
 }
 
