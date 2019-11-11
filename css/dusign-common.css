@@ -89,7 +89,6 @@
 }
 /* gitment */
 #blog_comments textarea{
-	height:200px;
 	resize:none;
 }
 .gitment_container{}
