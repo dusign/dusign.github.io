@@ -123,16 +123,28 @@
 	margin-bottom:20px!important;
 }
 /* Wave */
-@media (min-width: 768px) {
+@media (min-width: 889px) {
 	@keyframes move_wave {
 	    0% {
-	        transform: translateX(0%) translateZ(0) scaleY(0.7)
+	        transform: translateX(0%) translateZ(0) scaleY(1);
+			-ms-transform: translateX(0%) translateZ(0) scaleY(1);
+			-moz-transform: translateX(0%) translateZ(0) scaleY(1);
+			-webkit-transform: translateX(0%) translateZ(0) scaleY(1);
+			-o-transform: translateX(0%) translateZ(0) scaleY(1);
 	    }
 	    50% {
-	        transform: translateX(-25%) translateZ(0) scaleY(0.6)
+	        transform: translateX(-25%) translateZ(0) scaleY(0.9);
+			-ms-transform: translateX(-25%) translateZ(0) scaleY(0.9);
+			-moz-transform: translateX(-25%) translateZ(0) scaleY(0.9);
+			-webkit-transform: translateX(-25%) translateZ(0) scaleY(0.9);
+			-o-transform: translateX(-25%) translateZ(0) scaleY(0.9);
 	    }
 	    100% {
-	        transform: translateX(-50%) translateZ(0) scaleY(0.7)
+	        transform: translateX(-50%) translateZ(0) scaleY(1);
+			-ms-transform: translateX(-50%) translateZ(0) scaleY(1);
+			-moz-transform: translateX(-50%) translateZ(0) scaleY(1);
+			-webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
+			-o-transform: translateX(-50%) translateZ(0) scaleY(1);
 	    }
 	}
 	.waveWrapper {
@@ -161,18 +173,31 @@
 	    transform-origin: center bottom;
 	    background-size: 40% 60px;
 	    animation: move_wave 20s linear infinite;
+		-webkit-animation:move_wave 20s linear infinite;
 	}
 }
-@media (max-width: 768px) {
-		@keyframes move_wave {
+@media (max-width: 888px) {
+	@keyframes move_wave {
 	    0% {
-	        transform: translateX(0%) translateZ(0) scaleY(0.7)
+	        transform: translateX(0%) translateZ(0) scaleY(1);
+			-ms-transform: translateX(0%) translateZ(0) scaleY(1);
+			-moz-transform: translateX(0%) translateZ(0) scaleY(1);
+			-webkit-transform: translateX(0%) translateZ(0) scaleY(1);
+			-o-transform: translateX(0%) translateZ(0) scaleY(1);
 	    }
 	    50% {
-	        transform: translateX(-25%) translateZ(0) scaleY(0.6)
+	        transform: translateX(-25%) translateZ(0) scaleY(0.9);
+			-ms-transform: translateX(-25%) translateZ(0) scaleY(0.9);
+			-moz-transform: translateX(-25%) translateZ(0) scaleY(0.9);
+			-webkit-transform: translateX(-25%) translateZ(0) scaleY(0.9);
+			-o-transform: translateX(-25%) translateZ(0) scaleY(0.9);
 	    }
 	    100% {
-	        transform: translateX(-50%) translateZ(0) scaleY(0.7)
+	        transform: translateX(-50%) translateZ(0) scaleY(1);
+			-ms-transform: translateX(-50%) translateZ(0) scaleY(1);
+			-moz-transform: translateX(-50%) translateZ(0) scaleY(1);
+			-webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
+			-o-transform: translateX(-50%) translateZ(0) scaleY(1);
 	    }
 	}
 	.waveWrapper {
@@ -200,7 +225,8 @@
 	    background-position: 0px bottom;
 	    transform-origin: center bottom;
 	    background-size: 80% 60px;
-	    animation: move_wave 15s linear infinite;
+	    animation: move_wave 10s linear infinite;
+	    -webkit-animation:move_wave 10s linear infinite;
 	}
 }
 
