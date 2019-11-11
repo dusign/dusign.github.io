@@ -287,24 +287,31 @@
 
                 <!-- tip start -->
                 
-                <div class="visitor_notice">
-                    <img 
-                        src="/img/notice.png" 
-                        alt="notice"
-                        title="notice"/>
-                    <p class="notice">
-                        欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客，博客系统一键分享的功能还在完善中，请大家耐心等待。 若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。 评论点赞需要github账号登录，如果没有账号的话请点击 <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
-                    </p>
-                </div>
-                <div class="comment_notes">
-                    <p>
-                        If you like this blog or find it useful for you, you are welcome to comment on it. 
-                        You are also welcome to share this blog, so that more people can participate in it.
-                        If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
-                    </p>
+                <!-- tip end -->
+
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+
+                <!-- require APlayer start -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="undefined"
+                    data-server="undefined"
+                    data-type="undefined"
+                    data-fixed="undefined" >
                 </div>
                 
-                <!-- tip end -->
+                <!-- require APlayer end -->
 
                 <!-- gitment start -->
                 
@@ -329,6 +336,32 @@
 -->
 
 <script>
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+    
+     // your custom component
+    container.appendChild(instance.renderSomething(state, instance))
+    
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    //container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+  renderSomething(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    if (state.user.login) {
+      container.innerText = `Hello, ${state.user.login}`
+    }
+    return container
+  }
+}
+
+
 const gitment = new Gitment({
     id: 'Mon Mar 25 2019 18:02:56 GMT+0800', // optional
     owner: "dusign",
@@ -337,6 +370,7 @@ const gitment = new Gitment({
       client_id: "14d5194dbf45604a7488",
       client_secret: "b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc",
     },
+    theme: myTheme,
     // ...
     // For more available options, check out the documentation below
   })
@@ -349,6 +383,10 @@ const gitment = new Gitment({
 </script>
                 
                 <!-- gitment end -->
+
+                <!-- 来必力City版安装代码 -->
+                
+                <!-- City版安装代码已完成 -->
 
                 <!-- disqus comment start -->
                 
