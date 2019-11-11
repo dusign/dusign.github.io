@@ -185,14 +185,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -492,7 +492,7 @@ const myTheme = {
     container.lang = "en-US"
     container.className = 'hello_visitor'
     if (state.user.login) {
-      container.innerText = `Hello`+ '<i>'+ ` ${state.user.login} `+ '</i>'+ `, welcome to comment system.`
+      container.innerHtml = `Hello <b><i> ${state.user.login} </i></b>, welcome to comment system.`
     }
     return container
   }
