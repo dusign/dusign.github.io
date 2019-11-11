@@ -102,7 +102,7 @@
 .gitment-comment-main{
 	border:1px solid rgb(191,191,191);
 }
-.gitment-comment-main p{
+.gitment-comment-body p, .gitment-markdown p{
 	color:red!important;
 	font-size:13px!important;
 }
