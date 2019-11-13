@@ -15,6 +15,7 @@
 #local-search-input{
 	box-shadow:0px 0px 0px 0px rgb(191,191,191) inset;
 	border:1px solid rgb(191,191,191);
+	background: none;
 }
 #local-search-input:focus{
 	border:1px solid #66afe9;
@@ -91,14 +92,16 @@
 #blog_comments textarea{
 	resize:none!important;
 	font-size:13px!important;
+	background:none!important;
 }
 .gitment_container{}
 .gitment-header-issue-link{
 	display:none!important;
 }
-.gitment-editor-submit{
-}
 .hello_visitor{}
+.gitment-comment-header{
+	background:none!important;
+}
 .gitment-comment-main{
 	border:1px solid rgb(191,191,191);
 }
@@ -113,6 +116,7 @@
 .gitment-comment-main:hover::before{
 	border-width:8px;
 	border-right-color:rgba(102,175,233,0.6);
+	background:none;
 }
 .gitment-comment-header{
 }
@@ -160,10 +164,11 @@
 	    z-index: 5;
 	}
 	.wave{
+		border:0px;
 		position: absolute;
 		margin: 0px;
 		padding: 0px;
-		width: calc(100% + 0.26px);
+		width: calc(100% + 0.25px);
 		height: 100%;
 		background-repeat: repeat no-repeat;
 	    background-position: 0px bottom;
@@ -225,7 +230,7 @@
 		position: absolute;
 		margin: 0px;
 		padding: 0px;
-		width: calc(200% + 0.26px);
+		width: calc(200% + 0.25px);
 		height: 100%;
 		background-repeat: repeat no-repeat;
 	    background-position: 0px bottom;
@@ -247,6 +252,11 @@
 		/*-webkit-animation-delay:10s;*/
 	}
 }
+
+
+
+
+
 
 
 
