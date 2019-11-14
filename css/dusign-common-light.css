@@ -253,6 +253,26 @@
 	}
 }
 
+/* Tips */
+.notice {
+    color:rgba(51,51,51,0.9);
+    margin:0px;
+    padding:0px;
+}
+
+.visitor_notice a {
+    text-decoration:none;
+    color:rgba(51,51,51,0.9);
+    font-weight:normal;
+    font-style:italic;
+}
+
+.visitor_notice a:hover {
+    text-decoration:none;
+    color:rgba(51,51,51,0.9);
+    font-weight:bolder;
+    font-style:italic;
+}
 
 
 

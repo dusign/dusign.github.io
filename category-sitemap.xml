@@ -9,7 +9,14 @@
 
     <url>
         <loc>https://www.dusign.net/categories/hexo/</loc>
-        <lastmod>2019-11-11T14:46:00.343Z</lastmod>
+        <lastmod>2019-11-13T17:30:22.132Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/categories/algorithm/</loc>
+        <lastmod>2019-11-13T13:00:25.831Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -115,13 +122,6 @@
     <url>
         <loc>https://www.dusign.net/categories/django/</loc>
         <lastmod>2019-11-09T16:51:58.689Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/categories/algorithm/</loc>
-        <lastmod>2019-11-09T16:51:58.687Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

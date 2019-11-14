@@ -1,6 +1,124 @@
 /* dark start */
+/* 设置滚动条的样式 */
+::-webkit-scrollbar{
+  width: 12px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4);
+}
+
 body{
-  background:rgb(34,38,49);
+  background: rgb(34, 38, 49);
+  color: rgb(97, 101, 111); /* 普通文字颜色 rgb(97, 101, 111) */
+}
+.post-title, .post-subtitle{
+  color: rgb(199, 200, 206); /* 高亮文字颜色 rgb(197, 198, 203) */
+}
+.post-content-preview:hover,
+.post-content-preview:hover ~ .post-title, 
+.post-content-preview:hover ~ .post-subtitle{
+  color: rgb(199, 200, 206)!important; /* hover文字，线条颜色 rgb(199, 200, 206) */
+}
+hr{
+  background-color: rgb(74, 74, 74); /* hr颜色 rgb(74, 74, 74) */
+  border: none;
+  height: 1px;
+}
+.previous a, .next a{
+  background: none!important;
+  color: rgb(199, 200, 206)!important;
+  border-color: rgb(74, 74, 74)!important;
+}
+.previous a:hover, .next a:hover{
+  background: rgb(122, 125, 131)!important;
+  color: rgb(199, 200, 206)!important;
+  border-color: none!important;
+}
+.sidebar-container h5{
+  color: rgb(128, 128, 128)!important;
+}
+.sidebar-container h5 a:hover{
+  color: rgb(199, 200, 206)!important;
+}
+.sidebar-container .tags a:hover, .sidebar-container .tags a:active{
+  color: rgb(199, 200, 206)!important;
+  border-color: rgb(199, 200, 206)!important;
+}
+.tags a:hover{
+  color: rgb(199, 200, 206)!important;
+  border-color: rgb(199, 200, 206)!important;
+}
+.list-inline li a{
+  color: rgb(97, 101, 111)!important;
+}
+.list-inline li a:hover{
+  color: rgb(199, 200, 206)!important; /* hover按钮背景颜色 rgb(122, 125, 131) */
+  text-decoration:none;
+}
+.short-about ul li a{
+  color: rgb(64, 64, 64)!important;  /* 按钮背景颜色 rgb(64, 64, 64) */
+}
+.short-about ul li a:hover, .short-about ul li a:active{
+  color: rgb(122, 125, 131)!important; /* tag hover颜色 rgb(122, 125, 131) */
+}
+.widget ul li{
+  color: rgb(97, 101, 111)!important;
+}
+.widget ul li a{
+  color: rgb(97, 101, 111)!important;
+}
+.category-list-count{
+  color: rgb(97, 101, 111)!important;
+}
+.widget ul li a:hover{
+  color: rgb(199, 200, 206)!important;
+}
+
+.copyright a{
+  color: rgb(199, 200, 206)!important;
+}
+.post-container{
+  color: rgb(199, 200, 206);
+}
+.post-container p a{
+  color: rgb(97, 101, 111);
+}
+.post-container p a:hover{
+  color: rgb(199, 200, 206);
+}
+#toc{
+  color: rgb(199, 200, 206);
+}
+#toc a{
+  color: rgb(97, 101, 111);
+}
+#toc a:hover{
+  color: rgb(199, 200, 206);
+}
+
+.one-tag-list .listing-seperator{
+  color:rgb(199, 200, 206);
+}
+.one-tag-list ul li a{
+  color: rgb(97, 101, 111)!important;
+}
+.one-tag-list ul li a:hover{
+  color:rgb(199, 200, 206)!important;
+}
+#tag_clouds a{   /* tags 界面标签，正在寻找bug */
+  background:rgb(120,97,224)!important;
+  background-image: linear-gradient(to bottom,rgb(130,93,225) 0,rgb(80,118,221))!important;
 }
 /* dark and */
 
@@ -301,7 +419,7 @@ pre code {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 93;
   /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
@@ -794,11 +912,11 @@ body {
     padding: 55px 0;
   }
 }
-#tag_cloud {
+#tag_clouds {
   margin: 20px 0 15px 0;
 }
-#tag_cloud a,
-#tag_cloud .tag {
+#tag_clouds a,
+#tag_clouds .tag {
   font-size: 14px;
   border: none;
   line-height: 28px;
@@ -806,14 +924,14 @@ body {
   margin-bottom: 8px;
   background: #D6D6D6;
 }
-#tag_cloud a:hover,
-#tag_cloud .tag:hover,
-#tag_cloud a:active,
-#tag_cloud .tag:active {
+#tag_clouds a:hover,
+#tag_clouds .tag:hover,
+#tag_clouds a:active,
+#tag_clouds .tag:active {
   background-color: #0085a1 !important;
 }
 @media only screen and (min-width: 768px) {
-  #tag_cloud {
+  #tag_clouds {
     margin-bottom: 25px;
   }
 }

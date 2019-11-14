@@ -27,7 +27,10 @@
 
     <!-- Custom CSS --> 
     
-      <link rel="stylesheet" href="/css/dusign-light.css">
+        <link rel="stylesheet" href="/css/dusign-dark.css">
+        <link rel="stylesheet" href="/css/dusign-common-dark.css">
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <link rel="stylesheet" href="/css/toc.css">
     
     
     <!-- Pygments Highlight CSS -->
@@ -39,20 +42,12 @@
 
     <link rel="stylesheet" href="/css/signature.css">
 
-    
-      <link rel="stylesheet" href="/css/toc.css">
-    
-
-    <link rel="stylesheet" href="/css/dusign-common.css">
     <link rel="stylesheet" href="/css/fonts.googleapis.css">
 
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
     <!--<link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    
-      <link rel="stylesheet" href="/css/font-awesome.css">
-    
 
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -89,8 +84,10 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('Start-using-hexo.jpg')
-            /*post*/
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('Start-using-hexo.jpg')
+                /*post*/
+            
         
     }
     
@@ -148,8 +145,8 @@
 
     
     <div class="waveWrapper">
-        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
-        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_before" style="background-image: url('/img/wave-dark.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-dark.png')"></div>
     </div>
     
 </header>
@@ -292,6 +289,23 @@
                 <div class="comment_notes_blank"></div>
 
                 <!-- tip start -->
+                
+                <div class="visitor_notice">
+                    <img 
+                        src="/img/notice.png" 
+                        alt="notice"
+                        title="notice"/>
+                    <p class="notice">
+                        欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客, 若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。 评论点赞需要github账号登录，如果没有账号的话请点击 <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
+                    </p>
+                </div>
+                <div class="comment_notes">
+                    <p>
+                        If you like this blog or find it useful for you, you are welcome to comment on it. 
+                        You are also welcome to share this blog, so that more people can participate in it.
+                        If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+                    </p>
+                </div>
                 
                 <!-- tip end -->
 
@@ -485,29 +499,6 @@ const gitment = new Gitment({
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
-
-
-    <style  type="text/css">
-        .notice {
-            color:rgba(51,51,51,0.9);
-            margin:0px;
-            padding:0px;
-        }
-
-        .visitor_notice a {
-            text-decoration:none;
-            color:rgba(51,51,51,0.9);
-            font-weight:normal;
-            font-style:italic;
-        }
-
-        .visitor_notice a:hover {
-            text-decoration:none;
-            color:rgba(51,51,51,0.9);
-            font-weight:bolder;
-            font-style:italic;
-        }
-    </style>
 
 
 <style  type="text/css">
