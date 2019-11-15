@@ -50,64 +50,22 @@ class Musics {
                 imageUrl: '/music/img/infatuated.jpg'
             },{
                 id: 5,
-                title: 'Dream It Possible',
-                singer: 'Delacey',
-                songUrl: '/music/song/Dream It Possible_Delacey.mp3',
-                imageUrl: '/music/img/dream_it_possible.jpg'
-            },{
-                id: 6,
                 title: '九张机',
                 singer: '叶炫清',
                 songUrl: '/music/song/九张机_叶炫清.mp3',
                 imageUrl: '/music/img/九张机.jpg'
             },{
-                id: 7,
+                id: 6,
                 title: '不醉不会',
                 singer: '田馥甄',
                 songUrl: '/music/song/不醉不会_田馥甄.mp3',
                 imageUrl: '/music/img/不醉不会.jpg'
             },{
-                id: 8,
-                title: '一夜成长',
-                singer: '于文文',
-                songUrl: '/music/song/一夜成长_于文文.mp3',
-                imageUrl: '/music/img/一夜成长.jpg'
-            },{
-                id: 9,
-                title: '一步成诗',
-                singer: '王诗安',
-                songUrl: '/music/song/王诗安 - 一步成诗.mp3',
-                imageUrl: '/music/img/一步成诗.jpg'
-            },{
-                id: 10,
-                title: '生如夏花',
-                singer: '张靓颖',
-                songUrl: '/music/song/张靓颖 - 生如夏花.flac',
-                imageUrl: '/music/img/生如夏花.jpg'
-            },{
-                id: 11,
+                id: 7,
                 title: '空空如也',
                 singer: '胡66',
                 songUrl: '/music/song/空空如也_胡66.mp3',
                 imageUrl: '/music/img/空空如也.jpg'
-            },{
-                id: 12,
-                title: '红尘客栈',
-                singer: '安悦溪',
-                songUrl: '/music/song/安悦溪 - 红尘客栈.mp3',
-                imageUrl: '/music/img/红尘客栈.jpg'
-            },{
-                id: 13,
-                title: '如烟',
-                singer: '五月天',
-                songUrl: '/music/song/如烟_五月天.mp3',
-                imageUrl: '/music/img/如烟.jpg'
-            },{
-                id: 14,
-                title: 'Welcome To New York',
-                singer: 'Taylor Swift',
-                songUrl: '/music/song/Welcome To New York.mp3',
-                imageUrl: '/music/img/welcome_to_new_york.jpg'
             }
         ]
     }
