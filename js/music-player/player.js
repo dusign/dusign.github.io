@@ -44,28 +44,16 @@ class Musics {
                 imageUrl: '/music/img/stupid.jpg'
             },{
                 id: 4,
-                title: 'Infatuated',
-                singer: 'Sweet California',
-                songUrl: '/music/song/Sweet California - Infatuated.mp3',
-                imageUrl: '/music/img/infatuated.jpg'
-            },{
-                id: 5,
                 title: '九张机',
                 singer: '叶炫清',
                 songUrl: '/music/song/九张机_叶炫清.mp3',
                 imageUrl: '/music/img/九张机.jpg'
             },{
-                id: 6,
+                id: 5,
                 title: '不醉不会',
                 singer: '田馥甄',
                 songUrl: '/music/song/不醉不会_田馥甄.mp3',
                 imageUrl: '/music/img/不醉不会.jpg'
-            },{
-                id: 7,
-                title: '空空如也',
-                singer: '胡66',
-                songUrl: '/music/song/空空如也_胡66.mp3',
-                imageUrl: '/music/img/空空如也.jpg'
             }
         ]
     }
