@@ -251,7 +251,7 @@
 @media (max-width: 888px) {
         /* 播放器大小 */
     .music-player {
-        width: 350px;
+        width: 320px;
         line-height: 1!important;
     }
 
@@ -343,7 +343,7 @@
     /* 播放器控件 */
 
     .music-player .music-player__controls {
-        width: 180px;
+        width: 150px;
         height: 130px;
         float: right;
     }
@@ -362,12 +362,12 @@
     }
 
     .music-player .music__info .music__info--title {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .music-player .music__info .music__info--singer {
         color: #ccc;
-        font-size: 12px;
+        font-size: 11px;
         margin-top: 10px;
     }
 
@@ -390,7 +390,7 @@
 
     .music-player .player-control__btn {
         float: left;
-        margin: 0 5px;
+        margin: 0 3px;
         font-weight: bolder;
         color: #fff;
         cursor: pointer;
@@ -407,7 +407,7 @@
 
     .music-player .control__volume--progress {
         float: left;
-        width: 60px;
+        width: 50px;
         position: relative;
         top: 8px;
     }
