@@ -225,6 +225,7 @@
 	    padding: 0px;
 	    background-color: transparent;
 	    z-index: 5;
+	    display: none;
 	}
 	.wave{
 		position: absolute;
