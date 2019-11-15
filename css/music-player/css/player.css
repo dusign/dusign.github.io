@@ -161,7 +161,7 @@
         font-size: 12px;
         color: #fff;
         margin-top: 5px;
-        padding: 0px 3px;
+        padding: 1px 3px;
         background: rgba(0, 0, 0, 0.3);
         border-radius: 5px;
     }
@@ -300,10 +300,10 @@
 
     /* 唱片指针 */
     .music-player .music-player__pointer {
-        width: 25px;
+        width: 20px;
         position: absolute;
         right: -10px;
-        top: -20px;
+        top: -5px;
         -webkit-transform-origin: right top;
         -ms-transform-origin: right top;
         transform-origin: right top;
@@ -317,9 +317,9 @@
 
     /* 唱片指针播放状态 加play类名 */
     .music-player .music-player__pointer.play {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
+        -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        transform: rotate(2deg);
     }
 
     /* 唱片歌曲图片 */
@@ -416,7 +416,7 @@
         font-size: 12px;
         color: #fff;
         margin-top: 5px;
-        padding: 0px 3px;
+        padding: 1px 3px;
         background: rgba(0, 0, 0, 0.3);
         border-radius: 5px;
     }
