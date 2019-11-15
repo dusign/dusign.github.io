@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Ants</title>
+      <link href="/2019/11/12/Ants/"/>
+      <url>/2019/11/12/Ants/</url>
+      
+        <content type="html"><![CDATA[<p>Algorithms change the world. The importance of algorithms is self-evident to a programmer, so the practice of some algorithms is indispensable. Next, I will share some algorithmic problems.</p><h3 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h3><p><img src="ants-crawl.png" alt="ants"></p><h3 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h3><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><h3 id="Remark"><a href="#Remark" class="headerlink" title="Remark"></a>Remark</h3>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
+            
+            <tag> algorithm </tag>
+            
+            <tag> POJ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>How Browsers Work</title>
       <link href="/2019/11/06/How-Browsers-Work/"/>
       <url>/2019/11/06/How-Browsers-Work/</url>

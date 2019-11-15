@@ -45,26 +45,7 @@
 
     <link rel="stylesheet" href="/css/fonts.googleapis.css">
 
-    <!-- Custom Fonts -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <!--<link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
     <!-- ga & ba script hoook -->
     <script></script>
@@ -187,14 +168,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -468,29 +449,79 @@
                 
                 <!-- tip end -->
 
-                <!--分享-->
+                <!-- Music start-->
+                
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<!-- 播放器 -->
+<div class="music-player">
+    <!-- audio标签 -->
+    <audio class="music-player__audio" ></audio>
+    <!-- 播放器主体 -->
+    <div class="music-player__main">
+        <!-- 模糊背景 -->
+        <div class="music-player__blur"></div>
+        <!-- 唱片 -->
+        <div class="music-player__disc">
+            <!-- 唱片图片 -->
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <!-- 指针 -->
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <!-- 控件主体 -->
+        <div class="music-player__controls">
+            <!-- 歌曲信息 -->
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <!-- 控件... -->
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+
+                <!-- 歌曲播放进度 -->
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/music-player/utill.js"></script>
+<script src="/js/music-player/jquery.min.js"></script>
+<script src="/js/music-player/player.js"></script>
+
+                <!-- Music end -->
+
+                <!-- Sharing -->
                 
                     <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
                     <!--  css & js -->
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
                 
-                <!--分享-->
-
-                <!-- require APlayer start --><!--
-                
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
-
-                <div class="aplayer"
-                    data-id="undefined"
-                    data-server="undefined"
-                    data-type="undefined"
-                    data-fixed="undefined" >
-                </div>
-                -->
-                <!-- require APlayer end -->
+                <!-- Sharing -->
 
                 <!-- gitment start -->
                 
@@ -892,6 +923,7 @@ const gitment = new Gitment({
 
 <!-- busuanzi -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
 
 
