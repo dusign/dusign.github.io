@@ -35,6 +35,9 @@
     display: none;
   }
 }
+#toc::-webkit-scrollbar {
+  display: none;
+}
 .toc-fixed {
   position: fixed;
   top: 60px;
