@@ -263,8 +263,8 @@
 
     /* 播放器主体 */
     .music-player .music-player__main {
-        height: 180px;
-        padding: 25px;
+        height: 135px;
+        padding: 18px;
         -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
         border-radius: 10px;
@@ -291,8 +291,8 @@
     /* 播放器唱片效果 */
     .music-player .music-player__disc {
         float: left;
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
         background: url(../../../img/cd.png) no-repeat center;
         background-size: 100%;
         position: relative;
@@ -303,7 +303,7 @@
         width: 25px;
         position: absolute;
         right: -10px;
-        top: 0;
+        top: -20px;
         -webkit-transform-origin: right top;
         -ms-transform-origin: right top;
         transform-origin: right top;
@@ -324,8 +324,8 @@
 
     /* 唱片歌曲图片 */
     .music-player .music-player__image {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         position: absolute;
         overflow: hidden;
@@ -343,17 +343,17 @@
     /* 播放器控件 */
 
     .music-player .music-player__controls {
-        width: 130px;
+        width: 180px;
         height: 130px;
         float: right;
-        background: red;
     }
 
     /* 歌曲信息 */
     .music-player .music__info {
         width: 100%;
         height: 50px;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
+        margin-top: 0px;
     }
 
     .music-player .music__info .music__info--title,
@@ -362,12 +362,12 @@
     }
 
     .music-player .music__info .music__info--title {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .music-player .music__info .music__info--singer {
         color: #ccc;
-        font-size: 11px;
+        font-size: 12px;
         margin-top: 10px;
     }
 
@@ -396,6 +396,10 @@
         cursor: pointer;
     }
 
+    .iconfont{
+        font-size: 12px!important;
+    }
+
     .music-player .player-control__volume {
         float: right;
         overflow: hidden;
@@ -403,7 +407,7 @@
 
     .music-player .control__volume--progress {
         float: left;
-        width: 100px;
+        width: 60px;
         position: relative;
         top: 8px;
     }
