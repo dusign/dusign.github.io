@@ -336,11 +336,34 @@
 /* Tips */
 .notice {
     color:rgba(191,200,206,0.9);
-    margin:0px;
-    padding:0px;
+    margin: 14px 10px 10px 10px;
+    padding: 0px;
+	line-height: 24px!important;
+	font-size: 14px;
 }
-.comment_notes p {
-    color:rgba(191,200,206,0.9);
+.comment_notes_blank {
+    height: 100px;
+}
+.comment_notes {
+    color: rgba(51,51,51,0.9);
+    text-align: left;
+    font-style: italic;
+}
+.visitor_notice {
+    border: 1px solid rgba(209,216,220,0.9);
+    padding: 0px 0px 0px 0px!important;
+    border-radius: 10px;
+    min-height: 50px;
+}
+.visitor_notice img{
+    height: 40px;
+    width: 40px;
+    float: left;
+    position: relative;
+    margin: 5px 10px 5px 10px!important;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
 }
 .visitor_notice a {
     text-decoration:none;
