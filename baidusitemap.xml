@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.dusign.net/2019/11/18/Greedy-Algorithm/</loc>
+    <lastmod>2019-11-18</lastmod>
+  </url>  <url>
+    <loc>https://www.dusign.net/2019/10/31/BFS-Introduction/</loc>
+    <lastmod>2019-11-18</lastmod>
+  </url>  <url>
+    <loc>https://www.dusign.net/2019/10/25/DFS-Introduction/</loc>
+    <lastmod>2019-11-18</lastmod>
+  </url>  <url>
     <loc>https://www.dusign.net/2019/11/12/Ants/</loc>
     <lastmod>2019-11-16</lastmod>
   </url>  <url>
@@ -82,10 +91,10 @@
     <loc>https://www.dusign.net/2019/10/14/Hexo-Configuration/</loc>
     <lastmod>2019-11-09</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/09/30/Django-Project-Development/</loc>
+    <loc>https://www.dusign.net/2019/10/06/EPE8-Introduction/</loc>
     <lastmod>2019-11-09</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/10/06/EPE8-Introduction/</loc>
+    <loc>https://www.dusign.net/2019/09/30/Django-Project-Development/</loc>
     <lastmod>2019-11-09</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/09/10/Data-Check-Code/</loc>
@@ -94,13 +103,7 @@
     <loc>https://www.dusign.net/2019/11/06/How-Browsers-Work/</loc>
     <lastmod>2019-11-09</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/10/31/BFS-Introduction/</loc>
-    <lastmod>2019-11-09</lastmod>
-  </url>  <url>
     <loc>https://www.dusign.net/2019/10/23/HTML-Special-Characters/</loc>
-    <lastmod>2019-11-09</lastmod>
-  </url>  <url>
-    <loc>https://www.dusign.net/2019/10/25/DFS-Introduction/</loc>
     <lastmod>2019-11-09</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2017/05/19/Sublime%E4%B8%AD%E9%85%8D%E7%BD%AEPython%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>

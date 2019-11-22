@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Greedy Algorithm</title>
+      <link href="/2019/11/18/Greedy-Algorithm/"/>
+      <url>/2019/11/18/Greedy-Algorithm/</url>
+      
+        <content type="html"><![CDATA[<p>贪心算法又称贪婪算法，是遵循某种规则，不断贪心地选取当前最优策略的算法。贪心算法的关键是贪心策略的选择，选择的贪心策略必须具备无后效性，即某个状态以前的过程不会影响以后的状态，只与当前状态有关。接下来介绍几个贪心算法的典型例子。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
+            
+            <tag> algorithm </tag>
+            
+            <tag> greedy </tag>
+            
+            <tag> 贪心算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ants</title>
       <link href="/2019/11/12/Ants/"/>
       <url>/2019/11/12/Ants/</url>
@@ -111,6 +136,8 @@
             
             <tag> bfs </tag>
             
+            <tag> 宽度优先搜索 </tag>
+            
         </tags>
       
     </entry>
@@ -139,6 +166,8 @@
             <tag> algorithm </tag>
             
             <tag> dfs </tag>
+            
+            <tag> 深度优先搜索 </tag>
             
         </tags>
       
@@ -306,9 +335,9 @@
       
         <tags>
             
-            <tag> editor </tag>
-            
             <tag> linux </tag>
+            
+            <tag> editor </tag>
             
             <tag> vim </tag>
             
@@ -602,11 +631,11 @@
       
         <tags>
             
-            <tag> editor </tag>
-            
             <tag> markdown </tag>
             
             <tag> language </tag>
+            
+            <tag> editor </tag>
             
         </tags>
       
