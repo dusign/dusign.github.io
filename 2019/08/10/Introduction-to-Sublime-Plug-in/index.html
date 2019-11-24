@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="It&#39;s an IT blog">
+    <meta name="keyword"  content="dusign, super snail, dugang, IT blog, snail">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <title>
+        
+          Sublime Plugin Introduction - Super Snail | An IT blog
+        
+    </title>
+
+    <link rel="canonical" href="https://www.dusign.net/2019/08/10/Introduction-to-Sublime-Plug-in/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    
+        <link rel="stylesheet" href="/css/dusign-light.css">
+        <link rel="stylesheet" href="/css/dusign-common-light.css">
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    
+        <!-- background effects start -->
+        
+        <!-- background effects end -->
+    
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('SUBLIME-bg.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#sublime" title="sublime">sublime</a>
+                            
+                              <a class="tag" href="/tags/#editor" title="editor">editor</a>
+                            
+                              <a class="tag" href="/tags/#plugin" title="plugin">plugin</a>
+                            
+                        </div>
+                        <h1>Sublime Plugin Introduction</h1>
+                        <h2 class="subheading">This blog introduces some usage methods of sublime and several useful plugins.</h2>
+                        <span class="meta">
+                            Posted by Dusign on
+                            2019-08-10
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">2k</span> and
+                                Reading Time <span class="post-count">8</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Super Snail</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                    <li>
+                        <a href="https://blog.csdn.net/d_Nail" target="_blank">Chinese Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>Sublime text is one of the most popular text editors at present. It is a modern text editor with beautiful interface, smooth operation, fast start-up, low resource consumption, and many useful plug-ins. It is a good choice for people who often write programs.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p><img src="SUBLIME-web.png" alt="Sublime Text3 official website"><br>Sublime Text 的最新的版本是 <a href="http://www.sublimetext.com" target="_blank" rel="noopener">Sublime Text3 Build 3207</a> ,这是一个收费的版本，但是可以免费无限期试用，安装完之后在 view 里面可以设置 side bar 的显示以及 minimap 的显示，同时可以在 preferences 里面设置 color scheme、 theme 和 font。</p>
+<h2 id="Plug-ins"><a href="#Plug-ins" class="headerlink" title="Plug-ins"></a>Plug-ins</h2><p>Sublime text有非常多的好用的插件，这些插件能极大的提高我们的工作效率，在安装插件之前需要先安装 Package control ，这是一款管理其他插件的插件。有了它，我们就能很方便的 install 和 remove 其他插件，极大的提高了我们配置 Sublime text 的速度。</p>
+<h3 id="Package-control"><a href="#Package-control" class="headerlink" title="Package control"></a>Package control</h3><p>这是一款便于我们管理插件的 Sublime text 插件，安装也比较方便，安装方法是依次点击： menu -&gt; view -&gt; show console 或者按快捷键 <kbd>ctrl</kbd>+<kbd>~</kbd> 。之后底部会出现 console 框，然后输入以下代码</p>
+<p>sublime text3<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request,os,hashlib; </span><br><span class="line">h = <span class="string">'6f4c264a24d933ce70df5dedcf1dcaee'</span> + <span class="string">'ebe013ee18cced0ef93d5f746d80ef60'</span>; </span><br><span class="line">pf = <span class="string">'Package Control.sublime-package'</span>; </span><br><span class="line">ipp = sublime.installed_packages_path(); </span><br><span class="line">urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); </span><br><span class="line">by = urllib.request.urlopen( <span class="string">'http://packagecontrol.io/'</span> + pf.replace(<span class="string">' '</span>, <span class="string">'%20'</span>)).read(); </span><br><span class="line">dh = hashlib.sha256(by).hexdigest(); </span><br><span class="line">print(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="keyword">if</span> dh != h <span class="keyword">else</span> open(os.path.join( ipp, pf), <span class="string">'wb'</span> ).write(by)</span><br></pre></td></tr></table></figure></p>
+<p>sublime text2<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2,os,hashlib; </span><br><span class="line">h = <span class="string">'6f4c264a24d933ce70df5dedcf1dcaee'</span> + <span class="string">'ebe013ee18cced0ef93d5f746d80ef60'</span>; </span><br><span class="line">pf = <span class="string">'Package Control.sublime-package'</span>; </span><br><span class="line">ipp = sublime.installed_packages_path(); </span><br><span class="line">os.makedirs( ipp ) <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(ipp) <span class="keyword">else</span> <span class="literal">None</span>; </span><br><span class="line">urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); </span><br><span class="line">by = urllib2.urlopen( <span class="string">'http://packagecontrol.io/'</span> + pf.replace(<span class="string">' '</span>, <span class="string">'%20'</span>)).read(); </span><br><span class="line">dh = hashlib.sha256(by).hexdigest(); </span><br><span class="line">open( os.path.join( ipp, pf), <span class="string">'wb'</span> ).write(by) <span class="keyword">if</span> dh == h <span class="keyword">else</span> <span class="literal">None</span>; </span><br><span class="line">print(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h) <span class="keyword">if</span> dh != h <span class="keyword">else</span> <span class="string">'Please restart Sublime Text to finish installation'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>当在 console 框中输入上面的代码之后，在 status bar 上会有安装进度提示，等完成之后当在 menu -&gt; preference 中能看到 package control 时说明 package control 安装成功了，然后就能愉快的安装和管理其他插件了。</p>
+<p>通过 package control 安装和删除插件的方法是依次点击： menu -&gt; perference -&gt; package control 或者快捷键 Ctrl+Shift+P (windows) / Command+Shift+p (mac) ,然后在弹出的输入框中输入 install package 并选中 install package 后点击enter，接着就可以在弹出的新的输入框中输入你想要安装的插件的名称，然后回撤就可以安装了。（当输入 remove package 之后就是删除插件，其他的过程和上面的一样）</p>
+<h3 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h3><p>Emmet 这是一个 Sublime Text 必不可少的前端开发插件，堪称神器，它的前身就是大名鼎鼎的 zencoding，它使用仿 CSS 选择器的徐发来生成代码，大大的提高了 HTML/CSS 代码的编写速度。Emmet对于前端开发来说非常方便，下面简单的介绍以下它的使用方法。</p>
+<h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><p>1、初始化<br>Emmet 可以快速生成不同前端语言的模版，快捷键是 <kbd>Tab</kbd><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html:5 或者 !     用于生成 HTML5 文档类型</span><br><span class="line">html:xt          用于生成 XHTML 过渡文档类型</span><br><span class="line">html:4s          用户生成 HTML4 严格文档类型</span><br></pre></td></tr></table></figure><br>2、添加类、id、文本和属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div.boxclass          生成 class 为 boxclass 的 div 标签</span><br><span class="line">div#boxid             生成 id 为 boxid 的 div 标签</span><br><span class="line">div.boxclass#boxid    生成 class 为 boxclass 以及 id 为 boxid 的div标签</span><br><span class="line">a&#123;contents&#125;           生成 a 标签，里面的内容为 contents</span><br></pre></td></tr></table></figure><br>3、嵌套<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;  : 子元素符号，表示嵌套</span><br><span class="line">+  : 同级标签符号</span><br><span class="line">^  : 可以使该符号前面的标签提升一行</span><br></pre></td></tr></table></figure><br>4、分组<br>可以通过嵌套和括号来快速生成一些代码块，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(div&gt;h1)+(div&gt;span)</span><br></pre></td></tr></table></figure><br>5、多个元素<br>如果想要定义多个元素，就可以使用 <code>*</code> 符号，使用方法如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li*3      ul 标签下面会生成3个 li标签</span><br></pre></td></tr></table></figure><br>6、动态属性<br>可以使用通配符，让 Emmet 在生成多个标签时出现不同的属性值，用法如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li.class$*3    会生成三个 li 标签，class 值分别为 class1、class2、class3</span><br></pre></td></tr></table></figure></p>
+<h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><p>1、属性值<br>常见的属性值的书写方法列举如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">w44    生成 width:44px</span><br><span class="line">h44    生成 height:44px</span><br><span class="line">m44    生成 margin:44px</span><br></pre></td></tr></table></figure><br>同时后面还可以加单位，单位列举如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p 表示 %</span><br><span class="line">e 表示 em</span><br><span class="line">x 表示 ex</span><br></pre></td></tr></table></figure><br>2、模糊匹配<br>如果有一些缩写你没有记下，不确定，Emmet会根据你的输入内容自动匹配最接近的语法</p>
+<h3 id="DocBlockr"><a href="#DocBlockr" class="headerlink" title="DocBlockr"></a>DocBlockr</h3><p>这是一个自动生成注释的插件，有了它，你就可以很方便的添加注释，可以省下很多时间，同时 DocBlockr 还可以支持自定义，你可以自定义自己的注释的样式。</p>
+<h3 id="Color-Highlight"><a href="#Color-Highlight" class="headerlink" title="Color Highlight"></a>Color Highlight</h3><p>Color Highlight 这是一款颜色高亮显示的插件，非常好用，但是它的缺点是不能提取颜色。</p>
+<h3 id="Color-Highlighter"><a href="#Color-Highlighter" class="headerlink" title="Color Highlighter"></a>Color Highlighter</h3><p>Color Highlight 这也是一款颜色高亮的插件，它跟 Color Highlight 相比最大的不同就是可以提取颜色。</p>
+<h3 id="A-File-Icon"><a href="#A-File-Icon" class="headerlink" title="A File Icon"></a>A File Icon</h3><p>A File Icon 提供了一组漂亮的文件的 logo，不同的文件有不同的显示 logo，看起来很炫酷。</p>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>Git 就不用我介绍了，他是个版本控制的插件，这个插件也是项目开发必不可少的。</p>
+<h3 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h3><p>Alignment 是一款代码自动对齐的插件，使用快捷方式是 <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>a</kbd></p>
+<h3 id="AutoFileName"><a href="#AutoFileName" class="headerlink" title="AutoFileName"></a>AutoFileName</h3><p>AutoFileName 是一款输入文件路径时自动补全的插件，它可以快速帮你在文档中写路径。</p>
+<h3 id="BracketHighlighter"><a href="#BracketHighlighter" class="headerlink" title="BracketHighlighter"></a>BracketHighlighter</h3><p>BracketHighlighter 是一款括弧高亮的插件，当代码太多时，好多括弧，看起来有点乱，有了这款插件，它会将不同的括弧以不同的颜色显示，让你的代码清晰明了。</p>
+<h3 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h3><p>Nodejs 这个就不需要我过多介绍了，可以提供 node.js 的自动提示。</p>
+<h3 id="SideBarEnhancements"><a href="#SideBarEnhancements" class="headerlink" title="SideBarEnhancements"></a>SideBarEnhancements</h3><p>SideBarEnhancements 是一款 side bar 右键增强的插件，有了它你就可以直接在 side bar 中右键在项目中添加文件或者删除文件，同时还有很多其他的功能，你们自己慢慢体会吧。</p>
+<h3 id="SyncedSidebarBg"><a href="#SyncedSidebarBg" class="headerlink" title="SyncedSidebarBg"></a>SyncedSidebarBg</h3><p>SyncedSidebarBg 这款插件可以让你的 Sublime Text 的 side bar 的背景颜色和文本编辑区域的颜色保持一致。</p>
+<h3 id="ConvertToUTF8"><a href="#ConvertToUTF8" class="headerlink" title="ConvertToUTF8"></a>ConvertToUTF8</h3><p>ConvertToUTF8 可以将文件转码成utf-8格式，通过本插件，你可以编辑并保存目前编码不被 Sublime Text 支持的文件，特别是中日韩用户使用的 GB2312，GBK，BIG5，EUC-KR，EUC-JP ，ANSI等。ConvertToUTF8 同时支持 Sublime Text 2 和 3。</p>
+<h3 id="EncodingHelper"><a href="#EncodingHelper" class="headerlink" title="EncodingHelper"></a>EncodingHelper</h3><p>EncodingHelper 可以自动猜测你的文件的编码，并且显示在 status bar 上，将各种编码转换成为 UTF-8。</p>
+<h3 id="Codecs33"><a href="#Codecs33" class="headerlink" title="Codecs33"></a>Codecs33</h3><p>Codecs33 这款插件可以解决 Sublimt Text 在打开 GB2312 编码的文件时中文乱码的问题。</p>
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><p>jQuery 这款插件可以提供 jQuery 的自动提示功能，使用 jQuery 开发来说必不可少。</p>
+<h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><p>Vue 这款插件提供了 Vue 文件的高亮显示，使用 Vue.js 开发项目的话这款插件是必不可少的。</p>
+<h3 id="EJS2"><a href="#EJS2" class="headerlink" title="EJS2"></a>EJS2</h3><p>ejs2 这款插件提供了对 .ejs 文件的高亮显示，如果开发中用到 EJS 的话这款插件必不可少。</p>
+<h3 id="Markdownediting"><a href="#Markdownediting" class="headerlink" title="Markdownediting"></a>Markdownediting</h3><p>Markdownediting 是一款让 Markdown语法高亮显示的插件，如果你使用 Sublime 写 Markdown 文档，这款插件是必备的。</p>
+<p><code>MonokaiC</code> 是一款 sublime text3 下的主题，笔者推荐这款，安装方法如下</p>
+<blockquote>
+<h3 id="Install-1"><a href="#Install-1" class="headerlink" title="Install"></a>Install</h3><p>First, install MarkdownEditing.</p>
+<h3 id="Package-Control"><a href="#Package-Control" class="headerlink" title="Package Control"></a>Package Control</h3><p>Ctrl/Command + Shift + P to open the Command Palette<br>Select Package Control: Install Package<br>Search for MonokaiC<br>Press Enter</p>
+<h3 id="Manual"><a href="#Manual" class="headerlink" title="Manual"></a>Manual</h3><p>git clone <a href="https://github.com/avivace/MonokaiC" target="_blank" rel="noopener">https://github.com/avivace/MonokaiC</a> ~/.config/sublime-text-3/Packages/MonokaiC<br>Change the target directory with ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/MonokaiC on OS X and %appdata%\Sublime Text 3\Packages\MonokaiC on Windows.</p>
+<h3 id="Activation"><a href="#Activation" class="headerlink" title="Activation"></a>Activation</h3><p>To enable the theme, open your preferred MarkdownEditing User setting file from Preferences &gt; Package Settings &gt; Markdown Editing &gt; Markdown GFM Settings - USER (works with MultiMarkdown and Markdown Standard too) and put this:<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"color_scheme"</span>: <span class="string">"Packages/MonokaiC/themes/ME-MonokaiC.tmTheme"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>Be sure to Set Syntax -&gt; MarkdownEditing -&gt; Markdown GFM on your Markdown files</p>
+<p>然后编辑 Preferences &gt; Package Settings &gt; Markdown Editing &gt; Markdown GFM Settings - USER 输入一下内容<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"color_scheme"</span>: <span class="string">"Packages/MonokaiC/themes/ME-MonokaiC.tmTheme"</span>,</span><br><span class="line">    <span class="attr">"draw_centered"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"line_numbers"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"wrap_width"</span>: <span class="number">160</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/09/05/Markdown-Basic-Grammar/" data-toggle="tooltip" data-placement="top" title="Markdown Basic Grammar">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/07/20/Windows-System-Installation/" data-toggle="tooltip" data-placement="top" title="Windows System Installation">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- tip start -->
+                
+
+                
+                <div class="comment_notes">
+                    <p>
+                        If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- Music start-->
+                
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<div class="music-player">
+    <audio class="music-player__audio" ></audio>
+    <div class="music-player__main">
+        <div class="music-player__blur"></div>
+        <div class="music-player__disc">
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <div class="music-player__controls">
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/music-player/utill.js"></script>
+<script src="/js/music-player/jquery.min.js"></script>
+<script src="/js/music-player/player.js"></script>
+
+                <!-- Music end -->
+
+                <!-- Sharing -->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!-- Sharing -->
+
+                <!-- gitment start -->
+                
+                <hr>
+                <div id="blog_comments"></div>
+
+<!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+<!--
+<link rel="stylesheet" href="/css/gitment.css">
+<script type="text/javascript" src="/js/gitment.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<!--
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+-->
+
+<script>
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+    
+     // your custom component
+    container.appendChild(instance.renderSomething(state, instance))
+    
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    //container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+  renderSomething(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'hello_visitor'
+    if (state.user.login) {
+      container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+    }
+    return container
+  }
+}
+
+
+const gitment = new Gitment({
+    id: 'Sat Aug 10 2019 23:49:42 GMT+0800', // optional
+    owner: "dusign",
+    repo: "comments",
+    oauth: {
+      client_id: "14d5194dbf45604a7488",
+      client_secret: "b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc",
+    },
+    theme: myTheme,
+    // ...
+    // For more available options, check out the documentation below
+  })
+  
+  gitment.render('blog_comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
+                
+                <!-- gitment end -->
+
+                <!-- 来必力City版安装代码 -->
+                
+                <!-- City版安装代码已完成 -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Install"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Install</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Plug-ins"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Plug-ins</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Package-control"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Package control</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Emmet"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Emmet</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#HTML"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">HTML</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CSS"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">CSS</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DocBlockr"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">DocBlockr</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Color-Highlight"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Color Highlight</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Color-Highlighter"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Color Highlighter</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#A-File-Icon"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">A File Icon</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">Git</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Alignment"><span class="toc-nav-number">2.8.</span> <span class="toc-nav-text">Alignment</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#AutoFileName"><span class="toc-nav-number">2.9.</span> <span class="toc-nav-text">AutoFileName</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#BracketHighlighter"><span class="toc-nav-number">2.10.</span> <span class="toc-nav-text">BracketHighlighter</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Nodejs"><span class="toc-nav-number">2.11.</span> <span class="toc-nav-text">Nodejs</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SideBarEnhancements"><span class="toc-nav-number">2.12.</span> <span class="toc-nav-text">SideBarEnhancements</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SyncedSidebarBg"><span class="toc-nav-number">2.13.</span> <span class="toc-nav-text">SyncedSidebarBg</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ConvertToUTF8"><span class="toc-nav-number">2.14.</span> <span class="toc-nav-text">ConvertToUTF8</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#EncodingHelper"><span class="toc-nav-number">2.15.</span> <span class="toc-nav-text">EncodingHelper</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Codecs33"><span class="toc-nav-number">2.16.</span> <span class="toc-nav-text">Codecs33</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#jQuery"><span class="toc-nav-number">2.17.</span> <span class="toc-nav-text">jQuery</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Vue"><span class="toc-nav-number">2.18.</span> <span class="toc-nav-text">Vue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#EJS2"><span class="toc-nav-number">2.19.</span> <span class="toc-nav-text">EJS2</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Markdownediting"><span class="toc-nav-number">2.20.</span> <span class="toc-nav-text">Markdownediting</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Install-1"><span class="toc-nav-number">2.21.</span> <span class="toc-nav-text">Install</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Package-Control"><span class="toc-nav-number">2.22.</span> <span class="toc-nav-text">Package Control</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Manual"><span class="toc-nav-number">2.23.</span> <span class="toc-nav-text">Manual</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Activation"><span class="toc-nav-number">2.24.</span> <span class="toc-nav-text">Activation</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#sublime" title="sublime">sublime</a>
+                        
+                          <a class="tag" href="/tags/#editor" title="editor">editor</a>
+                        
+                          <a class="tag" href="/tags/#plugin" title="plugin">plugin</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Dusign&#39;s Web</a></li>
+                    
+                        <li><a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a></li>
+                    
+                        <li><a href="#" target="_blank">Other</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+
+
+<style  type="text/css">
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/dusign">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Dusign 2019 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">
+                        <i>hexo-theme-snail</i>
+                    </a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- Search -->
+<script src="/js/search.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://www.dusign.net/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects start -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+
+</html>
