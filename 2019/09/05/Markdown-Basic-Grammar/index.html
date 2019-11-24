@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="It&#39;s an IT blog">
+    <meta name="keyword"  content="dusign, super snail, dugang, IT blog, snail">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <title>
+        
+          Markdown Basic Grammar - Super Snail | An IT blog
+        
+    </title>
+
+    <link rel="canonical" href="https://www.dusign.net/2019/09/05/Markdown-Basic-Grammar/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    
+        <link rel="stylesheet" href="/css/dusign-light.css">
+        <link rel="stylesheet" href="/css/dusign-common-light.css">
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    
+        <!-- background effects start -->
+        
+        <!-- background effects end -->
+    
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('MARKDOWN-bg.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#editor" title="editor">editor</a>
+                            
+                              <a class="tag" href="/tags/#markdown" title="markdown">markdown</a>
+                            
+                              <a class="tag" href="/tags/#language" title="language">language</a>
+                            
+                        </div>
+                        <h1>Markdown Basic Grammar</h1>
+                        <h2 class="subheading">Markdown is a lightweight markup language that allows people to write documents in plain text format that is easy to read and write.</h2>
+                        <span class="meta">
+                            Posted by Dusign on
+                            2019-09-05
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">2.1k</span> and
+                                Reading Time <span class="post-count">7</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Super Snail</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                    <li>
+                        <a href="https://blog.csdn.net/d_Nail" target="_blank">Chinese Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>Markdown is a markup language in plain text format. Through simple markup grammar, it can make ordinary text content have a certain format.Markdown is widely used in many websites to write help documents or to publish messages in forums. For example: GitHub, brief book, reddit, Diaspora, Stack Exchange, OpenStreetMap, SourceForge, etc.</p>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>Markdown 在许多平台都有好多不同的编辑器，这里笔者根据自己的实际经历推荐给大家几款编辑器，希望大家会喜欢。</p>
+<p>在这里笔者首先要推荐的就是使用文本编辑器写 Markdown，例如 VS Code 、Sublime Text 、 Atom 等，这些文本编辑器不仅能写代码，还能顺别用 Markdown 写文档，这样比较方便，但是又一个缺点就是不能实时预览，想预览的画就需要在浏览器上刷新预览。</p>
+<p>如果大家不喜欢用上面的编辑器写 Markdown 或者觉得不能实时刷新而不方便的话，还有很多专门写文档的 Markdown 编辑器，Windows 上有 MarkdownPad 、Typee。Mac 平台推荐 Ulysses，这一一款很古老的 文档编辑器，堪称神器。Linux 平台笔者一般只是跑程序，需要的话大家自己找吧。</p>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>Markdown语法比较简单，不过仍然需要花费一定的功夫记忆，而且每一种样式有不同的实现方式，这里笔者只介绍一种常用的写法，同时也是笔者自己习惯的写法。</p>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>Markdown中标题使用 <code>#</code> 标记，使用 <code>#</code> 可表示 1-6 级标题，一级标题对应一个 <code>#</code> ，二级标题对应二个 <code>#</code>，依次类推。需要注意的是 <code>#</code> 和标题内容之间有一个空格。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。</p>
+<h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><p>Markdown字体用 <code>*</code> 标记，用法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜文本*</span></span><br><span class="line"><span class="strong">**粗体文本**</span></span><br><span class="line"><span class="strong">***粗斜体文本**</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h4><p>可以在一行中用三个以上的减号来建立一个分隔线，行内不能有其他东西，也可以在减号中间插入空格来建立分割线,用法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="bullet">- </span>- -</span><br></pre></td></tr></table></figure></p>
+<h4 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h4><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，用法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~需要添加删除线的内容~</span><br></pre></td></tr></table></figure></p>
+<h4 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h4><p>下划线可以通过 HTML 的 <code>&lt;u&gt;</code> 标签来实现，用法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>需要添加下划线的内容<span class="xml"><span class="tag">&lt;/&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<h4 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h4><p>在写文章的时候有时候会用到脚注，Markdown也给我们定义了脚注的写法，用法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[^要脚注的文本]</span><br><span class="line">[<span class="symbol">^要脚注的文本</span>]:<span class="link">脚注的内容</span></span><br></pre></td></tr></table></figure><br>注：Markdown 的脚注现在有些博客平台不支持，例如笔者使用的HEXO博客平台。</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>Markdown 支持无序列表和有序列表，同时还支持列表嵌套</p>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>无序列表使用 <code>+</code> 或者 <code>-</code> 标记，使用方法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+ </span>第一项</span><br><span class="line"><span class="bullet">+ </span>第二项</span><br><span class="line"><span class="bullet">+ </span>第三项</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>第一项</span><br><span class="line"><span class="bullet">- </span>第二项</span><br><span class="line"><span class="bullet">- </span>第三项</span><br></pre></td></tr></table></figure></p>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>有序列表使用数字加上 <code>.</code> 来标记，使用方法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>第一项</span><br><span class="line"><span class="bullet">2. </span>第二项</span><br><span class="line"><span class="bullet">3. </span>第三项</span><br></pre></td></tr></table></figure></p>
+<h4 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h4><p>列表嵌套只需要在子列表中的标记前添加四个空格或者一个 Tab 即可，使用方法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>第一项</span><br><span class="line"><span class="bullet">    - </span>嵌套列表第一项</span><br><span class="line"><span class="bullet">    - </span>嵌套列表第二项</span><br><span class="line"><span class="bullet">2. </span>第二项</span><br><span class="line"><span class="bullet">    - </span>嵌套列表第一项</span><br><span class="line"><span class="bullet">    - </span>嵌套列表第二项</span><br></pre></td></tr></table></figure></p>
+<h3 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h3><p>Markdown 中的引用是在引用的内容前面加 <code>&gt;</code> 符号，然后后面要加一个空格，使用方法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 引用的第一行内容</span></span><br><span class="line"><span class="quote">&gt; 引用的第二行内容</span></span><br><span class="line"><span class="quote">&gt; 引用的第三行内容</span></span><br></pre></td></tr></table></figure><br>引用还可以嵌套，引用嵌套时内层引用使用多个 <code>&gt;</code> ,即内层引用比外层多一个。引用中也可以使用列表，列表的使用方法如上。列表中也可以使用引用，使用的时候引用相对于列表缩进 4 个空格或者一个 Tab 。使用方法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">引用嵌套</span><br><span class="line"><span class="quote">&gt; 第一层</span></span><br><span class="line">&gt;&gt; 第二层</span><br><span class="line">&gt;&gt; 第三层</span><br><span class="line"></span><br><span class="line">引用中使用列表</span><br><span class="line"><span class="quote">&gt; - 无序列表第一项</span></span><br><span class="line"><span class="quote">&gt; - 无序列表第二项</span></span><br><span class="line"><span class="quote">&gt; 1. 有序列表第一项</span></span><br><span class="line"><span class="quote">&gt; 2. 有序列表第二项</span></span><br><span class="line"></span><br><span class="line">列表中使用引用</span><br><span class="line"><span class="bullet">- </span>列表第一项</span><br><span class="line"><span class="code">    &gt; 引用的第一行</span></span><br><span class="line"><span class="code">    &gt; 引用的第二行</span></span><br><span class="line"><span class="bullet">- </span>列表第二项</span><br></pre></td></tr></table></figure></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>Markdown 中还可以写入代码，如果是段落上的一个函数或者是一个片段的代码，只需要用 <code>` </code> 包起来即可，用法如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`这里是行内代码`</span></span><br></pre></td></tr></table></figure><br>如果代码中包含 <code>` </code> ,则前后需要使用 <code>`` </code> ，并且内容两端需要空格，用法如下</p>
+<pre><code class="lang-Markdown">`` ` ``
+</code></pre>
+<p>如果想输入一个代码块，则可以使用 <code>``` </code> 包裹多行代码，并且在开头的一个 <code>``` </code> 后面指定一种语言（可以不指定），用法如下  </p>
+<pre><code class="lang-Python">```python 
+from pythonds.graphs import Graph, Vertex
+from pythonds.basic import Queue
+
+def bfs(g,start):
+  start.setDistance(0)
+  start.setPred(None)
+  vertQueue = Queue()
+  vertQueue.enqueue(start)
+  while (vertQueue.size() &gt; 0):
+    currentVert = vertQueue.dequeue()
+    for nbr in currentVert.getConnections():
+      if (nbr.getColor() == &#39;white&#39;):
+        nbr.setColor(&#39;gray&#39;)
+        nbr.setDistance(currentVert.getDistance() + 1)
+        nbr.setPred(currentVert)
+        vertQueue.enqueue(nbr)
+    currentVert.setColor(&#39;black&#39;)
+```
+</code></pre>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接在文档里面是很常见的，Markdown 提供了链接功能，使用方法如下</p>
+<pre><code class="lang-Markdown">[链接名称](链接地址) 或者 &lt;链接地址&gt;
+</code></pre>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>Markdown 的插入图片的语法非常简单，和链接的语法非常相似，知识在前面多了一个 <code>!</code> ，使用方法如下</p>
+<pre><code class="lang-Markdown">![alt](src)
+![alt](src &quot;title&quot;)
+</code></pre>
+<p>虽然 Markdown 可以插入图片，但是没法指定图片的高度，如果想要指定图片的高度的话可以使用 HTML 中的 <code>&lt;img&gt;</code> 标签，使用方法如下</p>
+<pre><code class="lang-Markdown">&lt;img src=&quot;&quot; alt=&quot;&quot; width=&quot;&quot;&gt;
+</code></pre>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>Markdown 提供了表格的功能，制作表格时使用 <code>|</code> 来分割不同的单元格，使用 <code>-</code> 来分割表头和其他行，使用方法如下</p>
+<pre><code class="lang-Markdown">|表头|表头|
+|----|----|
+|单元格|单元格|
+|单元格|单元格|
+</code></pre>
+<p>同时我们还可以在表格中设置对齐方式：</p>
+<ul>
+<li><code>-:</code> 设置内容和标题栏右对齐</li>
+<li><code>:-</code> 设置内容和标题栏左对齐</li>
+<li><code>:-:</code> 设置内容和标题栏居中对齐 </li>
+</ul>
+<p>对齐的使用方法如下</p>
+<pre><code class="lang-Markdown">| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+</code></pre>
+<h2 id="进阶语法"><a href="#进阶语法" class="headerlink" title="进阶语法"></a>进阶语法</h2><p>Markdown 语法除了上面的这些常用的之外，还有一些不太常用，但是有的时候还是会用到，例如下面列举的这些语法。</p>
+<h3 id="HTML-元素"><a href="#HTML-元素" class="headerlink" title="HTML 元素"></a>HTML 元素</h3><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
+<p>目前支持的 HTML 元素有： <code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code> 等</p>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符。</p>
+<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号</p>
+<pre><code class="lang-Markdown">\   反斜线
+`   反引号
+*   星号
+_   下划线
+{}  花括号
+[]  方括号
+()  小括号
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   感叹号
+</code></pre>
+<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。</p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p>Markdown 的流程图画法是将流程图的代码包裹在 <code>```flow</code> 和 <code>``` </code> 之间，Markdown的语法只能画简单的流程图，同时好多博客系统也不支持 Markdown 流程图，比如笔者使用的 HEXO 就不支持。</p>
+<p>流程图也可以使用 Mermaid，这是一个用于画流程图、状态图、时序图以及甘特图的一个 JS 渲染库，它生成的不是图片，而是 HTML 代码，因此安全性比较高，可以访问 Mermaid <a href="https://mermaidjs.github.io" target="_blank" rel="noopener">官网</a>或者在 <a href="https://github.com/knsv/mermaid" target="_blank" rel="noopener">Github</a> 上下载安装。</p>
+<p>复杂一点的流程如需要使用Xmind，Xmind可以画各种复杂的流程图、鱼骨图以及思维导图，它是一个思维导图软件，在各个平台都有相应的版本。</p>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/09/10/Data-Check-Code/" data-toggle="tooltip" data-placement="top" title="Data Check Code">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/08/10/Introduction-to-Sublime-Plug-in/" data-toggle="tooltip" data-placement="top" title="Sublime Plugin Introduction">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- tip start -->
+                
+
+                
+                <div class="comment_notes">
+                    <p>
+                        If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- Music start-->
+                
+<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+<link rel="stylesheet" href="/css/music-player/css/reset.css">
+<link rel="stylesheet" href="/css/music-player/css/player.css">
+
+
+<div class="music-player">
+    <audio class="music-player__audio" ></audio>
+    <div class="music-player__main">
+        <div class="music-player__blur"></div>
+        <div class="music-player__disc">
+            <div class="music-player__image">
+                <img width="100%" src="" alt="">
+            </div>
+            <div class="music-player__pointer"><img width="100%" src="/img/cd_tou.png" alt=""></div>
+        </div>
+        <div class="music-player__controls">
+            <div class="music__info">
+                <h3 class="music__info--title">...</h3>
+                <p class="music__info--singer">...</p>
+            </div>
+            <div class="player-control">
+                <div class="player-control__content">
+                    <div class="player-control__btns">
+                        <div class="player-control__btn player-control__btn--prev"><i class="iconfont icon-prev"></i></div>
+                        <div class="player-control__btn player-control__btn--play"><i class="iconfont icon-play"></i></div>
+                        <div class="player-control__btn player-control__btn--next"><i class="iconfont icon-next"></i></div>
+                        <div class="player-control__btn player-control__btn--mode"><i class="iconfont icon-loop"></i></div>
+                    </div>
+                    <div class="player-control__volume">
+                        <div class="control__volume--icon player-control__btn"><i class="iconfont icon-volume"></i></div>
+                        <div class="control__volume--progress player_progress"></div>
+                    </div>
+                </div>
+                <div class="player-control__content">
+                    <div class="player__song--progress player_progress"></div>
+                    <div class="player__song--timeProgess nowTime">00:00</div>
+                    <div class="player__song--timeProgess totalTime">00:00</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/music-player/utill.js"></script>
+<script src="/js/music-player/jquery.min.js"></script>
+<script src="/js/music-player/player.js"></script>
+
+                <!-- Music end -->
+
+                <!-- Sharing -->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!-- Sharing -->
+
+                <!-- gitment start -->
+                
+                <hr>
+                <div id="blog_comments"></div>
+
+<!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+<!--
+<link rel="stylesheet" href="/css/gitment.css">
+<script type="text/javascript" src="/js/gitment.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<!--
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+-->
+
+<script>
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+    
+     // your custom component
+    container.appendChild(instance.renderSomething(state, instance))
+    
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    //container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+  renderSomething(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'hello_visitor'
+    if (state.user.login) {
+      container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+    }
+    return container
+  }
+}
+
+
+const gitment = new Gitment({
+    id: 'Thu Sep 05 2019 22:51:08 GMT+0800', // optional
+    owner: "dusign",
+    repo: "comments",
+    oauth: {
+      client_id: "14d5194dbf45604a7488",
+      client_secret: "b85cb293d90c4ad7aec36fc4fb6aac7e4922b3cc",
+    },
+    theme: myTheme,
+    // ...
+    // For more available options, check out the documentation below
+  })
+  
+  gitment.render('blog_comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
+                
+                <!-- gitment end -->
+
+                <!-- 来必力City版安装代码 -->
+                
+                <!-- City版安装代码已完成 -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#编辑器"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">编辑器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基本语法"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">基本语法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#标题"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">标题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#段落"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">段落</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#字体"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">字体</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#分割线"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">分割线</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#删除线"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">删除线</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#下划线"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">下划线</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#脚注"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">脚注</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#列表"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">列表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#无序列表"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">无序列表</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#有序列表"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">有序列表</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#列表嵌套"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">列表嵌套</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#区块"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">区块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#代码"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">代码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">链接</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#图片"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">图片</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#表格"><span class="toc-nav-number">2.8.</span> <span class="toc-nav-text">表格</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#进阶语法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">进阶语法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML-元素"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">HTML 元素</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#转义"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">转义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#公式"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">公式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#流程图"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">流程图</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#editor" title="editor">editor</a>
+                        
+                          <a class="tag" href="/tags/#markdown" title="markdown">markdown</a>
+                        
+                          <a class="tag" href="/tags/#language" title="language">language</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Dusign&#39;s Web</a></li>
+                    
+                        <li><a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a></li>
+                    
+                        <li><a href="#" target="_blank">Other</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+
+
+<style  type="text/css">
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/dusign">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Dusign 2019 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">
+                        <i>hexo-theme-snail</i>
+                    </a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- Search -->
+<script src="/js/search.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://www.dusign.net/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects start -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+
+</html>
