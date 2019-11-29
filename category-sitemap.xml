@@ -113,14 +113,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/categories/django/</loc>
+        <loc>https://www.dusign.net/categories/python/</loc>
         <lastmod>2019-11-09T16:51:58.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/categories/python/</loc>
+        <loc>https://www.dusign.net/categories/django/</loc>
         <lastmod>2019-11-09T16:51:58.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
