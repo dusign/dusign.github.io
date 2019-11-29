@@ -220,14 +220,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/github/</loc>
+        <loc>https://www.dusign.net/tags/git/</loc>
         <lastmod>2019-11-09T16:51:58.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/git/</loc>
+        <loc>https://www.dusign.net/tags/github/</loc>
         <lastmod>2019-11-09T16:51:58.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -367,6 +367,13 @@
     </url>
 
     <url>
+        <loc>https://www.dusign.net/tags/django/</loc>
+        <lastmod>2019-11-09T16:51:58.689Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.dusign.net/tags/code/</loc>
         <lastmod>2019-11-09T16:51:58.689Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -375,13 +382,6 @@
 
     <url>
         <loc>https://www.dusign.net/tags/epe8/</loc>
-        <lastmod>2019-11-09T16:51:58.689Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/django/</loc>
         <lastmod>2019-11-09T16:51:58.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
