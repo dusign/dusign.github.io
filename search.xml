@@ -308,9 +308,9 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> git </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
@@ -335,9 +335,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> editor </tag>
+            
+            <tag> linux </tag>
             
             <tag> vim </tag>
             
@@ -631,11 +631,11 @@
       
         <tags>
             
+            <tag> editor </tag>
+            
             <tag> markdown </tag>
             
             <tag> language </tag>
-            
-            <tag> editor </tag>
             
         </tags>
       
