@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Flex Box</title>
+      <link href="/2019/12/05/Flex-Box/"/>
+      <url>/2019/12/05/Flex-Box/</url>
+      
+        <content type="html"><![CDATA[<p>Flex box 即弹性布局，是 CSS3 的一种新的布局模式。是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。目前基本所有的主流浏览器都支持该属性，同时好多前端的框架也都支持该属性布局。</p><p>Flex box 由 flex container 和 flex item 组成，flex box 通过设置 display 属性的值为 flex 或 inline-flex 将其定义为弹性容器，弹性容器内包含了一个或多个弹性子元素，弹性容器外及弹性子元素内是正常渲染的。弹性盒子只定义了弹性子元素如何在弹性容器内布局，弹性子元素通常在弹性盒子内一行显示，默认情况每个容器只有一行。</p><p>Flex box 的属性如下：</p><p><code>flex-direction: row | row-reverse | column | column-reverse</code></p><ul><li>row - 横向从左到右排列（左对齐），默认的排列方式</li><li>row-reverse - 反转横向排列（右对齐，从后往前排，最后一项排在最前面</li><li>column - 纵向排列</li><li>column-reverse - 反转纵向排列，从后往前排，最后一项排在最上面</li></ul><p><code>justify-content: flex-start | flex-end | center | space-between | space-around</code></p><ul><li>flex-start - 弹性项目向行头紧挨着填充</li><li>flex-end - 弹性项目向行尾紧挨着填充</li><li>center - 弹性项目居中紧挨着填充</li><li>space-between - 弹性项目平均分布在该行上</li><li>space-around - 弹性项目平均分布在该行上，两边留有一半的间隔空间</li></ul><p><code>align-items: flex-start | flex-end | center | baseline | stretch</code></p><ul><li>flex-start - 弹性盒子元素的纵轴起始位置的边界紧靠住该行的纵轴起始边界</li><li>flex-end - 弹性盒子元素的纵轴起始位置的边界紧靠住该行的纵轴结束边界</li><li>center - 弹性盒子元素在该行的纵轴上居中放置</li><li>baseline - 如弹性盒子元素的行内轴与纵轴为同一条，则该值与’flex-start’等效。其它情况下，该值将参与基线对齐</li><li>stretch - 如果指定纵轴大小的属性值为’auto’，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸</li></ul><p><code>flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit</code></p><ul><li>nowrap - 默认， 弹性容器为单行</li><li>wrap - 弹性容器为多行</li><li>wrap-reverse - 反转 wrap 排列</li></ul><p><code>align-content: flex-start | flex-end | center | space-between | space-around | stretch</code></p><ul><li>stretch - 默认。各行将会伸展以占用剩余的空间</li><li>flex-start - 各行向弹性盒容器的起始位置堆叠</li><li>flex-end - 各行向弹性盒容器的结束位置堆叠</li><li>center -各行向弹性盒容器的中间位置堆叠</li><li>space-between - 各行在弹性盒容器中平均分布</li><li>space-around - 各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半</li></ul><p><code>order: &lt;integer&gt;</code> 用整数值来定义排列顺序，数值小的排在前面，可以为负值</p><p><code>margin: auto</code> 处理剩下的空间</p><p><code>align-self: auto | flex-start | flex-end | center | baseline | stretch</code></p><ul><li>auto - 如果’align-self’的值为’auto’，则其计算值为元素的父元素的’align-items’值，如果其没有父元素，则计算值为’stretch’</li><li>flex-start - 弹性盒子元素的纵轴起始位置的边界紧靠住该行的纵轴起始边界</li><li>flex-end - 弹性盒子元素的纵轴起始位置的边界紧靠住该行的纵轴结束边界</li><li>center - 弹性盒子元素在该行的纵轴上居中放置</li><li>baseline - 如弹性盒子元素的行内轴与纵轴为同一条，则该值与’flex-start’等效。其它情况下，该值将参与基线对齐</li><li>stretch - 如果指定纵轴大小的属性值为’auto’，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照’min/max-width/height’属性的限制</li></ul><p><code>flex: auto | initial | none | inherit |  [ flex-grow ] || [ flex-shrink ] || [ flex-basis ]</code></p><ul><li>auto - 计算值为 1 1 auto</li><li>initial - 计算值为 0 1 auto</li><li>none - 计算值为 0 0 auto</li><li>inherit - 从父元素继承</li><li>flex-grow - 定义弹性盒子元素的扩展比率</li><li>flex-shrink - 定义弹性盒子元素的收缩比率</li><li>flex-basis - 定义弹性盒子元素的默认基准值</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> flex </tag>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Greedy Algorithm</title>
       <link href="/2019/11/18/Greedy-Algorithm/"/>
       <url>/2019/11/18/Greedy-Algorithm/</url>
@@ -70,9 +93,9 @@
             
             <tag> html </tag>
             
-            <tag> browser </tag>
-            
             <tag> css </tag>
+            
+            <tag> browser </tag>
             
             <tag> js </tag>
             
@@ -308,9 +331,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> github </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
