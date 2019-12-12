@@ -166,13 +166,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -181,6 +174,13 @@
                         
                         <li>
                             <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -263,7 +263,7 @@
 <p>linux 执行命令让环境变量生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
 <p>mac 下环境变量配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> VIRTUALENVWRAPPER_PYTHON=  <span class="comment"># 命令 which python3 查询出来的路径</span></span><br><span class="line"><span class="comment"># 虚拟环境存储的目录</span></span><br><span class="line"><span class="built_in">export</span> WORKON_HOME=<span class="variable">$HOME</span>/.virtualenvs</span><br><span class="line"><span class="built_in">source</span> <span class="comment"># 命令 which virtualenvwrapper.sh 查询出来的路径</span></span><br></pre></td></tr></table></figure></p>
 <p>mac 执行命令让环境变量生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
-<p>virtualenv 相关命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建虚拟环境</span></span><br><span class="line">mkvirtualenv NAME</span><br><span class="line">mkvirtualenv NAME --python=python3.8</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除虚拟环境</span></span><br><span class="line">rmvirtualenv NAME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有虚拟环境</span></span><br><span class="line">workon</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入虚拟环境</span></span><br><span class="line">workon NAME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推出虚拟环境</span></span><br><span class="line">deactivate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在虚拟环境中安装相关包</span></span><br><span class="line">workon NAME</span><br><span class="line">pip3 install PACKAGE_NAME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载虚拟环境中的相关包</span></span><br><span class="line">workon NAME</span><br><span class="line">pip3 uninstall PACKAGE_NAME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看安装的包</span></span><br><span class="line">pip3 list</span><br></pre></td></tr></table></figure></p>
+<p>virtualenv 相关命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建虚拟环境</span></span><br><span class="line">mkvirtualenv NAME</span><br><span class="line">mkvirtualenv NAME --python=python3.8</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除虚拟环境</span></span><br><span class="line">rmvirtualenv NAME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有虚拟环境</span></span><br><span class="line">workon</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入虚拟环境</span></span><br><span class="line">workon NAME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 退出虚拟环境</span></span><br><span class="line">deactivate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在虚拟环境中安装相关包</span></span><br><span class="line">workon NAME</span><br><span class="line">pip3 install PACKAGE_NAME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载虚拟环境中的相关包</span></span><br><span class="line">workon NAME</span><br><span class="line">pip3 uninstall PACKAGE_NAME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看安装的包</span></span><br><span class="line">pip3 list</span><br></pre></td></tr></table></figure></p>
 
                 
                 <hr>
@@ -711,11 +711,28 @@ const gitment = new Gitment({
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
         
 
         <!-- background effects end -->
     
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

@@ -170,13 +170,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -185,6 +178,13 @@
                         
                         <li>
                             <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -290,7 +290,7 @@
 <li>将应用安装到项目里<br>在 <code>PROJECT_NAME/settings.py</code> 中的 <code>INSTALLED_APPS</code> 中添加 <code>APP_NAME.apps.APP_NAMEConfig</code>—-<code>APP_NAMEConfig</code> 的 <code>APP_NAME</code> 首字母大写。因为 <code>APP_NAMEConfig</code> 类写在文件 <code>APP_NAME/apps.py</code> 中，所以它的点式路径是 <code>APP_NAME.apps.APP_NAMEConfig</code></li>
 </ol>
 <h2 id="View"><a href="#View" class="headerlink" title="View"></a>View</h2><p>添加视图，修改文件 <code>PROJECT_NAME/APP_NAME/views.py</code> 如下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"Hello, world. This is an APP."</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">VIEW_NAME</span><span class="params">(request,PARAMETER)</span>:</span></span><br><span class="line">    response = <span class="string">"This is a simple view"</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(response % PARAMETER)</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>设置路由，修改文件 <code>APP_NAME/urls.py</code> 如下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">''</span>, views.index, name=<span class="string">'index'</span>),</span><br><span class="line">    path(<span class="string">'ROUTER_NAME'</span>, views.VIEW_NAME, name=<span class="string">'VIEW_NAME'</span>)</span><br><span class="line">    <span class="comment"># 使用尖括号捕获URL 并且以参数的形式发送给视图函数</span></span><br><span class="line">    path(<span class="string">'&lt;ROUTER_NAME:PARAMETER&gt;'</span>, views.VIEW_NAME, name=<span class="string">'VIEW_NAME'</span>) </span><br><span class="line">    ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p>设置路由，修改文件 <code>PROJECT_NAME/urls.py</code> 如下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">''</span>, views.index, name=<span class="string">'index'</span>),</span><br><span class="line">    path(<span class="string">'ROUTER_NAME'</span>, views.VIEW_NAME, name=<span class="string">'VIEW_NAME'</span>)</span><br><span class="line">    <span class="comment"># 使用尖括号捕获URL 并且以参数的形式发送给视图函数</span></span><br><span class="line">    path(<span class="string">'&lt;ROUTER_NAME:PARAMETER&gt;'</span>, views.VIEW_NAME, name=<span class="string">'VIEW_NAME'</span>) </span><br><span class="line">    ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
 <p>修改 <code>PROJECT_NAME/urls.py</code> 的内容如下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> include, path</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'admin/'</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">'APP_NAME/'</span>, include(<span class="string">'APP_NAME.urls'</span>)),</span><br><span class="line">    ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
 <p><code>path()</code> 函数总共有四个参数，分别是<code>route</code>、<code>view</code>、<code>kwargs</code>、<code>name</code>，前两个是必须参数，后两个是可选参数，参数意义如下</p>
 <ul>
@@ -1101,11 +1101,28 @@ const gitment = new Gitment({
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;🌱&#34;,&#34;just do it&#34;,&#34;🌾&#34;,&#34;🍀&#34;,&#34;don&#39;t give up&#34;,&#34;🍂&#34;,&#34;🌻&#34;,&#34;try it again&#34;,&#34;🍃&#34;,&#34;never say die&#34;,&#34;🌵&#34;,&#34;🌿&#34;,&#34;🌴&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34; ,&#34;rgb(157,211,250)&#34; ,&#34;rgb(255,0,0)&#34; ,&#34;rgb(242,153,29)&#34; ,&#34;rgb(23,204,16)&#34; ,&#34;rgb(222,0,0)&#34; ,&#34;rgb(22,36,92)&#34; ,&#34;rgb(127,24,116)&#34; ,&#34;rgb(119,195,79)&#34; ,&#34;rgb(4,77,34)&#34; ,&#34;rgb(122,2,60)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
         
 
         <!-- background effects end -->
     
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

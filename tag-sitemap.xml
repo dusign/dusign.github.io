@@ -3,6 +3,41 @@
 
 
     <url>
+        <loc>https://www.dusign.net/tags/framework/</loc>
+        <lastmod>2019-12-11T13:43:11.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/django/</loc>
+        <lastmod>2019-12-11T13:43:11.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/web/</loc>
+        <lastmod>2019-12-11T13:43:11.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/python/</loc>
+        <lastmod>2019-12-11T13:43:11.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/virtualenv/</loc>
+        <lastmod>2019-12-11T13:42:32.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.dusign.net/tags/plugin/</loc>
         <lastmod>2019-12-06T12:43:23.214Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -47,13 +82,6 @@
     <url>
         <loc>https://www.dusign.net/tags/dusign/</loc>
         <lastmod>2019-12-06T09:58:45.442Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/web/</loc>
-        <lastmod>2019-12-05T12:56:01.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -199,13 +227,6 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/framework/</loc>
-        <lastmod>2019-11-09T16:51:58.706Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.dusign.net/tags/os/</loc>
         <lastmod>2019-11-09T16:51:58.705Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -248,14 +269,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/github/</loc>
+        <loc>https://www.dusign.net/tags/git/</loc>
         <lastmod>2019-11-09T16:51:58.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/git/</loc>
+        <loc>https://www.dusign.net/tags/github/</loc>
         <lastmod>2019-11-09T16:51:58.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -381,13 +402,6 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/django/</loc>
-        <lastmod>2019-11-09T16:51:58.689Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.dusign.net/tags/code/</loc>
         <lastmod>2019-11-09T16:51:58.689Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -396,13 +410,6 @@
 
     <url>
         <loc>https://www.dusign.net/tags/epe8/</loc>
-        <lastmod>2019-11-09T16:51:58.689Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/python/</loc>
         <lastmod>2019-11-09T16:51:58.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

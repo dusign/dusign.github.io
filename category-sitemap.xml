@@ -8,6 +8,13 @@
     </url>
 
     <url>
+        <loc>https://www.dusign.net/categories/django/</loc>
+        <lastmod>2019-12-11T13:43:11.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.dusign.net/categories/text-editor/</loc>
         <lastmod>2019-12-06T12:43:23.214Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -108,13 +115,6 @@
     <url>
         <loc>https://www.dusign.net/categories/web-server/</loc>
         <lastmod>2019-11-09T16:51:58.692Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/categories/django/</loc>
-        <lastmod>2019-11-09T16:51:58.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
