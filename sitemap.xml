@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.dusign.net/2019/09/30/Django-Project-Development/</loc>
+    <loc>https://www.dusign.net/2019/11/01/Hexo-Theme-Snail/</loc>
     
-    <lastmod>2019-12-11T13:43:11.443Z</lastmod>
+    <lastmod>2019-12-14T14:28:43.905Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.dusign.net/2019/12/11/Usage-of-Virtualenv/</loc>
     
-    <lastmod>2019-12-11T13:42:32.496Z</lastmod>
+    <lastmod>2019-12-12T12:07:46.526Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.dusign.net/2019/09/30/Django-Project-Development/</loc>
+    
+    <lastmod>2019-12-11T13:43:11.443Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>https://www.dusign.net/2019/08/10/Introduction-to-Sublime-Plug-in/</loc>
     
     <lastmod>2019-12-06T12:43:23.214Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.dusign.net/2019/11/01/Hexo-Theme-Snail/</loc>
-    
-    <lastmod>2019-12-06T09:58:45.442Z</lastmod>
     
   </url>
   
