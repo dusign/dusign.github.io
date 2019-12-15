@@ -3,6 +3,48 @@
 
 
     <url>
+        <loc>https://www.dusign.net/tags/hexo/</loc>
+        <lastmod>2019-12-14T14:28:43.905Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/snail/</loc>
+        <lastmod>2019-12-14T14:28:43.905Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/hexo-theme-snail/</loc>
+        <lastmod>2019-12-14T14:28:43.905Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/dusign/</loc>
+        <lastmod>2019-12-14T14:28:43.905Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/virtualenv/</loc>
+        <lastmod>2019-12-12T12:07:46.526Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/python/</loc>
+        <lastmod>2019-12-12T12:07:46.526Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.dusign.net/tags/framework/</loc>
         <lastmod>2019-12-11T13:43:11.443Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,20 +66,6 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/python/</loc>
-        <lastmod>2019-12-11T13:43:11.443Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/virtualenv/</loc>
-        <lastmod>2019-12-11T13:42:32.496Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.dusign.net/tags/plugin/</loc>
         <lastmod>2019-12-06T12:43:23.214Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -54,34 +82,6 @@
     <url>
         <loc>https://www.dusign.net/tags/sublime/</loc>
         <lastmod>2019-12-06T12:43:23.214Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/hexo/</loc>
-        <lastmod>2019-12-06T09:58:45.442Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/snail/</loc>
-        <lastmod>2019-12-06T09:58:45.442Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/hexo-theme-snail/</loc>
-        <lastmod>2019-12-06T09:58:45.442Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/dusign/</loc>
-        <lastmod>2019-12-06T09:58:45.442Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -269,14 +269,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/git/</loc>
+        <loc>https://www.dusign.net/tags/github/</loc>
         <lastmod>2019-11-09T16:51:58.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/github/</loc>
+        <loc>https://www.dusign.net/tags/git/</loc>
         <lastmod>2019-11-09T16:51:58.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
