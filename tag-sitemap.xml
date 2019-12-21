@@ -3,6 +3,41 @@
 
 
     <url>
+        <loc>https://www.dusign.net/tags/node-js/</loc>
+        <lastmod>2019-12-21T05:33:45.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/mysqlclient/</loc>
+        <lastmod>2019-12-20T02:47:56.143Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/mac/</loc>
+        <lastmod>2019-12-20T02:47:56.143Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/mysql/</loc>
+        <lastmod>2019-12-20T02:47:56.143Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/python/</loc>
+        <lastmod>2019-12-20T02:47:56.143Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.dusign.net/tags/hexo/</loc>
         <lastmod>2019-12-14T14:28:43.905Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,13 +67,6 @@
 
     <url>
         <loc>https://www.dusign.net/tags/virtualenv/</loc>
-        <lastmod>2019-12-12T12:07:46.526Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/python/</loc>
         <lastmod>2019-12-12T12:07:46.526Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -269,14 +297,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/github/</loc>
+        <loc>https://www.dusign.net/tags/git/</loc>
         <lastmod>2019-11-09T16:51:58.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/git/</loc>
+        <loc>https://www.dusign.net/tags/github/</loc>
         <lastmod>2019-11-09T16:51:58.702Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -305,13 +333,6 @@
 
     <url>
         <loc>https://www.dusign.net/tags/mariadb/</loc>
-        <lastmod>2019-11-09T16:51:58.698Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/mysql/</loc>
         <lastmod>2019-11-09T16:51:58.698Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

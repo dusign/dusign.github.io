@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>Update Node.js</title>
+      <link href="/2019/12/20/Update-Node-js/"/>
+      <url>/2019/12/20/Update-Node-js/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>清除 npm 缓存<br><code>npm cache clean -f</code></p></li><li><p>安装 <a href="https://github.com/tj/n" target="_blank" rel="noopener">n</a> 模块，<a href="https://github.com/tj/n" target="_blank" rel="noopener">n</a> 模块是专门用来管理 nodejs 的版本的<br><code>sudo npm install -g n</code></p></li><li><p>查看 <a href="https://github.com/tj/n" target="_blank" rel="noopener">n</a> 模块的版本<br><code>n -V</code></p></li><li><p>升级到稳定版<br><code>n stable</code></p></li><li><p>升级到指定版本<br><code>n [版本号]</code></p></li><li><p><a href="https://github.com/tj/n" target="_blank" rel="noopener">n</a> 模块适用于 linux 或 mac，windows 下使用 <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">nvm</a> 或 <a href="https://github.com/nullivex/nodist" target="_blank" rel="noopener">nodist</a> 对 node.js 或 npm进行版本管理。</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> node.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Error Installing MySqlClient</title>
+      <link href="/2019/12/20/Error-Installing-MySqlClient/"/>
+      <url>/2019/12/20/Error-Installing-MySqlClient/</url>
+      
+        <content type="html"><![CDATA[<p>Django 使用 mysql 时，需要安装 mysqlclient 或 pymysql ，笔者的系统是 MACOS ，用 pyenv 管理 python 版本，使用 pyenv-virtualenv 搭建 python 虚拟环境，python 版本是 python3.8，虚拟环境中安装 mysqlclient 时出现了报错，错误及解决方法如下。</p><h2 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">Collecting mysqlclient</span><br><span class="line">  Using cached https://files.pythonhosted.org/packages/d0/97/7326248ac8d5049968bf4ec708a5d3d4806e412a42e74160d7f266a3e03a/mysqlclient-1.4.6.tar.gz</span><br><span class="line">Installing collected packages: mysqlclient</span><br><span class="line">    Running setup.py install <span class="keyword">for</span> mysqlclient ... error</span><br><span class="line">    ERROR: Command errored out with <span class="built_in">exit</span> status 1:</span><br><span class="line">     <span class="built_in">command</span>: /Users/dugang/.pyenv/versions/3.8.0/envs/myow/bin/python -u -c <span class="string">'import sys, setuptools, tokenize; sys.argv[0] = '</span><span class="string">"'"</span><span class="string">'/private/var/folders/g1/ht4cq7sx40vcbll3gw_bncgh0000gn/T/pip-install-cytmezc5/mysqlclient/setup.py'</span><span class="string">"'"</span><span class="string">'; __file__='</span><span class="string">"'"</span><span class="string">'/private/var/folders/g1/ht4cq7sx40vcbll3gw_bncgh0000gn/T/pip-install-cytmezc5/mysqlclient/setup.py'</span><span class="string">"'"</span><span class="string">';f=getattr(tokenize, '</span><span class="string">"'"</span><span class="string">'open'</span><span class="string">"'"</span><span class="string">', open)(__file__);code=f.read().replace('</span><span class="string">"'"</span><span class="string">'\r\n'</span><span class="string">"'"</span><span class="string">', '</span><span class="string">"'"</span><span class="string">'\n'</span><span class="string">"'"</span><span class="string">');f.close();exec(compile(code, __file__, '</span><span class="string">"'"</span><span class="string">'exec'</span><span class="string">"'"</span><span class="string">'))'</span> install --record /private/var/folders/g1/ht4cq7sx40vcbll3gw_bncgh0000gn/T/pip-record-cmhc1r6g/install-record.txt --single-version-externally-managed --compile --install-headers /Users/dugang/.pyenv/versions/3.8.0/envs/myow/include/site/python3.8/mysqlclient</span><br><span class="line">         cwd: /private/var/folders/g1/ht4cq7sx40vcbll3gw_bncgh0000gn/T/pip-install-cytmezc5/mysqlclient/</span><br><span class="line">    Complete output (30 lines):</span><br><span class="line">    running install</span><br><span class="line">    running build</span><br><span class="line">    running build_py</span><br><span class="line">    creating build</span><br><span class="line">    creating build/lib.macosx-10.15-x86_64-3.8</span><br><span class="line">    creating build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    copying MySQLdb/__init__.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    copying MySQLdb/_exceptions.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    copying MySQLdb/compat.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    copying MySQLdb/connections.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    copying MySQLdb/converters.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    copying MySQLdb/cursors.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    copying MySQLdb/release.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    copying MySQLdb/times.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    creating build/lib.macosx-10.15-x86_64-3.8/MySQLdb/constants</span><br><span class="line">    copying MySQLdb/constants/__init__.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb/constants</span><br><span class="line">    copying MySQLdb/constants/CLIENT.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb/constants</span><br><span class="line">    copying MySQLdb/constants/CR.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb/constants</span><br><span class="line">    copying MySQLdb/constants/ER.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb/constants</span><br><span class="line">    copying MySQLdb/constants/FIELD_TYPE.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb/constants</span><br><span class="line">    copying MySQLdb/constants/FLAG.py -&gt; build/lib.macosx-10.15-x86_64-3.8/MySQLdb/constants</span><br><span class="line">    running build_ext</span><br><span class="line">    building <span class="string">'MySQLdb._mysql'</span> extension</span><br><span class="line">    creating build/temp.macosx-10.15-x86_64-3.8</span><br><span class="line">    creating build/temp.macosx-10.15-x86_64-3.8/MySQLdb</span><br><span class="line">    clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -Dversion_info=(1,4,6,<span class="string">'final'</span>,0) -D__version__=1.4.6 -I/usr/<span class="built_in">local</span>/Cellar/mariadb/10.4.6_1/include/mysql -I/usr/<span class="built_in">local</span>/Cellar/mariadb/10.4.6_1/include/mysql/.. -I/Users/dugang/.pyenv/versions/3.8.0/envs/myow/include -I/Users/dugang/.pyenv/versions/3.8.0/include/python3.8 -c MySQLdb/_mysql.c -o build/temp.macosx-10.15-x86_64-3.8/MySQLdb/_mysql.o</span><br><span class="line">    clang -bundle -undefined dynamic_lookup -L/usr/<span class="built_in">local</span>/opt/readline/lib -L/usr/<span class="built_in">local</span>/opt/readline/lib -L/Users/dugang/.pyenv/versions/3.8.0/lib -L/usr/<span class="built_in">local</span>/opt/readline/lib -L/usr/<span class="built_in">local</span>/opt/readline/lib -L/Users/dugang/.pyenv/versions/3.8.0/lib build/temp.macosx-10.15-x86_64-3.8/MySQLdb/_mysql.o -L/usr/<span class="built_in">local</span>/Cellar/mariadb/10.4.6_1/lib -lmariadb -lz -liconv -lssl -lcrypto -o build/lib.macosx-10.15-x86_64-3.8/MySQLdb/_mysql.cpython-38-darwin.so</span><br><span class="line">    ld: library not found <span class="keyword">for</span> -lssl</span><br><span class="line">    clang: error: linker <span class="built_in">command</span> failed with <span class="built_in">exit</span> code 1 (use -v to see invocation)</span><br><span class="line">    error: <span class="built_in">command</span> <span class="string">'clang'</span> failed with <span class="built_in">exit</span> status 1</span><br><span class="line">    ----------------------------------------</span><br><span class="line">ERROR: Command errored out with <span class="built_in">exit</span> status 1: /Users/dugang/.pyenv/versions/3.8.0/envs/myow/bin/python -u -c <span class="string">'import sys, setuptools, tokenize; sys.argv[0] = '</span><span class="string">"'"</span><span class="string">'/private/var/folders/g1/ht4cq7sx40vcbll3gw_bncgh0000gn/T/pip-install-cytmezc5/mysqlclient/setup.py'</span><span class="string">"'"</span><span class="string">'; __file__='</span><span class="string">"'"</span><span class="string">'/private/var/folders/g1/ht4cq7sx40vcbll3gw_bncgh0000gn/T/pip-install-cytmezc5/mysqlclient/setup.py'</span><span class="string">"'"</span><span class="string">';f=getattr(tokenize, '</span><span class="string">"'"</span><span class="string">'open'</span><span class="string">"'"</span><span class="string">', open)(__file__);code=f.read().replace('</span><span class="string">"'"</span><span class="string">'\r\n'</span><span class="string">"'"</span><span class="string">', '</span><span class="string">"'"</span><span class="string">'\n'</span><span class="string">"'"</span><span class="string">');f.close();exec(compile(code, __file__, '</span><span class="string">"'"</span><span class="string">'exec'</span><span class="string">"'"</span><span class="string">'))'</span> install --record /private/var/folders/g1/ht4cq7sx40vcbll3gw_bncgh0000gn/T/pip-record-cmhc1r6g/install-record.txt --single-version-externally-managed --compile --install-headers /Users/dugang/.pyenv/versions/3.8.0/envs/myow/include/site/python3.8/mysqlclient Check the logs <span class="keyword">for</span> full <span class="built_in">command</span> output.</span><br></pre></td></tr></table></figure><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install openssl</span><br><span class="line"><span class="built_in">export</span> LIBRARY_PATH=<span class="variable">$LIBRARY_PATH</span>:/usr/<span class="built_in">local</span>/opt/openssl/lib/</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> mysql </tag>
+            
+            <tag> mac </tag>
+            
+            <tag> mysqlclient </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Usage of Virtualenv</title>
       <link href="/2019/12/11/Usage-of-Virtualenv/"/>
       <url>/2019/12/11/Usage-of-Virtualenv/</url>
@@ -468,9 +512,9 @@
             
             <tag> web </tag>
             
-            <tag> database </tag>
-            
             <tag> mysql </tag>
+            
+            <tag> database </tag>
             
             <tag> mariadb </tag>
             
