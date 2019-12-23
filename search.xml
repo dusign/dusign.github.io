@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Errors in Vue Development</title>
+      <link href="/2019/12/21/Errors-in-Vue-Development/"/>
+      <url>/2019/12/21/Errors-in-Vue-Development/</url>
+      
+        <content type="html"><![CDATA[<p><strong>1、Problem</strong>:  using <code>a.b</code> or <code>this.b</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: property <span class="string">'b'</span> does not exist on value <span class="keyword">of</span> type</span><br></pre></td></tr></table></figure><br><strong>Solution</strong>:  change <code>a</code> or <code>this</code> to <code>(a as any)</code> or <code>(this as any)</code></p><p><strong>2、Problem</strong>: using js or jquery to modify DOM’s css value doesn’t work</p><p><strong>Solution</strong>: mount Js functions in <code>mounted</code> instead of <code>created</code></p><p><strong>3、Problem</strong>: DOM does not change after changing <code>data</code></p><p><strong>Solution</strong>: using <code>this.$set(Object, &#39;key&#39;, value)</code> instead of <code>this.Object.key = value</code></p><p><strong>4、Problem</strong>: using<br><code>document.getElementsByClassName(&#39;CLASS_NAME&#39;)[key].style.ATTRIBUTE = VALUE</code> or <code>document.querySelector(&#39;.CLASS&#39;).style.ATTRIBUTE = VALUE</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: property <span class="string">'style'</span> does not exist on type <span class="string">'Element'</span>.Vetur(<span class="number">2339</span>)</span><br></pre></td></tr></table></figure><br><strong>Solution</strong>: usign <code>(document.querySelector(&#39;.CLASS&#39;) as HTMLElement).style.ATTRIBUTE = VALUE;</code> or jQuery</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vue.js </tag>
+            
+            <tag> typescript </tag>
+            
+            <tag> error </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Update Node.js</title>
       <link href="/2019/12/20/Update-Node-js/"/>
       <url>/2019/12/20/Update-Node-js/</url>
