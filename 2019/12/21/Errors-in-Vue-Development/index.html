@@ -109,7 +109,7 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">121</span> and
+                                Words <span class="post-count">123</span> and
                                 Reading Time <span class="post-count">1</span> Minutes
                             </span>
                             <div class="blank_box"></div>
@@ -171,14 +171,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -249,12 +249,12 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p><strong>1、Problem</strong>:  using <code>a.b</code> or <code>this.b</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: property <span class="string">'b'</span> does not exist on value <span class="keyword">of</span> type</span><br></pre></td></tr></table></figure><br><strong>Solution</strong>:  change <code>a</code> or <code>this</code> to <code>(a as any)</code> or <code>(this as any)</code></p>
+                <p><strong>1、Problem</strong>:  （TypeScript）using <code>a.b</code> or <code>this.b</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: property <span class="string">'b'</span> does not exist on value <span class="keyword">of</span> type</span><br></pre></td></tr></table></figure><br><strong>Solution</strong>:  change <code>a</code> or <code>this</code> to <code>(a as any)</code> or <code>(this as any)</code></p>
 <p><strong>2、Problem</strong>: using js or jquery to modify DOM’s css value doesn’t work</p>
 <p><strong>Solution</strong>: mount Js functions in <code>mounted</code> instead of <code>created</code></p>
 <p><strong>3、Problem</strong>: DOM does not change after changing <code>data</code></p>
 <p><strong>Solution</strong>: using <code>this.$set(Object, &#39;key&#39;, value)</code> instead of <code>this.Object.key = value</code></p>
-<p><strong>4、Problem</strong>: using<br><code>document.getElementsByClassName(&#39;CLASS_NAME&#39;)[key].style.ATTRIBUTE = VALUE</code> or <code>document.querySelector(&#39;.CLASS&#39;).style.ATTRIBUTE = VALUE</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: property <span class="string">'style'</span> does not exist on type <span class="string">'Element'</span>.Vetur(<span class="number">2339</span>)</span><br></pre></td></tr></table></figure><br><strong>Solution</strong>: usign <code>(document.querySelector(&#39;.CLASS&#39;) as HTMLElement).style.ATTRIBUTE = VALUE;</code> or jQuery</p>
+<p><strong>4、Problem</strong>: （TypeScript）using<br><code>document.getElementsByClassName(&#39;CLASS_NAME&#39;)[key].style.ATTRIBUTE = VALUE</code> or <code>document.querySelector(&#39;.CLASS&#39;).style.ATTRIBUTE = VALUE</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: property <span class="string">'style'</span> does not exist on type <span class="string">'Element'</span>.Vetur(<span class="number">2339</span>)</span><br></pre></td></tr></table></figure><br><strong>Solution</strong>: usign <code>(document.querySelector(&#39;.CLASS&#39;) as HTMLElement).style.ATTRIBUTE = VALUE;</code> or jQuery</p>
 
                 
                 <hr>
@@ -704,29 +704,14 @@ const gitment = new Gitment({
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🌱&quot;,&quot;just do it&quot;,&quot;🌾&quot;,&quot;🍀&quot;,&quot;don&#39;t give up&quot;,&quot;🍂&quot;,&quot;🌻&quot;,&quot;try it again&quot;,&quot;🍃&quot;,&quot;never say die&quot;,&quot;🌵&quot;,&quot;🌿&quot;,&quot;🌴&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot; ,&quot;rgb(157,211,250)&quot; ,&quot;rgb(255,0,0)&quot; ,&quot;rgb(242,153,29)&quot; ,&quot;rgb(23,204,16)&quot; ,&quot;rgb(222,0,0)&quot; ,&quot;rgb(22,36,92)&quot; ,&quot;rgb(127,24,116)&quot; ,&quot;rgb(119,195,79)&quot; ,&quot;rgb(4,77,34)&quot; ,&quot;rgb(122,2,60)&quot;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;Cease to struggle and you cease to live.&#34; ,&#34;He who seize the right moment, is the right man.&#34; ,&#34;Man errs as long as he strives.&#34; ,&#34;Adversity is the midwife of genius.&#34; ,&#34;Gods determine what you‘re going to be.&#34; ,&#34;Leap, and the net will appear.&#34; ,&#34;Sow nothing, reap nothing.&#34; ,&#34;Hang on to your dreams.&#34; ,&#34;Those who turn back never reach the summit.&#34;]' color='[&#34;#9933CC&#34; ,&#34;#339933&#34; ,&#34;#66CCCC&#34; ,&#34;#FF99CC&#34; ,&#34;#CCCCFF&#34; ,&#34;#6666CC&#34; ,&#34;#663399&#34; ,&#34;#66CC99&#34; ,&#34;#FF0033&#34;]'></script>
         
 
         <!-- background effects end -->
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    <script src="/js/ribbonDynamic.js"></script>
 </body>
 
 </html>

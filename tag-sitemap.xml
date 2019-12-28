@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://www.dusign.net/tags/error/</loc>
+        <lastmod>2019-12-24T12:36:37.745Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/typescript/</loc>
+        <lastmod>2019-12-24T12:36:37.745Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/vue-js/</loc>
+        <lastmod>2019-12-24T12:36:37.745Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.dusign.net/tags/node-js/</loc>
         <lastmod>2019-12-21T05:33:45.071Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -242,13 +263,6 @@
 
     <url>
         <loc>https://www.dusign.net/tags/javascript/</loc>
-        <lastmod>2019-11-09T16:51:58.706Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/vue-js/</loc>
         <lastmod>2019-11-09T16:51:58.706Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
