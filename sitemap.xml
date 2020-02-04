@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.dusign.net/2019/12/20/Error-Installing-MySqlClient/</loc>
+    
+    <lastmod>2020-02-04T11:35:43.570Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.dusign.net/about/index.html</loc>
     
     <lastmod>2020-02-04T11:19:10.595Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://www.dusign.net/2019/12/20/Update-Node-js/</loc>
     
     <lastmod>2019-12-21T05:33:45.071Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.dusign.net/2019/12/20/Error-Installing-MySqlClient/</loc>
-    
-    <lastmod>2019-12-20T02:47:56.143Z</lastmod>
     
   </url>
   
