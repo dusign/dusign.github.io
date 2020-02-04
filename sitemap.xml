@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.dusign.net/about/index.html</loc>
+    
+    <lastmod>2020-02-04T11:19:10.595Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.dusign.net/categories/index.html</loc>
     
-    <lastmod>2020-02-03T07:17:47.899Z</lastmod>
+    <lastmod>2020-02-04T11:18:24.564Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.dusign.net/2019/12/21/Errors-in-Vue-Development/</loc>
     
-    <lastmod>2019-12-24T12:36:37.745Z</lastmod>
+    <lastmod>2020-02-03T09:24:35.369Z</lastmod>
     
   </url>
   
@@ -306,13 +313,6 @@
     <loc>https://www.dusign.net/2019/10/19/Shut-Down-Windows/</loc>
     
     <lastmod>2019-11-09T16:51:58.672Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.dusign.net/about/index.html</loc>
-    
-    <lastmod>2019-10-13T18:35:31.165Z</lastmod>
     
   </url>
   
