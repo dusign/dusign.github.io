@@ -13,7 +13,7 @@
       
       <categories>
           
-          <category> regexp </category>
+          <category> computer science </category>
           
       </categories>
       
@@ -44,10 +44,6 @@
       
       
         <tags>
-            
-            <tag> vue.js </tag>
-            
-            <tag> typescript </tag>
             
             <tag> error </tag>
             
@@ -99,12 +95,6 @@
       
         <tags>
             
-            <tag> python </tag>
-            
-            <tag> mysql </tag>
-            
-            <tag> mac </tag>
-            
             <tag> mysqlclient </tag>
             
         </tags>
@@ -129,8 +119,6 @@
       
       
         <tags>
-            
-            <tag> python </tag>
             
             <tag> virtualenv </tag>
             
@@ -157,11 +145,7 @@
       
         <tags>
             
-            <tag> css </tag>
-            
             <tag> flex </tag>
-            
-            <tag> web </tag>
             
         </tags>
       
@@ -186,13 +170,7 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> greedy </tag>
-            
-            <tag> 贪心算法 </tag>
             
         </tags>
       
@@ -217,10 +195,6 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> POJ </tag>
             
         </tags>
@@ -239,20 +213,14 @@
       
       <categories>
           
-          <category> browser </category>
+          <category> computer science </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> html </tag>
-            
-            <tag> css </tag>
-            
             <tag> browser </tag>
-            
-            <tag> js </tag>
             
         </tags>
       
@@ -277,13 +245,7 @@
       
         <tags>
             
-            <tag> dusign </tag>
-            
             <tag> hexo-theme-snail </tag>
-            
-            <tag> snail </tag>
-            
-            <tag> hexo </tag>
             
         </tags>
       
@@ -308,13 +270,7 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> bfs </tag>
-            
-            <tag> 宽度优先搜索 </tag>
             
         </tags>
       
@@ -339,13 +295,7 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> dfs </tag>
-            
-            <tag> 深度优先搜索 </tag>
             
         </tags>
       
@@ -363,7 +313,7 @@
       
       <categories>
           
-          <category> web </category>
+          <category> computer science </category>
           
       </categories>
       
@@ -371,10 +321,6 @@
         <tags>
             
             <tag> html </tag>
-            
-            <tag> html5 </tag>
-            
-            <tag> character </tag>
             
         </tags>
       
@@ -399,10 +345,6 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> windows </tag>
-            
             <tag> shutdown </tag>
             
         </tags>
@@ -421,7 +363,7 @@
       
       <categories>
           
-          <category> mathjax </category>
+          <category> computer science </category>
           
       </categories>
       
@@ -429,10 +371,6 @@
         <tags>
             
             <tag> mathjax </tag>
-            
-            <tag> math </tag>
-            
-            <tag> formula </tag>
             
         </tags>
       
@@ -459,10 +397,6 @@
             
             <tag> hexo </tag>
             
-            <tag> mathjax </tag>
-            
-            <tag> blog </tag>
-            
         </tags>
       
     </entry>
@@ -479,14 +413,12 @@
       
       <categories>
           
-          <category> git </category>
+          <category> computer science </category>
           
       </categories>
       
       
         <tags>
-            
-            <tag> github </tag>
             
             <tag> git </tag>
             
@@ -506,16 +438,12 @@
       
       <categories>
           
-          <category> vim </category>
+          <category> text editor </category>
           
       </categories>
       
       
         <tags>
-            
-            <tag> editor </tag>
-            
-            <tag> linux </tag>
             
             <tag> vim </tag>
             
@@ -542,10 +470,6 @@
       
         <tags>
             
-            <tag> web </tag>
-            
-            <tag> php </tag>
-            
             <tag> picture processing </tag>
             
         </tags>
@@ -571,11 +495,7 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> epe8 </tag>
-            
-            <tag> code </tag>
             
         </tags>
       
@@ -600,13 +520,7 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> mysql </tag>
-            
-            <tag> database </tag>
-            
-            <tag> mariadb </tag>
             
         </tags>
       
@@ -624,20 +538,14 @@
       
       <categories>
           
-          <category> django </category>
+          <category> python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> python </tag>
-            
-            <tag> web </tag>
-            
             <tag> django </tag>
-            
-            <tag> framework </tag>
             
         </tags>
       
@@ -662,13 +570,7 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> vue.js </tag>
-            
-            <tag> framework </tag>
-            
-            <tag> javascript </tag>
             
         </tags>
       
@@ -686,7 +588,7 @@
       
       <categories>
           
-          <category> linux </category>
+          <category> OS </category>
           
       </categories>
       
@@ -694,8 +596,6 @@
         <tags>
             
             <tag> linux </tag>
-            
-            <tag> OS </tag>
             
         </tags>
       
@@ -713,7 +613,7 @@
       
       <categories>
           
-          <category> architecture </category>
+          <category> computer science </category>
           
       </categories>
       
@@ -721,10 +621,6 @@
         <tags>
             
             <tag> x86 </tag>
-            
-            <tag> architecture </tag>
-            
-            <tag> intel </tag>
             
         </tags>
       
@@ -742,7 +638,7 @@
       
       <categories>
           
-          <category> computer </category>
+          <category> computer science </category>
           
       </categories>
       
@@ -750,10 +646,6 @@
         <tags>
             
             <tag> memory </tag>
-            
-            <tag> computer </tag>
-            
-            <tag> os </tag>
             
         </tags>
       
@@ -771,20 +663,14 @@
       
       <categories>
           
-          <category> computer </category>
+          <category> computer science </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 校验码 </tag>
-            
-            <tag> 奇偶校验 </tag>
-            
-            <tag> 海明校验码 </tag>
-            
-            <tag> CRC </tag>
+            <tag> check code </tag>
             
         </tags>
       
@@ -802,18 +688,14 @@
       
       <categories>
           
-          <category> markdown </category>
+          <category> computer science </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> editor </tag>
-            
             <tag> markdown </tag>
-            
-            <tag> language </tag>
             
         </tags>
       
@@ -840,10 +722,6 @@
             
             <tag> sublime </tag>
             
-            <tag> editor </tag>
-            
-            <tag> plugin </tag>
-            
         </tags>
       
     </entry>
@@ -860,7 +738,7 @@
       
       <categories>
           
-          <category> windows </category>
+          <category> OS </category>
           
       </categories>
       
@@ -868,10 +746,6 @@
         <tags>
             
             <tag> windows </tag>
-            
-            <tag> OS </tag>
-            
-            <tag> system installation </tag>
             
         </tags>
       
@@ -895,10 +769,6 @@
       
       
         <tags>
-            
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
             
             <tag> ccf-csp </tag>
             
@@ -925,10 +795,6 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> ccf-csp </tag>
             
         </tags>
@@ -953,10 +819,6 @@
       
       
         <tags>
-            
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
             
             <tag> ccf-csp </tag>
             
@@ -983,10 +845,6 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> ccf-csp </tag>
             
         </tags>
@@ -1011,10 +869,6 @@
       
       
         <tags>
-            
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
             
             <tag> ccf-csp </tag>
             
@@ -1041,10 +895,6 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> ccf-csp </tag>
             
         </tags>
@@ -1069,10 +919,6 @@
       
       
         <tags>
-            
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
             
             <tag> ccf-csp </tag>
             
@@ -1099,10 +945,6 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> ccf-csp </tag>
             
         </tags>
@@ -1121,7 +963,7 @@
       
       <categories>
           
-          <category> linux </category>
+          <category> OS </category>
           
       </categories>
       
@@ -1129,10 +971,6 @@
         <tags>
             
             <tag> linux </tag>
-            
-            <tag> serial port </tag>
-            
-            <tag> data read </tag>
             
         </tags>
       
@@ -1159,12 +997,6 @@
             
             <tag> LAMP </tag>
             
-            <tag> centos </tag>
-            
-            <tag> web server </tag>
-            
-            <tag> nginx </tag>
-            
         </tags>
       
     </entry>
@@ -1190,10 +1022,6 @@
             
             <tag> hexo </tag>
             
-            <tag> blog </tag>
-            
-            <tag> github </tag>
-            
         </tags>
       
     </entry>
@@ -1210,18 +1038,14 @@
       
       <categories>
           
-          <category> vim </category>
+          <category> text editor </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> vim </tag>
-            
-            <tag> .vimrc </tag>
             
         </tags>
       
@@ -1247,8 +1071,6 @@
         <tags>
             
             <tag> sublime </tag>
-            
-            <tag> python </tag>
             
         </tags>
       
