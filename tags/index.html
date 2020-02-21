@@ -142,13 +142,6 @@
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -163,21 +156,30 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/photography/">Photography</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
 
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
                     <li>
                         <a href="https://blog.csdn.net/d_Nail" target="_blank">Chinese Blog</a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -223,15 +225,17 @@
             <!-- 标签云 -->
             <div id='tag_clouds' class="tags">
                 
-                    <a href="#sublime" title="sublime" rel="2">sublime</a>
-                
                     <a href="#shutdown" title="shutdown" rel="1">shutdown</a>
+                
+                    <a href="#sublime" title="sublime" rel="2">sublime</a>
                 
                     <a href="#dfs" title="dfs" rel="1">dfs</a>
                 
+                    <a href="#bfs" title="bfs" rel="1">bfs</a>
+                
                     <a href="#html" title="html" rel="1">html</a>
                 
-                    <a href="#bfs" title="bfs" rel="1">bfs</a>
+                    <a href="#hexo-theme-snail" title="hexo-theme-snail" rel="1">hexo-theme-snail</a>
                 
                     <a href="#POJ" title="POJ" rel="1">POJ</a>
                 
@@ -239,15 +243,13 @@
                 
                     <a href="#flex" title="flex" rel="1">flex</a>
                 
-                    <a href="#virtualenv" title="virtualenv" rel="1">virtualenv</a>
-                
                     <a href="#mysqlclient" title="mysqlclient" rel="1">mysqlclient</a>
+                
+                    <a href="#virtualenv" title="virtualenv" rel="1">virtualenv</a>
                 
                     <a href="#node.js" title="node.js" rel="1">node.js</a>
                 
                     <a href="#error" title="error" rel="1">error</a>
-                
-                    <a href="#hexo-theme-snail" title="hexo-theme-snail" rel="1">hexo-theme-snail</a>
                 
                     <a href="#regexp" title="regexp" rel="1">regexp</a>
                 
@@ -255,9 +257,9 @@
                 
                     <a href="#check code" title="check code" rel="1">check code</a>
                 
-                    <a href="#epe8" title="epe8" rel="1">epe8</a>
-                
                     <a href="#django" title="django" rel="1">django</a>
+                
+                    <a href="#epe8" title="epe8" rel="1">epe8</a>
                 
                     <a href="#hexo" title="hexo" rel="2">hexo</a>
                 
@@ -269,9 +271,9 @@
                 
                     <a href="#mathjax" title="mathjax" rel="1">mathjax</a>
                 
-                    <a href="#mysql" title="mysql" rel="1">mysql</a>
-                
                     <a href="#picture processing" title="picture processing" rel="1">picture processing</a>
+                
+                    <a href="#mysql" title="mysql" rel="1">mysql</a>
                 
                     <a href="#git" title="git" rel="1">git</a>
                 
@@ -279,11 +281,11 @@
                 
                     <a href="#memory" title="memory" rel="1">memory</a>
                 
-                    <a href="#x86" title="x86" rel="1">x86</a>
+                    <a href="#vue.js" title="vue.js" rel="1">vue.js</a>
                 
                     <a href="#windows" title="windows" rel="1">windows</a>
                 
-                    <a href="#vue.js" title="vue.js" rel="1">vue.js</a>
+                    <a href="#x86" title="x86" rel="1">x86</a>
                 
                     <a href="#browser" title="browser" rel="1">browser</a>
                 
@@ -291,6 +293,32 @@
 
             <!-- 标签列表 -->
 
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="shutdown">
+                    <span class="tag-text">shutdown</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/19/Shut-Down-Windows/">
+                        <h2 class="post-title">
+                            Shut Down Windows
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A software for automatic shutdown of windows system.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="sublime">
@@ -338,32 +366,6 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="shutdown">
-                    <span class="tag-text">shutdown</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/19/Shut-Down-Windows/">
-                        <h2 class="post-title">
-                            Shut Down Windows
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A software for automatic shutdown of windows system.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="dfs">
                     <span class="tag-text">dfs</span>
                 </span>
@@ -380,6 +382,32 @@
                         
                             <h3 class="post-subtitle">
                                 Depth-first search is one of the most commonly used algorithms.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="bfs">
+                    <span class="tag-text">bfs</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/31/BFS-Introduction/">
+                        <h2 class="post-title">
+                            BFS Introduction
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Breadth-first search is one of the most commonly used algorithms.
                             </h3>
                         
                     </a>
@@ -416,8 +444,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="bfs">
-                    <span class="tag-text">bfs</span>
+                <span class="fa fa-tag listing-seperator" id="hexo-theme-snail">
+                    <span class="tag-text">hexo-theme-snail</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -425,13 +453,13 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/10/31/BFS-Introduction/">
+                     <a href="/2019/11/01/Hexo-Theme-Snail/">
                         <h2 class="post-title">
-                            BFS Introduction
+                            Hexo-Theme-Snail
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                Breadth-first search is one of the most commonly used algorithms.
+                                A succinct hexo theme.
                             </h3>
                         
                     </a>
@@ -520,32 +548,6 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="virtualenv">
-                    <span class="tag-text">virtualenv</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/12/11/Usage-of-Virtualenv/">
-                        <h2 class="post-title">
-                            Usage of Virtualenv
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A tool to create isolated Python environments.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="mysqlclient">
                     <span class="tag-text">mysqlclient</span>
                 </span>
@@ -562,6 +564,32 @@
                         
                             <h3 class="post-subtitle">
                                 Mac 在 pyenv 虚拟环境中安装 mysqlclient 出现错误解决办法。
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="virtualenv">
+                    <span class="tag-text">virtualenv</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/12/11/Usage-of-Virtualenv/">
+                        <h2 class="post-title">
+                            Usage of Virtualenv
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A tool to create isolated Python environments.
                             </h3>
                         
                     </a>
@@ -614,32 +642,6 @@
                         
                             <h3 class="post-subtitle">
                                 Some problems and solutions I encountered during the use of vue.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="hexo-theme-snail">
-                    <span class="tag-text">hexo-theme-snail</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/11/01/Hexo-Theme-Snail/">
-                        <h2 class="post-title">
-                            Hexo-Theme-Snail
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A succinct hexo theme.
                             </h3>
                         
                     </a>
@@ -704,6 +706,25 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
+                     <a href="/2019/04/14/CCF-CSP-Questions-one-0/">
+                        <h2 class="post-title">
+                            CCF-CSP Questions (one)
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                This is the first question of CCF-CSP in March 2019.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
                      <a href="/2019/06/09/CCF-CSP-Questions-five/">
                         <h2 class="post-title">
                             CCF-CSP Questions (five)
@@ -742,25 +763,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/04/14/CCF-CSP-Questions-one-0/">
-                        <h2 class="post-title">
-                            CCF-CSP Questions (one)
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                This is the first question of CCF-CSP in March 2019.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
                      <a href="/2019/06/21/CCF-CSP-Questions-seven/">
                         <h2 class="post-title">
                             CCF-CSP Questions (seven)
@@ -780,13 +782,13 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/04/27/CCF-CSP-Questions-three/">
+                     <a href="/2019/06/15/CCF-CSP-Questions-six/">
                         <h2 class="post-title">
-                            CCF-CSP Questions (three)
+                            CCF-CSP Questions (six)
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                This is the third question of CCF-CSP in March 2019.
+                                This is the fourth question of CCF-CSP in December 2013.
                             </h3>
                         
                     </a>
@@ -799,13 +801,13 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/06/15/CCF-CSP-Questions-six/">
+                     <a href="/2019/04/27/CCF-CSP-Questions-three/">
                         <h2 class="post-title">
-                            CCF-CSP Questions (six)
+                            CCF-CSP Questions (three)
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                This is the fourth question of CCF-CSP in December 2013.
+                                This is the third question of CCF-CSP in March 2019.
                             </h3>
                         
                     </a>
@@ -861,32 +863,6 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="epe8">
-                    <span class="tag-text">epe8</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/06/EPE8-Introduction/">
-                        <h2 class="post-title">
-                            EPE8 Introduction
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                EPE8 is a style guide for python code.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="django">
                     <span class="tag-text">django</span>
                 </span>
@@ -903,6 +879,32 @@
                         
                             <h3 class="post-subtitle">
                                 Django is a web framework developed with python. It is one of the most representative Python frameworks. Many successful websites and APPs are based on Django.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="epe8">
+                    <span class="tag-text">epe8</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/06/EPE8-Introduction/">
+                        <h2 class="post-title">
+                            EPE8 Introduction
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                EPE8 is a style guide for python code.
                             </h3>
                         
                     </a>
@@ -1081,32 +1083,6 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="mysql">
-                    <span class="tag-text">mysql</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/02/MySQL-Tutorial/">
-                        <h2 class="post-title">
-                            MySQL Tutorial
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                MySQL is one of the most widely used databases. It adopts a dual authorization policy and is divided into a community version and a commercial version. Due to its small size, high speed and low cost, it is widely used by small and medium-sized websites.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="picture processing">
                     <span class="tag-text">picture processing</span>
                 </span>
@@ -1123,6 +1099,32 @@
                         
                             <h3 class="post-subtitle">
                                 Picture processing is one of the indispensable functions of a website.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="mysql">
+                    <span class="tag-text">mysql</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/02/MySQL-Tutorial/">
+                        <h2 class="post-title">
+                            MySQL Tutorial
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                MySQL is one of the most widely used databases. It adopts a dual authorization policy and is divided into a community version and a commercial version. Due to its small size, high speed and low cost, it is widely used by small and medium-sized websites.
                             </h3>
                         
                     </a>
@@ -1230,8 +1232,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="x86">
-                    <span class="tag-text">x86</span>
+                <span class="fa fa-tag listing-seperator" id="vue.js">
+                    <span class="tag-text">vue.js</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -1239,13 +1241,13 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/09/28/X86-Instruction-Knowledge/">
+                     <a href="/2019/09/30/Vue-Project-Development/">
                         <h2 class="post-title">
-                            The X86 Architecture
+                            Vue Project Development
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                The X86 architecture is a set of computer language instructions executed by microprocessors. It refers to the abbreviation of the standard number of an Intel general purpose computer series and also identifies a set of general purpose computer instructions.
+                                Vue is a progressive JavaScript framework, which is a lightweight front-end framework, and has a large number of users in China.
                             </h3>
                         
                     </a>
@@ -1282,8 +1284,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="vue.js">
-                    <span class="tag-text">vue.js</span>
+                <span class="fa fa-tag listing-seperator" id="x86">
+                    <span class="tag-text">x86</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -1291,13 +1293,13 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/09/30/Vue-Project-Development/">
+                     <a href="/2019/09/28/X86-Instruction-Knowledge/">
                         <h2 class="post-title">
-                            Vue Project Development
+                            The X86 Architecture
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                Vue is a progressive JavaScript framework, which is a lightweight front-end framework, and has a large number of users in China.
+                                The X86 architecture is a set of computer language instructions executed by microprocessors. It refers to the abbreviation of the standard number of an Intel general purpose computer series and also identifies a set of general purpose computer instructions.
                             </h3>
                         
                     </a>
