@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Vue Router</title>
+      <link href="/2020/02/23/Vue-Router/"/>
+      <url>/2020/02/23/Vue-Router/</url>
+      
+        <content type="html"><![CDATA[<p>Vue Router is the official router for Vue.js. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. For most Single Page Applications, it’s recommended to use the officially-supported vue-router library. </p><h3 id="路由跳转"><a href="#路由跳转" class="headerlink" title="路由跳转"></a>路由跳转</h3><p>Vue.js 中做项目的时候需要点击父组件中的某个内容之后跳转到子组件中，方法如下：</p><ol><li><p><code>this.$router.push({name: &#39;ROUTER_NAME&#39;, params: { KEY: VALUE }})</code><br>注意使用之前要提前设置好 <code>router</code>，其中 <code>name</code> 也可以换成 <code>path</code>，与 <code>router</code> 中的数据对应即可。</p></li><li><p><code>this.$router.replace(&#39;/PATH&#39;)</code></p></li></ol><h3 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h3><p>有时候路由跳转的时候父组件需要给子组件传递参数，这时候就需要在路由中携带参数，然后在子组件中从路由中获取相应的参数，方法如下：</p><p>1、通过 <code>$router.push</code> 在 <code>path</code> 后面传递参数，父组件写法如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">path: <span class="string">`/PATH/<span class="subst">$&#123;PARAMS_KEY&#125;</span>`</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br>然后在路由中配置如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    path: <span class="string">'/PATH/:PARAMS_KEY'</span>,</span><br><span class="line">    name: <span class="string">'NAME'</span>,</span><br><span class="line">    component: COMPONENT</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这种方法需要在 <code>path</code> 中添加 <code>/:PARAMS_KEY</code> 来对应 <code>$router.push</code> 中 <code>path</code> 所携带的参数，然后在子组件中可以使用如下方法来获取传递的参数值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$route.params.PARAMS_KEY</span><br></pre></td></tr></table></figure></p><p>2、通过 <code>$router.push</code> 中的 <code>name</code> 匹配路由，通过 <code>params</code> 来传递参数，父组件写法如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">    name: <span class="string">'NAME'</span>,</span><br><span class="line">    params: &#123;</span><br><span class="line">        KEY: VALUE</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br>然后在路由中配置如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    path: <span class="string">'/PATH'</span>,</span><br><span class="line">    name: <span class="string">'NAME'</span>,</span><br><span class="line">    component: COMPONENT</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>子组件中通过如下方法来获取参数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$route.params.KEY</span><br></pre></td></tr></table></figure></p><p>3、通过 <code>$router.push</code> 中的 <code>path</code> 来匹配路由，通过 <code>query</code> 来传递参数，父组件写法如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">    path: <span class="string">'/PATH'</span>,</span><br><span class="line">    query: &#123;</span><br><span class="line">        KEY: VALUE</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br>然后在路由中配置如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    path: <span class="string">'/PATH'</span>,</span><br><span class="line">    name: <span class="string">'NAME'</span>,</span><br><span class="line">    component: COMPONENT</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>子组件中通过如下方法来获取参数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$route.query.KEY</span><br></pre></td></tr></table></figure><br>这种方法下 <code>query</code> 中传递的参数会显示在 url 后面，类似于 get 请求的 url 中的参数。</p><h3 id="route-and-router"><a href="#route-and-router" class="headerlink" title="route and router"></a>route and router</h3><p><code>router</code> 是 <code>VueRouter</code> 的一个对象，通过 <code>Vue.use(VueRouter)</code> 和 <code>VueRouter</code> 构造函数得到一个 <code>router</code> 的实例对象，这是一个全局的对象，他包含了所有的路由包含了许多关键的对象和属性。</p><p>如 <code>history</code> 对象</p><ol><li><code>$router.push({path:&#39;PATH&#39;})</code> 是向 <code>history</code> 栈中添加一个路由，我们看来是切换路由，但本质是在添加一个 <code>history</code> 记录，此时 <code>window.history.length</code> 会 +1</li><li><code>$router.replace({path:&#39;PATH&#39;})</code> 是替换路由，没有历史记录，<code>window.history.length</code> 不会 +1</li></ol><p>而 <code>route</code> 是一个跳转的路由对象，每一个路由都会有一个 <code>route</code> 对象，是一个局部的对象，可以获取对应的 <code>name</code>、<code>path</code>、<code>params</code>、<code>query</code>等</p><p><code>$route.path</code> 是一个字符串，等于当前路由对象的路径，会被解析为绝对路径</p><p><code>$route.params</code> 是一个对象，包含路由中的动态片段和全匹配片段的键值对</p><p><code>$route.query</code> 是一个对象，包含路由中查询参数的键值对。例如，对于 <code>/home/news/detail/01?favorite=yes</code> ，会得到 <code>$route.query.favorite == &#39;yes&#39;</code> </p><p><code>$route.router</code> 是路由规则所属的路由器（以及其所属的组件）</p><p><code>$route.matched</code> 是一个数组，包含当前匹配的路径中所包含的所有片段所对应的配置参数对象</p><p><code>$route.name</code> 是当前路径的名字，如果没有使用具名路径，则名字为空</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue.js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue.js </tag>
+            
+            <tag> router </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Regular Expression</title>
       <link href="/2020/02/17/Regular-Expression/"/>
       <url>/2020/02/17/Regular-Expression/</url>
@@ -46,6 +73,8 @@
         <tags>
             
             <tag> error </tag>
+            
+            <tag> vue.js </tag>
             
         </tags>
       
@@ -97,6 +126,8 @@
             
             <tag> mysqlclient </tag>
             
+            <tag> python </tag>
+            
         </tags>
       
     </entry>
@@ -121,6 +152,8 @@
         <tags>
             
             <tag> virtualenv </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -147,6 +180,8 @@
             
             <tag> flex </tag>
             
+            <tag> css </tag>
+            
         </tags>
       
     </entry>
@@ -172,6 +207,8 @@
             
             <tag> greedy </tag>
             
+            <tag> algorithm </tag>
+            
         </tags>
       
     </entry>
@@ -196,6 +233,8 @@
         <tags>
             
             <tag> POJ </tag>
+            
+            <tag> algorithm </tag>
             
         </tags>
       
@@ -247,6 +286,8 @@
             
             <tag> hexo-theme-snail </tag>
             
+            <tag> hexo </tag>
+            
         </tags>
       
     </entry>
@@ -272,6 +313,8 @@
             
             <tag> bfs </tag>
             
+            <tag> algorithm </tag>
+            
         </tags>
       
     </entry>
@@ -296,6 +339,8 @@
         <tags>
             
             <tag> dfs </tag>
+            
+            <tag> algorithm </tag>
             
         </tags>
       
@@ -369,6 +414,8 @@
       
       
         <tags>
+            
+            <tag> hexo </tag>
             
             <tag> mathjax </tag>
             
@@ -447,6 +494,8 @@
             
             <tag> vim </tag>
             
+            <tag> text editor </tag>
+            
         </tags>
       
     </entry>
@@ -471,6 +520,8 @@
         <tags>
             
             <tag> picture processing </tag>
+            
+            <tag> php </tag>
             
         </tags>
       
@@ -497,6 +548,8 @@
             
             <tag> epe8 </tag>
             
+            <tag> python </tag>
+            
         </tags>
       
     </entry>
@@ -522,6 +575,8 @@
             
             <tag> mysql </tag>
             
+            <tag> database </tag>
+            
         </tags>
       
     </entry>
@@ -546,6 +601,8 @@
         <tags>
             
             <tag> django </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -596,6 +653,8 @@
         <tags>
             
             <tag> linux </tag>
+            
+            <tag> OS </tag>
             
         </tags>
       
@@ -722,6 +781,8 @@
             
             <tag> sublime </tag>
             
+            <tag> text editor </tag>
+            
         </tags>
       
     </entry>
@@ -746,6 +807,8 @@
         <tags>
             
             <tag> windows </tag>
+            
+            <tag> OS </tag>
             
         </tags>
       
@@ -772,6 +835,8 @@
             
             <tag> ccf-csp </tag>
             
+            <tag> algorithm </tag>
+            
         </tags>
       
     </entry>
@@ -796,6 +861,8 @@
         <tags>
             
             <tag> ccf-csp </tag>
+            
+            <tag> algorithm </tag>
             
         </tags>
       
@@ -822,6 +889,8 @@
             
             <tag> ccf-csp </tag>
             
+            <tag> algorithm </tag>
+            
         </tags>
       
     </entry>
@@ -846,6 +915,8 @@
         <tags>
             
             <tag> ccf-csp </tag>
+            
+            <tag> algorithm </tag>
             
         </tags>
       
@@ -872,6 +943,8 @@
             
             <tag> ccf-csp </tag>
             
+            <tag> algorithm </tag>
+            
         </tags>
       
     </entry>
@@ -896,6 +969,8 @@
         <tags>
             
             <tag> ccf-csp </tag>
+            
+            <tag> algorithm </tag>
             
         </tags>
       
@@ -922,6 +997,8 @@
             
             <tag> ccf-csp </tag>
             
+            <tag> algorithm </tag>
+            
         </tags>
       
     </entry>
@@ -946,6 +1023,8 @@
         <tags>
             
             <tag> ccf-csp </tag>
+            
+            <tag> algorithm </tag>
             
         </tags>
       
@@ -972,6 +1051,8 @@
             
             <tag> linux </tag>
             
+            <tag> OS </tag>
+            
         </tags>
       
     </entry>
@@ -996,6 +1077,14 @@
         <tags>
             
             <tag> LAMP </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> mysql </tag>
+            
+            <tag> php </tag>
+            
+            <tag> apache </tag>
             
         </tags>
       
@@ -1047,6 +1136,8 @@
             
             <tag> vim </tag>
             
+            <tag> text editor </tag>
+            
         </tags>
       
     </entry>
@@ -1071,6 +1162,8 @@
         <tags>
             
             <tag> sublime </tag>
+            
+            <tag> text editor </tag>
             
         </tags>
       
