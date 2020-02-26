@@ -181,7 +181,7 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -195,7 +195,7 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/photography/">Photography</a>
                         </li>
                         
                     
@@ -407,23 +407,20 @@
 <tr>
 <td style="text-align:center"><code>DateField</code></td>
 <td style="text-align:center"><font color=#868686 size=2><code>date</code></font></td>
-<td style="text-align:center"><font color=#868686 size=2><code>auto_now</code> \</td>
-<td style="text-align:center"><code>auto_now_add</code>&lt;/font&gt;</td>
-<td></td>
+<td style="text-align:center"><font color=#868686 size=2><code>auto_now</code> &#124; <code>auto_now_add</code></font></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>DateTimeField</code></td>
 <td style="text-align:center"><font color=#868686 size=2>date&amp;time</font></td>
-<td style="text-align:center"><font color=#868686 size=2><code>auto_now</code> \</td>
-<td style="text-align:center"><code>auto_now_add</code>&lt;/font&gt;</td>
-<td></td>
+<td style="text-align:center"><font color=#868686 size=2><code>auto_now</code> &#124; <code>auto_now_add</code></font></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>DecimalField</code></td>
 <td style="text-align:center"><font color=#868686 size=2>固定精度的十进制</font></td>
-<td style="text-align:center"><font color=#868686 size=2><code>max_digits</code> \</td>
-<td style="text-align:center"><code>decimal_places</code>&lt;/font&gt;</td>
-<td></td>
+<td style="text-align:center"><font color=#868686 size=2><code>max_digits</code> &#124; <code>decimal_places</code></font></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>DurationField</code></td>
@@ -440,27 +437,20 @@
 <tr>
 <td style="text-align:center"><code>FileField</code></td>
 <td style="text-align:center"><font color=#868686 size=2>文件上传类型</font></td>
-<td style="text-align:center"><font color=#868686 size=2><code>upload_to</code> \</td>
-<td style="text-align:center"><code>max_length</code>&lt;/font&gt;</td>
-<td></td>
+<td style="text-align:center"><font color=#868686 size=2><code>upload_to</code> &#124; <code>max_length</code></font></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>FilePathField</code></td>
 <td style="text-align:center"><font color=#868686 size=2>文件目录类型</font></td>
-<td style="text-align:center"><font color=#868686 size=2><code>path</code> \</td>
-<td style="text-align:center"><code>match</code> \</td>
-<td><code>recursive</code> \</td>
-<td><code>max_length</code>&lt;/font&gt;</td>
-<td></td>
+<td style="text-align:center"><font color=#868686 size=2><code>path</code> &#124; <code>match</code> &#124; <code>recursive</code> &#124; <code>max_length</code></font></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>ImageField</code></td>
 <td style="text-align:center"><font color=#868686 size=2>图片类型</font></td>
-<td style="text-align:center"><font color=#868686 size=2><code>upload_to</code> \</td>
-<td style="text-align:center"><code>height_field</code> \</td>
-<td><code>width_field</code> \</td>
-<td><code>max_length</code>&lt;/font&gt;</td>
-<td></td>
+<td style="text-align:center"><font color=#868686 size=2><code>upload_to</code> &#124; <code>height_field</code> &#124; <code>width_field</code> &#124; <code>max_length</code></font></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>IntegerField</code></td>
@@ -495,9 +485,8 @@
 <tr>
 <td style="text-align:center"><code>TimeField</code></td>
 <td style="text-align:center"><font color=#868686 size=2><code>time</code></font></td>
-<td style="text-align:center"><font color=#868686 size=2><code>auto_now</code> \</td>
-<td style="text-align:center"><code>auto_now_add</code>&lt;/font&gt;</td>
-<td></td>
+<td style="text-align:center"><font color=#868686 size=2><code>auto_now</code> &#124; <code>auto_now_add</code></font></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>URLField</code></td>
@@ -508,8 +497,8 @@
 <tr>
 <td style="text-align:center"><code>ForeignKey</code></td>
 <td style="text-align:center"><font color=#868686 size=2>关联关系字段</font></td>
-<td style="text-align:center"><font color=#868686 size=2><code>to</code> \</td>
-<td style="text-align:center"><code>on_delete</code>&lt;/font&gt;</td>
+<td style="text-align:center"><font color=#868686 size=2><code>to</code> &#124; <code>on_delete</code></font></td>
+<td style="text-align:center">&nbsp;</td>
 </tr>
 </tbody>
 </table>
