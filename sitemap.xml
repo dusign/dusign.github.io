@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.dusign.net/2019/09/29/Some-Setting-of-Linux/</loc>
+    
+    <lastmod>2020-02-28T10:35:53.984Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.dusign.net/2019/12/11/Usage-of-Virtualenv/</loc>
+    
+    <lastmod>2020-02-27T14:05:05.937Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.dusign.net/2019/09/30/Django-Project-Development/</loc>
     
     <lastmod>2020-02-26T06:38:12.532Z</lastmod>
@@ -114,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://www.dusign.net/2019/12/11/Usage-of-Virtualenv/</loc>
-    
-    <lastmod>2020-02-23T06:43:02.243Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.dusign.net/2019/06/09/CCF-CSP-Questions-five/</loc>
     
     <lastmod>2020-02-23T06:43:02.243Z</lastmod>
@@ -128,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://www.dusign.net/2019/06/21/CCF-CSP-Questions-seven/</loc>
+    <loc>https://www.dusign.net/2019/04/14/CCF-CSP-Questions-one-0/</loc>
     
     <lastmod>2020-02-23T06:43:02.243Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.dusign.net/2019/04/14/CCF-CSP-Questions-one-0/</loc>
+    <loc>https://www.dusign.net/2019/06/21/CCF-CSP-Questions-seven/</loc>
     
     <lastmod>2020-02-23T06:43:02.243Z</lastmod>
     
@@ -157,13 +164,6 @@
   
   <url>
     <loc>https://www.dusign.net/2019/10/02/MySQL-Tutorial/</loc>
-    
-    <lastmod>2020-02-23T06:43:02.243Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.dusign.net/2019/09/29/Some-Setting-of-Linux/</loc>
     
     <lastmod>2020-02-23T06:43:02.243Z</lastmod>
     

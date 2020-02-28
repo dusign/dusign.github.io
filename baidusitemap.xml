@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.dusign.net/2019/09/29/Some-Setting-of-Linux/</loc>
+    <lastmod>2020-02-28</lastmod>
+  </url>  <url>
+    <loc>https://www.dusign.net/2019/12/11/Usage-of-Virtualenv/</loc>
+    <lastmod>2020-02-27</lastmod>
+  </url>  <url>
     <loc>https://www.dusign.net/2019/09/30/Django-Project-Development/</loc>
     <lastmod>2020-02-26</lastmod>
   </url>  <url>
@@ -49,16 +55,13 @@
     <loc>https://www.dusign.net/2019/11/12/Ants/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/12/11/Usage-of-Virtualenv/</loc>
-    <lastmod>2020-02-23</lastmod>
-  </url>  <url>
     <loc>https://www.dusign.net/2019/06/09/CCF-CSP-Questions-five/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/06/21/CCF-CSP-Questions-seven/</loc>
+    <loc>https://www.dusign.net/2019/04/14/CCF-CSP-Questions-one-0/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/04/14/CCF-CSP-Questions-one-0/</loc>
+    <loc>https://www.dusign.net/2019/06/21/CCF-CSP-Questions-seven/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/10/06/EPE8-Introduction/</loc>
@@ -68,9 +71,6 @@
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/10/02/MySQL-Tutorial/</loc>
-    <lastmod>2020-02-23</lastmod>
-  </url>  <url>
-    <loc>https://www.dusign.net/2019/09/29/Some-Setting-of-Linux/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/10/07/Picture-Processing-Class/</loc>
