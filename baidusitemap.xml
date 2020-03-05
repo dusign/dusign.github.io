@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.dusign.net/2019/11/01/Hexo-Theme-Snail/</loc>
+    <lastmod>2020-03-05</lastmod>
+  </url>  <url>
     <loc>https://www.dusign.net/2020/03/05/Setting-up-Django-with-uWSGI-and-Nginx/</loc>
     <lastmod>2020-03-05</lastmod>
   </url>  <url>
@@ -46,10 +49,10 @@
     <loc>https://www.dusign.net/2019/04/27/CCF-CSP-Questions-three/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/08/10/Introduction-to-Sublime-Plug-in/</loc>
+    <loc>https://www.dusign.net/2019/03/19/LAMP-Server-Environment-Tutorial/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/03/19/LAMP-Server-Environment-Tutorial/</loc>
+    <loc>https://www.dusign.net/2019/08/10/Introduction-to-Sublime-Plug-in/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/03/25/Linux-Reads-Serial-Data/</loc>
@@ -86,9 +89,6 @@
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/07/20/Windows-System-Installation/</loc>
-    <lastmod>2020-02-23</lastmod>
-  </url>  <url>
-    <loc>https://www.dusign.net/2019/11/01/Hexo-Theme-Snail/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/10/31/BFS-Introduction/</loc>

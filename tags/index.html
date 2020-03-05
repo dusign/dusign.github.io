@@ -142,13 +142,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -157,6 +150,13 @@
                         
                         <li>
                             <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -225,19 +225,19 @@
             <!-- 标签云 -->
             <div id='tag_clouds' class="tags">
                 
+                    <a href="#shutdown" title="shutdown" rel="1">shutdown</a>
+                
                     <a href="#sublime" title="sublime" rel="2">sublime</a>
                 
                     <a href="#text editor" title="text editor" rel="4">text editor</a>
-                
-                    <a href="#shutdown" title="shutdown" rel="1">shutdown</a>
                 
                     <a href="#algorithm" title="algorithm" rel="12">algorithm</a>
                 
                     <a href="#dfs" title="dfs" rel="1">dfs</a>
                 
-                    <a href="#html" title="html" rel="1">html</a>
-                
                     <a href="#bfs" title="bfs" rel="1">bfs</a>
+                
+                    <a href="#html" title="html" rel="1">html</a>
                 
                     <a href="#hexo" title="hexo" rel="4">hexo</a>
                 
@@ -247,17 +247,15 @@
                 
                     <a href="#greedy" title="greedy" rel="1">greedy</a>
                 
-                    <a href="#virtualenv" title="virtualenv" rel="1">virtualenv</a>
-                
-                    <a href="#python" title="python" rel="4">python</a>
-                
                     <a href="#css" title="css" rel="1">css</a>
                 
                     <a href="#flex" title="flex" rel="1">flex</a>
                 
-                    <a href="#mysqlclient" title="mysqlclient" rel="1">mysqlclient</a>
+                    <a href="#virtualenv" title="virtualenv" rel="1">virtualenv</a>
                 
-                    <a href="#node.js" title="node.js" rel="1">node.js</a>
+                    <a href="#python" title="python" rel="4">python</a>
+                
+                    <a href="#mysqlclient" title="mysqlclient" rel="1">mysqlclient</a>
                 
                     <a href="#vue.js" title="vue.js" rel="3">vue.js</a>
                 
@@ -265,13 +263,19 @@
                 
                     <a href="#regexp" title="regexp" rel="1">regexp</a>
                 
+                    <a href="#node.js" title="node.js" rel="1">node.js</a>
+                
                     <a href="#router" title="router" rel="1">router</a>
+                
+                    <a href="#django" title="django" rel="2">django</a>
+                
+                    <a href="#uwsgi" title="uwsgi" rel="1">uwsgi</a>
+                
+                    <a href="#nginx" title="nginx" rel="1">nginx</a>
                 
                     <a href="#ccf-csp" title="ccf-csp" rel="8">ccf-csp</a>
                 
                     <a href="#check code" title="check code" rel="1">check code</a>
-                
-                    <a href="#django" title="django" rel="2">django</a>
                 
                     <a href="#epe8" title="epe8" rel="1">epe8</a>
                 
@@ -287,15 +291,15 @@
                 
                     <a href="#OS" title="OS" rel="3">OS</a>
                 
+                    <a href="#mathjax" title="mathjax" rel="1">mathjax</a>
+                
                     <a href="#markdown" title="markdown" rel="1">markdown</a>
                 
-                    <a href="#mathjax" title="mathjax" rel="1">mathjax</a>
+                    <a href="#picture processing" title="picture processing" rel="1">picture processing</a>
                 
                     <a href="#database" title="database" rel="1">database</a>
                 
                     <a href="#git" title="git" rel="1">git</a>
-                
-                    <a href="#picture processing" title="picture processing" rel="1">picture processing</a>
                 
                     <a href="#vim" title="vim" rel="2">vim</a>
                 
@@ -307,14 +311,36 @@
                 
                     <a href="#browser" title="browser" rel="1">browser</a>
                 
-                    <a href="#uwsgi" title="uwsgi" rel="1">uwsgi</a>
-                
-                    <a href="#nginx" title="nginx" rel="1">nginx</a>
-                
             </div>
 
             <!-- 标签列表 -->
 
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="shutdown">
+                    <span class="tag-text">shutdown</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/19/Shut-Down-Windows/">
+                        <h2 class="post-title">
+                            Shut Down Windows
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A software for automatic shutdown of windows system.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="sublime">
@@ -435,32 +461,6 @@
                         
                             <h3 class="post-subtitle">
                                 This  is a vim configuration.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="shutdown">
-                    <span class="tag-text">shutdown</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/19/Shut-Down-Windows/">
-                        <h2 class="post-title">
-                            Shut Down Windows
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A software for automatic shutdown of windows system.
                             </h3>
                         
                     </a>
@@ -732,32 +732,6 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="html">
-                    <span class="tag-text">html</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/23/HTML-Special-Characters/">
-                        <h2 class="post-title">
-                            HTML Special Characters
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                It mainly includes mathematical symbols, Greek letters, shapes, punctuation and other symbols.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="bfs">
                     <span class="tag-text">bfs</span>
                 </span>
@@ -774,6 +748,32 @@
                         
                             <h3 class="post-subtitle">
                                 Breadth-first search is one of the most commonly used algorithms.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="html">
+                    <span class="tag-text">html</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/23/HTML-Special-Characters/">
+                        <h2 class="post-title">
+                            HTML Special Characters
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                It mainly includes mathematical symbols, Greek letters, shapes, punctuation and other symbols.
                             </h3>
                         
                     </a>
@@ -945,6 +945,58 @@
             </div>
             
             <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="css">
+                    <span class="tag-text">css</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/12/05/Flex-Box/">
+                        <h2 class="post-title">
+                            Flex Box
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Flex box is a new way of css layout.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="flex">
+                    <span class="tag-text">flex</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/12/05/Flex-Box/">
+                        <h2 class="post-title">
+                            Flex Box
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Flex box is a new way of css layout.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="virtualenv">
                     <span class="tag-text">virtualenv</span>
                 </span>
@@ -1018,25 +1070,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/09/30/Django-Project-Development/">
-                        <h2 class="post-title">
-                            Django Project Development
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Django is a web framework developed with python. It is one of the most representative Python frameworks. Many successful websites and APPs are based on Django.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
                      <a href="/2019/10/06/EPE8-Introduction/">
                         <h2 class="post-title">
                             EPE8 Introduction
@@ -1051,51 +1084,18 @@
                 </div>
                 <hr>
                 
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="css">
-                    <span class="tag-text">css</span>
-                </span>
-                
                   <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/12/05/Flex-Box/">
+                     <a href="/2019/09/30/Django-Project-Development/">
                         <h2 class="post-title">
-                            Flex Box
+                            Django Project Development
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                Flex box is a new way of css layout.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="flex">
-                    <span class="tag-text">flex</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/12/05/Flex-Box/">
-                        <h2 class="post-title">
-                            Flex Box
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Flex box is a new way of css layout.
+                                Django is a web framework developed with python. It is one of the most representative Python frameworks. Many successful websites and APPs are based on Django.
                             </h3>
                         
                     </a>
@@ -1122,32 +1122,6 @@
                         
                             <h3 class="post-subtitle">
                                 Mac 在 pyenv 虚拟环境中安装 mysqlclient 出现错误解决办法。
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="node.js">
-                    <span class="tag-text">node.js</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/12/20/Update-Node-js/">
-                        <h2 class="post-title">
-                            Update Node.js
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                The method to update node.js .
                             </h3>
                         
                     </a>
@@ -1274,6 +1248,32 @@
             </div>
             
             <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="node.js">
+                    <span class="tag-text">node.js</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/12/20/Update-Node-js/">
+                        <h2 class="post-title">
+                            Update Node.js
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                The method to update node.js .
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="router">
                     <span class="tag-text">router</span>
                 </span>
@@ -1290,6 +1290,103 @@
                         
                             <h3 class="post-subtitle">
                                 The official router for Vue.js.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="django">
+                    <span class="tag-text">django</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2020/03/05/Setting-up-Django-with-uWSGI-and-Nginx/">
+                        <h2 class="post-title">
+                            Setting up Django with uWSGI and Nginx
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A tutorial is aimed at the Django user who wants to set up a production web server.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/09/30/Django-Project-Development/">
+                        <h2 class="post-title">
+                            Django Project Development
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Django is a web framework developed with python. It is one of the most representative Python frameworks. Many successful websites and APPs are based on Django.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="uwsgi">
+                    <span class="tag-text">uwsgi</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2020/03/05/Setting-up-Django-with-uWSGI-and-Nginx/">
+                        <h2 class="post-title">
+                            Setting up Django with uWSGI and Nginx
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A tutorial is aimed at the Django user who wants to set up a production web server.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="nginx">
+                    <span class="tag-text">nginx</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2020/03/05/Setting-up-Django-with-uWSGI-and-Nginx/">
+                        <h2 class="post-title">
+                            Setting up Django with uWSGI and Nginx
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A tutorial is aimed at the Django user who wants to set up a production web server.
                             </h3>
                         
                     </a>
@@ -1475,51 +1572,6 @@
                         
                             <h3 class="post-subtitle">
                                 校验码是指能够发现或能够自动纠正错误的数据编码，也称为检错纠错编码
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="django">
-                    <span class="tag-text">django</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2020/03/05/Setting-up-Django-with-uWSGI-and-Nginx/">
-                        <h2 class="post-title">
-                            Setting up Django with uWSGI and Nginx
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A tutorial is aimed at the Django user who wants to set up a production web server.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/09/30/Django-Project-Development/">
-                        <h2 class="post-title">
-                            Django Project Development
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Django is a web framework developed with python. It is one of the most representative Python frameworks. Many successful websites and APPs are based on Django.
                             </h3>
                         
                     </a>
@@ -1826,6 +1878,32 @@
             </div>
             
             <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="mathjax">
+                    <span class="tag-text">mathjax</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2019/10/14/Mathjax-Tutorial/">
+                        <h2 class="post-title">
+                            Mathjax Tutorial
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                A JavaScript display engine for mathematics that works in all browsers.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="markdown">
                     <span class="tag-text">markdown</span>
                 </span>
@@ -1852,8 +1930,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="mathjax">
-                    <span class="tag-text">mathjax</span>
+                <span class="fa fa-tag listing-seperator" id="picture processing">
+                    <span class="tag-text">picture processing</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -1861,13 +1939,13 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2019/10/14/Mathjax-Tutorial/">
+                     <a href="/2019/10/07/Picture-Processing-Class/">
                         <h2 class="post-title">
-                            Mathjax Tutorial
+                            Picture Processing Class
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                A JavaScript display engine for mathematics that works in all browsers.
+                                Picture processing is one of the indispensable functions of a website.
                             </h3>
                         
                     </a>
@@ -1920,32 +1998,6 @@
                         
                             <h3 class="post-subtitle">
                                 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="picture processing">
-                    <span class="tag-text">picture processing</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/10/07/Picture-Processing-Class/">
-                        <h2 class="post-title">
-                            Picture Processing Class
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Picture processing is one of the indispensable functions of a website.
                             </h3>
                         
                     </a>
@@ -2095,58 +2147,6 @@
                         
                             <h3 class="post-subtitle">
                                 Behind the scenes of modern web browsers.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="uwsgi">
-                    <span class="tag-text">uwsgi</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2020/03/05/Setting-up-Django-with-uWSGI-and-Nginx/">
-                        <h2 class="post-title">
-                            Setting up Django with uWSGI and Nginx
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A tutorial is aimed at the Django user who wants to set up a production web server.
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="nginx">
-                    <span class="tag-text">nginx</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2020/03/05/Setting-up-Django-with-uWSGI-and-Nginx/">
-                        <h2 class="post-title">
-                            Setting up Django with uWSGI and Nginx
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                A tutorial is aimed at the Django user who wants to set up a production web server.
                             </h3>
                         
                     </a>
