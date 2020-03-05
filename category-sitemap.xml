@@ -8,6 +8,27 @@
     </url>
 
     <url>
+        <loc>https://www.dusign.net/categories/python/</loc>
+        <lastmod>2020-03-05T13:16:58.401Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/categories/OS/</loc>
+        <lastmod>2020-03-03T12:42:12.052Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/categories/database/</loc>
+        <lastmod>2020-03-02T15:45:57.721Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.dusign.net/categories/css/</loc>
         <lastmod>2020-02-23T06:43:02.489Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -22,22 +43,8 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/categories/python/</loc>
-        <lastmod>2020-02-23T06:43:02.461Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.dusign.net/categories/vue-js/</loc>
         <lastmod>2020-02-23T06:43:02.245Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/categories/OS/</loc>
-        <lastmod>2020-02-23T06:43:02.244Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -58,13 +65,6 @@
 
     <url>
         <loc>https://www.dusign.net/categories/php/</loc>
-        <lastmod>2020-02-23T06:43:02.243Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/categories/database/</loc>
         <lastmod>2020-02-23T06:43:02.243Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

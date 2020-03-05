@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.dusign.net/2020/03/05/Setting-up-Django-with-uWSGI-and-Nginx/</loc>
+    <lastmod>2020-03-05</lastmod>
+  </url>  <url>
     <loc>https://www.dusign.net/2019/09/29/Some-Setting-of-Linux/</loc>
-    <lastmod>2020-02-28</lastmod>
+    <lastmod>2020-03-03</lastmod>
+  </url>  <url>
+    <loc>https://www.dusign.net/2019/10/02/MySQL-Tutorial/</loc>
+    <lastmod>2020-03-02</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/12/11/Usage-of-Virtualenv/</loc>
     <lastmod>2020-02-27</lastmod>
@@ -25,10 +31,10 @@
     <loc>https://www.dusign.net/2019/06/29/CCF-CSP-Questions-eight/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/04/21/CCF-CSP-Questions-two/</loc>
+    <loc>https://www.dusign.net/2019/06/15/CCF-CSP-Questions-six/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/06/15/CCF-CSP-Questions-six/</loc>
+    <loc>https://www.dusign.net/2019/04/21/CCF-CSP-Questions-two/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2017/05/19/Sublime%E4%B8%AD%E9%85%8D%E7%BD%AEPython%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
@@ -40,10 +46,10 @@
     <loc>https://www.dusign.net/2019/04/27/CCF-CSP-Questions-three/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/03/19/LAMP-Server-Environment-Tutorial/</loc>
+    <loc>https://www.dusign.net/2019/08/10/Introduction-to-Sublime-Plug-in/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>https://www.dusign.net/2019/08/10/Introduction-to-Sublime-Plug-in/</loc>
+    <loc>https://www.dusign.net/2019/03/19/LAMP-Server-Environment-Tutorial/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/03/25/Linux-Reads-Serial-Data/</loc>
@@ -68,9 +74,6 @@
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/10/14/Mathjax-Tutorial/</loc>
-    <lastmod>2020-02-23</lastmod>
-  </url>  <url>
-    <loc>https://www.dusign.net/2019/10/02/MySQL-Tutorial/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://www.dusign.net/2019/10/07/Picture-Processing-Class/</loc>

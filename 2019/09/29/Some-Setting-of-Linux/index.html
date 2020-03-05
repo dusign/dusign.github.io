@@ -105,8 +105,8 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">4.4k</span> and
-                                Reading Time <span class="post-count">18</span> Minutes
+                                Words <span class="post-count">4.5k</span> and
+                                Reading Time <span class="post-count">19</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -167,14 +167,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -188,14 +188,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/photography/">Photography</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -271,14 +271,8 @@
 </li>
 <li><p>配置firewalld-cmd<br><code>firewall-cmd --version</code> —&gt; 查看版本<br><code>firewall-cmd --help</code> —&gt; 查看帮助<br><code>firewall-cmd --state</code> —&gt; 显示状态<br><code>firewall-cmd --zone=public --list-ports</code> —&gt; 查看所有打开的端口<br><code>firewall-cmd --reload</code> —&gt; ，重启防火墙，更新防火墙规则<br><code>firewall-cmd --get-active-zones</code> —&gt; 查看区域信息<br><code>firewall-cmd --get-zone-of-interface=eth0</code> —&gt; 查看指定接口所属区域<br><code>firewall-cmd --panic-on</code> —&gt; 拒绝所有包<br><code>firewall-cmd --panic-off</code> —&gt; 取消拒绝状态<br><code>firewall-cmd --query-panic</code> —&gt; 查看是否拒绝<br><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code> —&gt; 在public中永久开放80端口，<code>--permanent</code> 永久生效，没有此参数重启后失效）添加端口<br><code>firewall-cmd --reload</code> —&gt; 重新载入端口<br><code>firewall-cmd --zone=public --query-port=80/tcp</code> —&gt; 查看端口是否开启，<code>--zone</code> 为作用域，默认为 <code>public</code><br><code>firewall-cmd --zone=public --remove-port=80/tcp --permanent</code> —&gt; 删除端口<br><code>firewall-cmd --list-all-zones</code> —&gt; 查看所有的zone信息<br><code>firewall-cmd --get-default-zone</code> —&gt; 查看默认zone是哪一个<br><code>firewall-cmd --zone=internal --change-zone=p3p1</code> —&gt; 临时修改接口p3p1所属的zone为internal<br><code>firewall-cmd --add-service=http</code> —&gt; 暂时开放http<br><code>firewall-cmd --permanent --add-service=http</code> —&gt; 永久开放http<br><code>firewall-cmd --permanent --zone=public --remove-service=ssh</code> —&gt; 从public zone中移除服务<br><code>firewall-cmd --reload</code> —&gt; 重新加载配置</p>
 </li>
-<li><p>SElinux<br>Security Enhanced Linux (SELinux)是一个访问控制服务，基于安全策略加强对系统资源的访问控制。在系统安全的基础上，解决“May <subject> do <action> to <object>”的访问控制问题。</p>
+<li><p>SElinux<br>Security Enhanced Linux (SELinux)是一个访问控制服务，基于安全策略加强对系统资源的访问控制。在系统安全的基础上，解决“May <subject> do <action> to <object>”的访问控制问题。<br>SELinux是一个Linux内核的扩展模块，通过LSM(Linux Security Module)框架在链接时被加入到Linux内核中，SElinux虽然是一款用来提高系统安全性的软件，但也会和好多服务都冲突。<br>查看当前状态<br><code>getenforce</code><br>临时关闭<br><code>setenforce 0</code><br>永久关闭<br>修改 <code>/etc/selinux/config</code> 中的 <code>SELINUX=enforcing</code> 为 <code>SELINUX=disabled</code></p>
 </li>
-</ol>
-<p>SELinux是一个Linux内核的扩展模块，通过LSM(Linux Security Module)框架在链接时被加入到Linux内核中，SElinux虽然是一款用来提高系统安全性的软件，但也会和好多服务都冲突。</p>
-<p>查看当前状态<br><code>getenforce</code></p>
-<p>临时关闭<br><code>setenforce 0</code></p>
-<p>永久关闭<br>修改 <code>/etc/selinux/config</code> 中的 <code>SELINUX=enforcing</code> 为 <code>SELINUX=disabled</code></p>
-<ol>
 <li><p>CentOS端口命令<br><code>netstat -lntp</code> —&gt; 查看监听(Listen)的端口<br><code>netstat -antp</code> —&gt; 查看所有建立的TCP连接<br>查看Linux系统主机名：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hostname</span></span><br><span class="line">localhost.localdomain</span><br></pre></td></tr></table></figure>
 <p>查看服务器IP地址：</p>
@@ -292,21 +286,30 @@
 <p>其他网络信息：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># iptables -L #查看防火墙规则</span></span><br><span class="line"><span class="comment"># route -n #查看路由表</span></span><br><span class="line"><span class="comment"># netstat -s #查看网络统计信息</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>.bashrc<br><code>PS1=&quot;[\u@\h \d \A \W]\$&quot;</code></p>
+<li><p>.bashrc<br><code>PS1=&quot;[\u@\h \d \A \W]\$&quot;</code><br><code>\[\e[F;Bm\] cotent \[\e[0m\]</code> —&gt; 颜色设置<br>下面是我的设置<br><code>PS1=&quot;[\[\e[37;41m\]\u@\h\[\e[0m\]\[\e[37;42m\]\d \A\[\e[0m\]\[\e[37;43m\]\W\[\e[0m\]\[\e[37;0m\]]\$\[\e[0m\]&quot;</code></p>
+</li>
+<li><p>U盘操作<br>linux挂载U盘过程</p>
 </li>
 </ol>
-<p><code>\[\e[F;Bm\] cotent \[\e[0m\]</code> —&gt; 颜色设置</p>
-<p>下面是我的设置<br><code>PS1=&quot;[\[\e[37;41m\]\u@\h\[\e[0m\]\[\e[37;42m\]\d \A\[\e[0m\]\[\e[37;43m\]\W\[\e[0m\]\[\e[37;0m\]]\$\[\e[0m\]&quot;</code></p>
+<ul>
+<li><code>sudo fdisk -l</code> 查看U盘状态以及U盘分区名字</li>
+<li><code>sudo mount /dev/sdb /mnt</code> 挂载U盘到 <code>/mnt</code> 中</li>
+<li>卸载U盘 <code>umount /mnt</code> ，卸载的时候要退到挂载目录之外</li>
+</ul>
+<p>linux格式化U盘过程</p>
+<ul>
+<li><code>sudo fdisk -l</code> 查看U盘状态以及U盘分区名字</li>
+<li><code>mkfs.vfat /dev/sdb</code> 格式化U盘</li>
+</ul>
 <h2 id="配置软件源"><a href="#配置软件源" class="headerlink" title="配置软件源"></a>配置软件源</h2><p>安装epel源 <code>rpm -ivh http://dl.fedoraproject.org/pub/epel/8/Everything/x86_64/Packages/e/epel-release-8-5.el8.noarch.rpm</code></p>
 <h2 id="常用工具及用法"><a href="#常用工具及用法" class="headerlink" title="常用工具及用法"></a>常用工具及用法</h2><p>Linux中有好多非常有用的命令行工具，也有好多好玩的命令行工具，下面笔者介绍一些工具，可能一次性写的不全，后面会慢慢的补上去。</p>
 <h3 id="cmatrix"><a href="#cmatrix" class="headerlink" title="cmatrix"></a>cmatrix</h3><ul>
 <li>MAC 系统安装方法：<code>brew install cmatrix</code></li>
 <li>RedHat 系Linux安装方法：<code>sudo yum install cmatrix</code></li>
 <li>Ubuntu 系Linux安装方法：<code>sudo apt-get install cmatrix</code></li>
-<li><p>Arch 系Linux安装方法：<code>sudo pacman -S cmatrix</code></p>
-<p>  如果没有配置相应的软件园，没法用包管理工具直接安装的可以选择编译安装，安装方法如下：</p>
-</li>
+<li>Arch 系Linux安装方法：<code>sudo pacman -S cmatrix</code></li>
 </ul>
+<p>如果没有配置相应的软件园，没法用包管理工具直接安装的可以选择编译安装，安装方法如下：</p>
 <ol>
 <li>访问 GitHub 项目地址 <code>https://github.com/abishekvashok/cmatrix</code> 在 releases 中下载 cmatrix-1.2.tar，也可以使用 <code>wget</code> 命令下载</li>
 <li>解压 cmatrix-1.2.tar ，解压的时候会用到 <code>tar</code>，如果没有安装的话请使用命令安装，以 CentOS 为例 <code>sudo yum install tar</code>，解压命令为 <code>tar -xvf cmatrix-1.2.tar</code></li>
@@ -916,7 +919,7 @@ const gitment = new Gitment({
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;Cease to struggle and you cease to live.&#34; ,&#34;He who seize the right moment, is the right man.&#34; ,&#34;Man errs as long as he strives.&#34; ,&#34;Adversity is the midwife of genius.&#34; ,&#34;Gods determine what you‘re going to be.&#34; ,&#34;Leap, and the net will appear.&#34; ,&#34;Sow nothing, reap nothing.&#34; ,&#34;Hang on to your dreams.&#34; ,&#34;Those who turn back never reach the summit.&#34;]' color='[&#34;#9933CC&#34; ,&#34;#339933&#34; ,&#34;#66CCCC&#34; ,&#34;#FF99CC&#34; ,&#34;#CCCCFF&#34; ,&#34;#6666CC&#34; ,&#34;#663399&#34; ,&#34;#66CC99&#34; ,&#34;#FF0033&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;Cease to struggle and you cease to live.&quot; ,&quot;He who seize the right moment, is the right man.&quot; ,&quot;Man errs as long as he strives.&quot; ,&quot;Adversity is the midwife of genius.&quot; ,&quot;Gods determine what you‘re going to be.&quot; ,&quot;Leap, and the net will appear.&quot; ,&quot;Sow nothing, reap nothing.&quot; ,&quot;Hang on to your dreams.&quot; ,&quot;Those who turn back never reach the summit.&quot;]' color='[&quot;#9933CC&quot; ,&quot;#339933&quot; ,&quot;#66CCCC&quot; ,&quot;#FF99CC&quot; ,&quot;#CCCCFF&quot; ,&quot;#6666CC&quot; ,&quot;#663399&quot; ,&quot;#66CC99&quot; ,&quot;#FF0033&quot;]'></script>
         
 
         <!-- background effects end -->
@@ -926,6 +929,23 @@ const gitment = new Gitment({
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 
 </html>
