@@ -3,36 +3,50 @@
 
 
     <url>
-        <loc>https://www.dusign.net/tags/nginx/</loc>
-        <lastmod>2020-03-05T13:16:58.401Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/uwsgi/</loc>
-        <lastmod>2020-03-05T13:16:58.401Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/django/</loc>
-        <lastmod>2020-03-05T13:16:58.401Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.dusign.net/tags/OS/</loc>
-        <lastmod>2020-03-03T12:42:12.052Z</lastmod>
+        <lastmod>2020-03-20T13:33:48.499Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.dusign.net/tags/linux/</loc>
-        <lastmod>2020-03-03T12:42:12.052Z</lastmod>
+        <lastmod>2020-03-20T13:33:48.499Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/nginx/</loc>
+        <lastmod>2020-03-05T16:36:37.684Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/uwsgi/</loc>
+        <lastmod>2020-03-05T16:36:37.684Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/django/</loc>
+        <lastmod>2020-03-05T16:36:37.684Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/hexo-theme-snail/</loc>
+        <lastmod>2020-03-05T13:37:28.308Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dusign.net/tags/hexo/</loc>
+        <lastmod>2020-03-05T13:37:28.308Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -199,22 +213,8 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/hexo/</loc>
-        <lastmod>2020-02-23T06:43:02.243Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.dusign.net/tags/shutdown/</loc>
         <lastmod>2020-02-23T06:43:02.243Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.dusign.net/tags/hexo-theme-snail/</loc>
-        <lastmod>2020-02-23T06:37:34.740Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
