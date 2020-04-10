@@ -107,8 +107,8 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">1.7k</span> and
-                                Reading Time <span class="post-count">8</span> Minutes
+                                Words <span class="post-count">2k</span> and
+                                Reading Time <span class="post-count">9</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -176,13 +176,6 @@
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -190,14 +183,21 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
                         </li>
                         
                     
@@ -272,6 +272,7 @@
 <p>11、上面的测试都正常之后，我们使用 unix sockets 代替端口，修改 nginx 配置文件中的 <code>server</code> 如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server unix:///home/user/Project/myow/myow.sock; # for a file socket</span><br><span class="line"># server 127.0.0.1:8001; # for a web port socket (we&apos;ll use this first)</span><br></pre></td></tr></table></figure><br>然后运行uwsgi<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --socket test.sock --wsgi-file test.py</span><br></pre></td></tr></table></figure><br>使用浏览器输入 <code>localhost:8000</code> ,看是否工作正常，如果报错的话请检查 uwsgi 和 nginx 对当前工作目录有没有权限<br>如果 uwsgi 对当前目录没有权限的话请使用如下启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --socket test.sock --wsgi-file test.py --chmod-socket=666 <span class="comment"># (very permissive)</span></span><br></pre></td></tr></table></figure><br>或者<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --socket test.sock --wsgi-file test.py --chmod-socket=664 <span class="comment"># (more sensible)</span></span><br></pre></td></tr></table></figure><br>如果 nginx 对 sock 没有权限，请提高 nginx 的权限，修改 nginx 的配置文件中的 <code>user</code> 为更高权限的用户<br>然后再运行，会在浏览器中看到 “Hello World”</p>
 <p>12、使用 uwsgi 和 nginx 运行 django<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --socket /your/project.sock --module project.wsgi --chmod-socket=664</span><br></pre></td></tr></table></figure><br>通过浏览器访问，如果报错 <code>DisallowedHost at / Invalid HTTP_HOST header:</code> ,说明你的 django 只有本地 ip 访问的权限，需要修改 <code>setting.py</code> 中的 <code>ALLOWED_HOSTS</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALLOWED_HOSTS = [&apos;*&apos;]     # 所有的ip都可以访问</span><br></pre></td></tr></table></figure></p>
 <p>13、使用 ini 文件启动 uwsgi<br>新建 uwsgi 的启动文件，uwsgi.ini 的内容如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">[uwsgi]</span><br><span class="line"></span><br><span class="line"># Django-related settings</span><br><span class="line"># the base directory (full path)</span><br><span class="line">chdir = /home/user/Project/myow</span><br><span class="line"># Django&apos;s wsgi file</span><br><span class="line">module = myow.wsgi</span><br><span class="line"># the virtualenv (full path)</span><br><span class="line">home = /home/user/.pyenv/versions/myow</span><br><span class="line"></span><br><span class="line"># uwsgi 启动用户名和用户组</span><br><span class="line"># uid = www</span><br><span class="line"># gid = www</span><br><span class="line"></span><br><span class="line"># process-related settings</span><br><span class="line"># master</span><br><span class="line">master = true</span><br><span class="line"></span><br><span class="line"># maximum number of worker processes</span><br><span class="line">processes = 10</span><br><span class="line">safe-pidfile = /tmp/myow-uwsgi.pid</span><br><span class="line"></span><br><span class="line"># the socket (use the full path to be safe</span><br><span class="line">socket = /home/user/Project/myow/myow.sock</span><br><span class="line"></span><br><span class="line"># ... with appropriate permissions - may be needed</span><br><span class="line">chmod-socket = 664</span><br><span class="line"></span><br><span class="line"># clear environment on exit</span><br><span class="line">vacuum = true</span><br><span class="line"></span><br><span class="line"># 启用线程</span><br><span class="line"># enable-threads = true</span><br><span class="line"></span><br><span class="line"># 设置自动中断时间</span><br><span class="line"># harakiri =30</span><br><span class="line"></span><br><span class="line"># 设置缓冲</span><br><span class="line"># post-buffering = 4096</span><br><span class="line"></span><br><span class="line"># 设置静态文件</span><br><span class="line"># static-map = /static=//www/wwwroot/mysite/static</span><br><span class="line"></span><br><span class="line"># 设置日志目录</span><br><span class="line"># daemonize = /var/log/uwsgi/myow.log</span><br></pre></td></tr></table></figure><br>uwsgi 的启动操作是通过包含主进程号的文件进行设置的，前提是要在 uwsgi 的启动文件中设置保存主进程的 pid<br>启动 uwsgi<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi  --ini  uwsgi.ini</span><br></pre></td></tr></table></figure><br>停止 uwsgi<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --stop /tmp/myow-uwsgi.pid</span><br></pre></td></tr></table></figure><br>重启 uwsgi<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --reload /tmp/myow-uwsgi.pid</span><br></pre></td></tr></table></figure></p>
+<p>14、Vue 部署<br>如果想前后端分离部署 Vue 的话，只需要再新建一个 nginx 节点，用其他的端口访问前端页面，然后通过不同的端口请求后台数据。<br>上面的方法涉及到跨域访问，具体的解决办法如下<br>首先安装 django-cors-headers<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django-cors-headers</span><br></pre></td></tr></table></figure><br>然后在 django 的项目的 setting 中设置如下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line">  ...</span><br><span class="line">  <span class="string">'corsheaders'</span>,</span><br><span class="line">  ...</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">CORS_ALLOW_CREDENTIALS = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">CORS_ORIGIN_ALLOW_ALL = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 白名单</span></span><br><span class="line">CORS_ORIGIN_WHITELIST = (</span><br><span class="line">    <span class="string">'*'</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">CORS_ALLOW_METHODS = (</span><br><span class="line">    <span class="string">'DELETE'</span>,</span><br><span class="line">    <span class="string">'GET'</span>,</span><br><span class="line">    <span class="string">'OPTIONS'</span>,</span><br><span class="line">    <span class="string">'PATCH'</span>,</span><br><span class="line">    <span class="string">'POST'</span>,</span><br><span class="line">    <span class="string">'PUT'</span>,</span><br><span class="line">    <span class="string">'VIEW'</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">CORS_ALLOW_HEADERS = (</span><br><span class="line">    <span class="string">'XMLHttpRequest'</span>,</span><br><span class="line">    <span class="string">'X_FILENAME'</span>,</span><br><span class="line">    <span class="string">'accept-encoding'</span>,</span><br><span class="line">    <span class="string">'authorization'</span>,</span><br><span class="line">    <span class="string">'content-type'</span>,</span><br><span class="line">    <span class="string">'dnt'</span>,</span><br><span class="line">    <span class="string">'origin'</span>,</span><br><span class="line">    <span class="string">'x-csrftoken'</span>,</span><br><span class="line">    <span class="string">'x-requested-with'</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">MIDDLEWARE = [</span><br><span class="line">    <span class="string">'django.middleware.security.SecurityMiddleware'</span>,</span><br><span class="line">    <span class="string">'django.contrib.sessions.middleware.SessionMiddleware'</span>,</span><br><span class="line">    <span class="string">'corsheaders.middleware.CorsMiddleware'</span>,    <span class="comment"># 新增加的，注意顺序</span></span><br><span class="line">    <span class="string">'django.middleware.common.CommonMiddleware'</span>,</span><br><span class="line">    <span class="string">'django.middleware.csrf.CsrfViewMiddleware'</span>,</span><br><span class="line">    <span class="string">'django.contrib.auth.middleware.AuthenticationMiddleware'</span>,</span><br><span class="line">    <span class="string">'django.contrib.messages.middleware.MessageMiddleware'</span>,</span><br><span class="line">    <span class="string">'django.middleware.clickjacking.XFrameOptionsMiddleware'</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure><br>之后就可以跨域访问了，有时候运行会出现如下错误<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(corsheaders.E013) Origin <span class="string">'*'</span> <span class="keyword">in</span> CORS_ORIGIN_WHITELIST is missing  scheme or netloc</span><br><span class="line">HINT: Add a scheme (e.g. https://) or netloc (e.g. example.com).</span><br></pre></td></tr></table></figure><br>这是由于 django-cors-headers 的新版本的白名单设置在 ip 之前需要加 ‘http’，如果没有白名单，则删掉相应的设置，如果有的话请在 ip 之前加上 ‘http’，之后一切就正常了。</p>
 
                 
                 <hr>
@@ -299,11 +300,9 @@
 
                 <!-- Music start-->
                 
-                
-<link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
+                <link rel="stylesheet" href="/css/music-player/fonts/iconfont.css">
 <link rel="stylesheet" href="/css/music-player/css/reset.css">
 <link rel="stylesheet" href="/css/music-player/css/player.css">
-
 
 <div class="music-player">
     <audio class="music-player__audio" ></audio>
@@ -338,9 +337,7 @@
                     <div class="player__song--timeProgess nowTime">00:00</div>
                     <div class="player__song--timeProgess totalTime">00:00</div>
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>
