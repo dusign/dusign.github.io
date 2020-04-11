@@ -69,7 +69,7 @@
   color: color-theme;
 }
 .toc-nav-child {
-  margin-left: 0em;
+  margin-left: -1em;
 }
 #sidebar {
   display: inline;
