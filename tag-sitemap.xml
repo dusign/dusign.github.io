@@ -4,49 +4,49 @@
 
     <url>
         <loc>https://www.dusign.net/tags/OS/</loc>
-        <lastmod>2020-03-20T13:33:48.499Z</lastmod>
+        <lastmod>2020-04-17T04:43:02.389Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.dusign.net/tags/linux/</loc>
-        <lastmod>2020-03-20T13:33:48.499Z</lastmod>
+        <lastmod>2020-04-17T04:43:02.389Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.dusign.net/tags/nginx/</loc>
-        <lastmod>2020-03-05T16:36:37.684Z</lastmod>
+        <lastmod>2020-04-11T10:17:10.164Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.dusign.net/tags/uwsgi/</loc>
-        <lastmod>2020-03-05T16:36:37.684Z</lastmod>
+        <lastmod>2020-04-11T10:17:10.164Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.dusign.net/tags/django/</loc>
-        <lastmod>2020-03-05T16:36:37.684Z</lastmod>
+        <lastmod>2020-04-11T10:17:10.164Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.dusign.net/tags/hexo-theme-snail/</loc>
-        <lastmod>2020-03-05T13:37:28.308Z</lastmod>
+        <lastmod>2020-04-11T06:03:39.262Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.dusign.net/tags/hexo/</loc>
-        <lastmod>2020-03-05T13:37:28.308Z</lastmod>
+        <lastmod>2020-04-11T06:03:39.262Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -66,14 +66,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/python/</loc>
+        <loc>https://www.dusign.net/tags/virtualenv/</loc>
         <lastmod>2020-02-27T14:05:05.937Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/virtualenv/</loc>
+        <loc>https://www.dusign.net/tags/python/</loc>
         <lastmod>2020-02-27T14:05:05.937Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -255,14 +255,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/memory/</loc>
+        <loc>https://www.dusign.net/tags/git/</loc>
         <lastmod>2020-02-19T15:41:24.245Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/git/</loc>
+        <loc>https://www.dusign.net/tags/memory/</loc>
         <lastmod>2020-02-19T15:41:24.245Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
