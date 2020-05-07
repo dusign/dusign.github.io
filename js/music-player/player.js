@@ -21,8 +21,9 @@ class Player {
 
 //歌曲信息
 class Musics {
-    //歌曲
-    constructor() {
+    // 歌曲
+    /* 网易云音乐 */
+    /*constructor() {
         $.ajaxSettings.async = false;
         var data = $.getJSON('https://api.uomg.com/api/rand.music?', {
             sort: '热歌榜',
@@ -49,6 +50,39 @@ class Musics {
             singer: data.data.artistsname,
             songUrl: data.data.url,
             imageUrl: data.data.picurl
+        }];
+        return songs[0];
+    }*/
+
+    /* 全民K歌 */
+    constructor() {
+        $.ajaxSettings.async = false;
+        var data = $.getJSON('https://api.uomg.com/api/get.kg?', {
+            songurl: 'https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html',
+            format: 'json'
+        }).responseJSON;
+        console.log(data);
+        this.songs = [{
+            id: data.code,
+            title: data.data.song_name,
+            singer: data.data.kg_nick,
+            songUrl: data.data.playurl,
+            imageUrl: data.data.pic
+        }];
+    }
+    //根据索引获取歌曲的方法
+    getSongByNum(index) {
+        $.ajaxSettings.async = false;
+        var data = $.getJSON('https://api.uomg.com/api/get.kg?', {
+            songurl: 'https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html',
+            format: 'json'
+        }).responseJSON;
+        var songs = [{
+            id: data.code,
+            title: data.data.song_name,
+            singer: data.data.kg_nick,
+            songUrl: data.data.playurl,
+            imageUrl: data.data.pic
         }];
         return songs[0];
     }
