@@ -4,14 +4,14 @@
 
     <url>
         <loc>https://www.dusign.net/tags/OS/</loc>
-        <lastmod>2020-04-17T04:43:02.389Z</lastmod>
+        <lastmod>2020-04-17T05:06:36.038Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.dusign.net/tags/linux/</loc>
-        <lastmod>2020-04-17T04:43:02.389Z</lastmod>
+        <lastmod>2020-04-17T05:06:36.038Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -192,14 +192,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/mathjax/</loc>
+        <loc>https://www.dusign.net/tags/epe8/</loc>
         <lastmod>2020-02-23T06:43:02.243Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/epe8/</loc>
+        <loc>https://www.dusign.net/tags/mathjax/</loc>
         <lastmod>2020-02-23T06:43:02.243Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -255,14 +255,14 @@
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/git/</loc>
+        <loc>https://www.dusign.net/tags/memory/</loc>
         <lastmod>2020-02-19T15:41:24.245Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.dusign.net/tags/memory/</loc>
+        <loc>https://www.dusign.net/tags/git/</loc>
         <lastmod>2020-02-19T15:41:24.245Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
