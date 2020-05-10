@@ -153,9 +153,9 @@
       
         <tags>
             
-            <tag> mysqlclient </tag>
-            
             <tag> python </tag>
+            
+            <tag> mysqlclient </tag>
             
         </tags>
       
@@ -180,9 +180,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> virtualenv </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
